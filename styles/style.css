@@ -119,6 +119,26 @@ body.stack {
   background-size: cover;
 }
 
+/* Pointer Styling */
+.pointer {
+  font-family: 'Montserrat', sans-serif; /* Match the site's font */
+  font-size: 16px; /* Font size for pointers */
+}
+
+.pointer.head {
+  color: #3498db; /* Blue for head */
+}
+
+.pointer.tail {
+  color: #27ae60; /* Green for tail */
+}
+
+.pointer-arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transform: rotate(90deg); /* Arrow pointing to the right */
+}
+
 /* Git Icon */
 .git-icon {
   position: fixed;
@@ -132,6 +152,8 @@ body.stack {
   width: 100%;
   height: auto;
   border-radius: 50%; /* Circle shape */
+  background: #ffffff; /* White circle for contrast */
+  padding: 5px;
 }
 
 /* Stack Page Title and Header */
@@ -180,7 +202,7 @@ table th, table td {
 }
 
 table th {
-  background: #9abdcd; /* Light gray header for the table */
+  background: #98d5f2; /* Light gray header for the table */
   font-weight: bold;
 }
 
@@ -195,8 +217,8 @@ table th {
   background: #e9ecef;
   margin: 1rem auto;
   display: block;
-  width: 400px;
-  height: 250px;
+  width: 500px;
+  height: 300px;
 }
 
 .controls {
