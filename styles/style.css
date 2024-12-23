@@ -40,3 +40,15 @@ body {
     color: #00ffcc;
   }
   
+  /* New styles for visualization */
+  .visualization {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  canvas {
+    background-color: #1e1e1e;
+    border: 1px solid #00ffcc;
+    margin: 1rem auto;
+  }
+  
