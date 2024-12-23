@@ -18,30 +18,38 @@
 
   <!-- Main Content -->
   <main>
+    <h1 class="title">Stack</h1>
+
+    <!-- Subtitles with Boxes -->
+    <section class="box">
+      <h2>What is it?</h2>
+      <p>A Stack is a Last-In-First-Out (LIFO) data structure...</p>
+    </section>
+
+    <!-- Visualization -->
+    <section class="visualization box">
+      <h2>Visualization</h2>
+      <canvas id="stackCanvas" width="800" height="500"></canvas>
+      <div class="controls">
+        <button onclick="pushItem()">Push</button>
+        <button onclick="popItem()">Pop</button>
+        <button onclick="clearAll()">Clear All</button>
+      </div>
+    </section>
+
     <!-- Advantages and Disadvantages -->
     <section class="box">
       <h2>Advantages and Disadvantages</h2>
       <div class="pros-cons">
         <div class="advantages">
-          <span>✅</span> <p>Simple and efficient</p>
+          <p>✅ Simple to implement</p>
+          <p>✅ Efficient memory use</p>
+          <p>✅ Easy debugging</p>
         </div>
         <div class="disadvantages">
-          <span>❌</span> <p>Limited by stack size</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Possible Implementations -->
-    <section class="box">
-      <h2>Possible Implementations</h2>
-      <div class="implementations">
-        <div class="circle implementation-icon">
-          <div class="icon array-icon"></div>
-          <p>Array</p>
-        </div>
-        <div class="circle implementation-icon">
-          <div class="icon linked-list-icon"></div>
-          <p>Linked List</p>
+          <p>❌ Limited size</p>
+          <p>❌ Lacks random access</p>
+          <p>❌ Overflows on capacity</p>
         </div>
       </div>
     </section>
