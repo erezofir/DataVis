@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-  font-family: 'Montserrat', sans-serif; /* Restoring preferred font */
+  font-family: 'Montserrat', sans-serif; /* Correct font */
   background: #f2f4f6;
   color: #080808;
   margin: 0;
@@ -13,26 +13,6 @@ h1 {
   text-align: center;
   font-size: 2.5rem;
   margin: 1rem;
-}
-
-/* Top Footer */
-.top-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1e1e1e;
-  color: #ffffff;
-  padding: 1rem;
-}
-
-.top-footer .tabs a {
-  color: #ffffff;
-  text-decoration: none;
-  margin-left: 1rem;
-}
-
-.top-footer .tabs a:hover {
-  text-decoration: underline;
 }
 
 /* Grid Layout for Circles */
@@ -48,9 +28,9 @@ h1 {
 
 /* Circle for Icons */
 .circle {
-  width: 120px; /* Reduced size */
+  width: 120px;
   height: 120px;
-  background: #d0ebff; /* Light blue-gray */
+  background: #e0f7fa; /* Light blue-gray */
   color: #080808;
   border-radius: 50%;
   display: flex;
@@ -66,10 +46,16 @@ h1 {
   transform: scale(1.1);
 }
 
+.circle h3 {
+  font-size: 1rem;
+  color: #080808; /* Fixing purple text */
+  margin-top: 0.5rem;
+}
+
 .stack-icon {
-  width: 40px; /* Adjusted icon size */
+  width: 40px;
   height: 40px;
-  background-image: url('../assets/icons/stack-icon.svg'); /* Ensure the file is available */
+  background-image: url('../assets/icons/stack-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -89,34 +75,31 @@ h1 {
 }
 
 .footer-icon {
-  width: 20px;
+  width: 20px; /* Adjusted size */
   height: 20px;
   margin-left: 10px;
 }
-
-/* Visualization Section */
-.visualization canvas {
-  border: 1px solid #00ffcc;
-  background: #e9ecef; /* Light gray background */
-  margin: 1rem auto;
-  display: block;
-  width: 800px; /* Adjusted canvas size */
-  height: 500px;
+/* Advantages and Disadvantages */
+.pros-cons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
 }
 
-.controls button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.advantages, .disadvantages {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #080808;
 }
 
-.controls button:hover {
-  background: #2c7cb3;
+.advantages {
+  color: green;
+}
+
+.disadvantages {
+  color: red;
 }
 
 /* Possible Implementations */
