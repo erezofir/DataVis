@@ -55,13 +55,19 @@ body.stack {
   padding: 2rem;
 }
 
-/* Pyramid Structure */
-.pyramid {
+
+/* Arrange Circles in Pyramid Structure */
+.pyramid-structure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem; /* Space between rows */
-  margin-top: 3rem;
+  gap: 2rem; /* Space between rows */
+}
+
+.pyramid-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between circles in each row */
 }
 
 .row {
