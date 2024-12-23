@@ -36,9 +36,9 @@ function drawStack() {
 
       // Arrow for head pointer
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth + 10, y + rectHeight / 2);
-      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 - 5);
-      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 + 5);
+      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Adjusted starting position
+      ctx.lineTo(x + rectWidth + 30, y + rectHeight / 2 - 5);
+      ctx.lineTo(x + rectWidth + 30, y + rectHeight / 2 + 5);
       ctx.closePath();
       ctx.fillStyle = "#3498db";
       ctx.fill();
@@ -48,7 +48,8 @@ function drawStack() {
     if (index === tail) {
       ctx.fillStyle = "#27ae60"; // Green for tail
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Tail", x - 40, y + rectHeight / 2 + 5);
+      ctx.fillText("Head", x + rectWidth + 30, y + rectHeight / 2 + 5); // Adjusted to move right
+
 
       // Arrow for tail pointer
       ctx.beginPath();
