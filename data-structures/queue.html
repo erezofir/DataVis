@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Visualization</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../scripts/visualizations/queue.js" defer></script>
+</head>
+<body class="queue">
+  <!-- Top Footer -->
+  <header class="top-footer">
+    <div class="site-name">Data Structures Visualization</div>
+    <div class="tabs">
+      <a href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="queue-header">
+      <h1 class="title">Queue</h1>
+      <img src="../assets/illustrations/queue.png" alt="Queue Illustration" class="queue-image">
+    </div>
+
+    <section class="box">
+      <h2>What is it?</h2>
+      <p>A Queue is a First-In-First-Out (FIFO) data structure. Elements are added at the rear and removed from the front.</p>
+    </section>
+
+    <section class="box">
+      <h2>Time and Space Complexity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Operation</th>
+            <th>Time Complexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enqueue</td>
+            <td>O(1)</td>
+          </tr>
+          <tr>
+            <td>Dequeue</td>
+            <td>O(1)</td>
+          </tr>
+          <tr>
+            <td>Peek</td>
+            <td>O(1)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="box">
+      <h2>Properties</h2>
+      <ul class="spaced-list">
+        <li>Follows FIFO principle.</li>
+        <li>Efficient operations at both ends.</li>
+        <li>Can be implemented using arrays or linked lists.</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Operations</h2>
+      <ul>
+        <li>Enqueue: Add an element to the rear.</li>
+        <li>Dequeue: Remove an element from the front.</li>
+        <li>Peek: View the front element without removing it.</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Visualization</h2>
+      <canvas id="queueCanvas" width="400" height="300"></canvas>
+      <div class="controls">
+        <button>Enqueue</button>
+        <button>Dequeue</button>
+        <button>Clear All</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
