@@ -4,47 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stack Visualization</title>
-  <meta name="description" content="Interactive stack visualization with push, pop, and peek operations.">
   <link rel="stylesheet" href="../styles/style.css">
   <script src="../scripts/visualizations/stack.js" defer></script>
 </head>
 <body>
   <header>
+    <a href="../index.html" class="home-icon">🏠</a>
     <h1>Stack</h1>
   </header>
 
   <main>
-    <section class="description">
-      <h2>What is a Stack?</h2>
+    <section class="box">
+      <h2>What is it?</h2>
       <p>A Stack is a Last-In-First-Out (LIFO) data structure. Operations include Push, Pop, and Peek.</p>
-      <h3>Time Complexity</h3>
+    </section>
+
+    <section class="box">
+      <h2>Time Complexity</h2>
       <table>
-        <tr>
-          <th>Operation</th>
-          <th>Time Complexity</th>
-        </tr>
-        <tr>
-          <td>Push</td>
-          <td>O(1)</td>
-        </tr>
-        <tr>
-          <td>Pop</td>
-          <td>O(1)</td>
-        </tr>
-        <tr>
-          <td>Peek</td>
-          <td>O(1)</td>
-        </tr>
+        <tr><th>Operation</th><th>Time Complexity</th></tr>
+        <tr><td>Push</td><td>O(1)</td></tr>
+        <tr><td>Pop</td><td>O(1)</td></tr>
+        <tr><td>Peek</td><td>O(1)</td></tr>
       </table>
     </section>
 
-    <section class="visualization">
-      <h2>Visualization</h2>
+    <section class="box">
+      <h2>Features</h2>
+      <ul>
+        <li>Follows LIFO principle</li>
+        <li>Efficient operations</li>
+        <li>Can be implemented using arrays or linked lists</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Actions</h2>
+      <ul>
+        <li>Push: Add an element to the top</li>
+        <li>Pop: Remove the top element</li>
+        <li>Peek: View the top element without removing it</li>
+        <li>Clear All: Reset the stack</li>
+      </ul>
+    </section>
+
+    <section class="visualization box">
+      <h2>Visualization of the Actions</h2>
       <canvas id="stackCanvas" width="600" height="400"></canvas>
       <div class="controls">
         <button onclick="pushItem()">Push</button>
         <button onclick="popItem()">Pop</button>
         <button onclick="peekItem()">Peek</button>
+        <button onclick="clearAll()">Clear All</button>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>Advantages and Disadvantages</h2>
+      <div class="pros-cons">
+        <div class="advantages">
+          <h3>Advantages</h3>
+          <ul>
+            <li>Simple and efficient</li>
+            <li>Easy to implement</li>
+          </ul>
+        </div>
+        <div class="disadvantages">
+          <h3>Disadvantages</h3>
+          <ul>
+            <li>Limited by stack size</li>
+            <li>No random access to elements</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>Possible Implementations</h2>
+      <div class="implementations">
+        <div class="implementation">
+          <h3>Doubly Linked List</h3>
+          <p>A linked list with nodes connected in both directions.</p>
+        </div>
+        <div class="implementation">
+          <h3>Array</h3>
+          <p>A fixed-size or dynamic array to store elements.</p>
+        </div>
       </div>
     </section>
   </main>

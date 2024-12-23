@@ -15,7 +15,7 @@ function drawStack() {
 }
 
 function pushItem() {
-  const value = prompt("Enter a value to push:");
+  const value = prompt("Enter a value:");
   if (value) {
     stack.push(value);
     drawStack();
@@ -23,20 +23,21 @@ function pushItem() {
 }
 
 function popItem() {
-  if (stack.length > 0) {
-    alert(`Popped: ${stack.pop()}`);
-    drawStack();
-  } else {
-    alert("The stack is empty!");
-  }
+  stack.pop();
+  drawStack();
 }
 
 function peekItem() {
   if (stack.length > 0) {
-    alert(`Top: ${stack[stack.length - 1]}`);
+    alert(`Top Element: ${stack[stack.length - 1]}`);
   } else {
-    alert("The stack is empty!");
+    alert("Stack is empty");
   }
+}
+
+function clearAll() {
+  stack.length = 0;
+  drawStack();
 }
 
 drawStack();
