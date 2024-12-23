@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-  font-family: 'Montserrat', sans-serif; /* Correct font */
+  font-family: 'Montserrat', sans-serif;
   background: #f2f4f6;
   color: #080808;
   margin: 0;
@@ -9,10 +9,30 @@ body {
   min-height: 100vh;
 }
 
-h1 {
+/* Title Typing Effect */
+.title {
   text-align: center;
   font-size: 2.5rem;
-  margin: 1rem;
+  margin: 2rem 0;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+#typing-effect {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
 }
 
 /* Grid Layout for Circles */
@@ -23,15 +43,13 @@ h1 {
   flex-wrap: wrap;
   gap: 1.5rem;
   padding: 2rem;
-  flex: 1;
 }
 
 /* Circle for Icons */
 .circle {
   width: 120px;
   height: 120px;
-  background: #e0f7fa; /* Light blue-gray */
-  color: #080808;
+  background: #d0ebff; /* Light blue-gray */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -48,8 +66,8 @@ h1 {
 
 .circle h3 {
   font-size: 1rem;
-  color: #080808; /* Fixing purple text */
   margin-top: 0.5rem;
+  text-decoration: none; /* Remove underline */
 }
 
 .stack-icon {
@@ -61,81 +79,18 @@ h1 {
   background-size: contain;
 }
 
-/* Bottom Footer */
-.bottom-footer {
+/* Footer Styling */
+.top-footer, .bottom-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1e1e1e;
+  background: #1c2c3f; /* Gray-blue */
   color: #ffffff;
   padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 .footer-icon {
-  width: 20px; /* Adjusted size */
+  width: 20px;
   height: 20px;
   margin-left: 10px;
-}
-/* Advantages and Disadvantages */
-.pros-cons {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 1rem;
-}
-
-.advantages, .disadvantages {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #080808;
-}
-
-.advantages {
-  color: green;
-}
-
-.disadvantages {
-  color: red;
-}
-
-/* Possible Implementations */
-.implementations {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.implementation-icon {
-  width: 100px;
-  height: 100px;
-  background: #d0ebff; /* Light blue-gray */
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.array-icon {
-  background-image: url('../assets/icons/array-icon.svg');
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.linked-list-icon {
-  background-image: url('../assets/icons/linked-list-icon.svg');
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
