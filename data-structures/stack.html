@@ -15,7 +15,10 @@
 
   <main>
     <section class="box">
-      <h2>What is it?</h2>
+      <div class="section-header">
+        <h2>What is it?</h2>
+        <img src="../assets/images/stack-illustration.png" alt="Stack Illustration">
+      </div>
       <p>A Stack is a Last-In-First-Out (LIFO) data structure. Operations include Push, Pop, and Peek.</p>
     </section>
 
@@ -39,22 +42,20 @@
     </section>
 
     <section class="box">
-      <h2>Actions</h2>
+      <h2>Operations</h2>
       <ul>
         <li>Push: Add an element to the top</li>
         <li>Pop: Remove the top element</li>
-        <li>Peek: View the top element without removing it</li>
         <li>Clear All: Reset the stack</li>
       </ul>
     </section>
 
     <section class="visualization box">
-      <h2>Visualization of the Actions</h2>
+      <h2>Visualization</h2>
       <canvas id="stackCanvas" width="600" height="400"></canvas>
       <div class="controls">
         <button onclick="pushItem()">Push</button>
         <button onclick="popItem()">Pop</button>
-        <button onclick="peekItem()">Peek</button>
         <button onclick="clearAll()">Clear All</button>
       </div>
     </section>
@@ -63,18 +64,10 @@
       <h2>Advantages and Disadvantages</h2>
       <div class="pros-cons">
         <div class="advantages">
-          <h3>Advantages</h3>
-          <ul>
-            <li>Simple and efficient</li>
-            <li>Easy to implement</li>
-          </ul>
+          <p>✅ Simple and efficient</p>
         </div>
         <div class="disadvantages">
-          <h3>Disadvantages</h3>
-          <ul>
-            <li>Limited by stack size</li>
-            <li>No random access to elements</li>
-          </ul>
+          <p>❌ Limited by stack size</p>
         </div>
       </div>
     </section>
@@ -83,19 +76,22 @@
       <h2>Possible Implementations</h2>
       <div class="implementations">
         <div class="implementation">
-          <h3>Doubly Linked List</h3>
-          <p>A linked list with nodes connected in both directions.</p>
+          <div class="icon array-icon"></div>
+          <p>Array</p>
         </div>
         <div class="implementation">
-          <h3>Array</h3>
-          <p>A fixed-size or dynamic array to store elements.</p>
+          <div class="icon linked-list-icon"></div>
+          <p>Linked List</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2024 Data Structures Visualization</p>
+  <footer class="footer">
+    <div class="footer-left">Data Structures Visualization</div>
+    <div class="footer-right">
+      <a href="../index.html">Home</a>
+    </div>
   </footer>
 </body>
 </html>

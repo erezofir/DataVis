@@ -1,36 +1,7 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background: #f2f4f6;
-    color: #080808;
-    margin: 0;
-  }
-  
-  header {
-    text-align: center;
-    background: #ffffff;
-    padding: 1rem;
-    position: relative;
-  }
-  
-  header .home-icon {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-  }
-  
-  .circle {
+.circle {
     width: 150px;
     height: 150px;
-    background: #001f54;
+    background: #1e3a8a; /* Dark blue */
     color: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -41,16 +12,47 @@ body {
     transition: transform 0.2s;
   }
   
-  .circle:hover {
-    transform: scale(1.1);
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
   }
   
   .box {
-    background: #ffffff;
+    background: #f9f9f9; /* Light gray */
     border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .section-header img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .pros-cons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
   }
   
   .visualization canvas {
@@ -58,16 +60,7 @@ body {
     margin-top: 1rem;
   }
   
-  .pros-cons {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .advantages {
-    color: darkgreen;
-  }
-  
-  .disadvantages {
-    color: red;
+  .controls button {
+    margin: 0.5rem;
   }
   
