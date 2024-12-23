@@ -54,10 +54,18 @@ body {
   animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
 }
 
-/* Circles */
+/* Grid Layout */
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Ensure the grid fills most of the viewport */
+}
+
+/* Circle for Stack */
 .circle {
-  width: 120px;
-  height: 120px;
+  width: 150px; /* Larger size for better visibility */
+  height: 150px;
   background: #d0ebff; /* Light blue-gray */
   border-radius: 50%;
   display: flex;
@@ -76,12 +84,12 @@ body {
 .circle h3 {
   font-size: 1rem;
   margin-top: 0.5rem;
-  text-decoration: none; /* No underline */
+  text-decoration: none; /* Remove underline */
 }
 
 .stack-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px; /* Adjust size to fit inside the circle */
+  height: 50px;
   background-image: url('../assets/icons/stack.svg'); /* Add stack.svg */
   background-repeat: no-repeat;
   background-position: center;
