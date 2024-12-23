@@ -81,8 +81,8 @@ body.stack {
 
 /* Circle Styling */
 .circle {
-  width: 100px; /* Adjusted size */
-  height: 100px;
+  width: 120px; /* Increased size */
+  height: 120px;
   background: #d0ebff; /* Light blue-gray */
   border-radius: 50%;
   display: flex;
@@ -90,8 +90,8 @@ body.stack {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  transition: transform 0.2s;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Allows placement anywhere */
+  transition: transform 0.3s ease-out;
 }
 
 .circle:hover {
@@ -99,7 +99,7 @@ body.stack {
 }
 
 .circle h3 {
-  font-size: 1.5rem;
+  font-size: 0.85rem; /* Reduced size */
   margin-top: 0.5rem;
   text-decoration: none; /* No underline */
 }
@@ -125,10 +125,10 @@ body.stack {
   -webkit-animation: fall 1.5s ease-out;
 }
 
-.stack-icon {
+
+.icon {
   width: 50px;
   height: 50px;
-  background-image: url('../assets/icons/stack.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -141,27 +141,23 @@ body.stack {
   -webkit-animation: rotateIcon 4s linear infinite;
 }
 
-@keyframes rotateIcon {
-  from {
-    transform: rotate(0deg);
+/* Falling with Bounce Animation */
+@keyframes fallBounce {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  80% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-/* Decorations (e.g., Arrows, Dots) */
-.decorations {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Not clickable */
-  background-image: url('../assets/decorations.svg'); /* Path to your SVG file */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.fall-animation {
+  animation: fallBounce 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 /* Pointer Styling */
