@@ -10,13 +10,13 @@ body {
 /* Home Page Background */
 body.home {
   background: #0d1a2d; /* Dark blue */
-  color: #ffffff;
+  color: #515393;
 }
 
 /* Stack Page Background */
 body.stack {
   background: #b5b7bae0; /* Light gray */
-  color: #080808;
+  color: #030058;
 }
 
 /* Top Footer */
@@ -41,8 +41,8 @@ body.stack {
 /* Home Page Main Title */
 .main-title {
   font-family: 'Oswald', sans-serif;
-  font-size: 4rem; /* Larger font size */
-  color: #aee1eb; /* White text */
+  font-size: 8rem; /* Larger font size */
+  color: #42828f; /* White text */
   margin: 2rem;
   text-align: left; /* Indented to the left */
 }
