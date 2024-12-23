@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Structures Visualization</title>
   <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/falling-animation.js" defer></script>
 </head>
 <body class="home">
   <!-- Top Footer -->
@@ -17,46 +18,47 @@
 
   <!-- Main Content -->
   <main>
-    <div class="home-content">
-      <h1 class="main-title">Data Structures</h1>
-      <div class="stacked-circles">
-        <!-- Stack Circle -->
+    <h1 class="main-title">Data Structures</h1>
+    <div class="pyramid">
+      <!-- Level 1 -->
+      <div class="circle fall-animation">
+        <a href="data-structures/stack.html">
+          <div class="icon" style="background-image: url('assets/icons/stack.svg');"></div>
+          <h3>Stack</h3>
+        </a>
+      </div>
+
+      <!-- Level 2 -->
+      <div class="row">
         <div class="circle fall-animation">
-          <a href="data-structures/stack.html">
-            <div class="icon" style="background-image: url('assets/icons/stack.svg');"></div>
-            <h3>Stack</h3>
-          </a>
-        </div>
-        <!-- Array Circle -->
-        <div class="circle fall-animation" style="background-color: #add8e6;"> <!-- Lighter shade -->
           <a href="data-structures/array.html">
             <div class="icon" style="background-image: url('assets/icons/array.svg');"></div>
             <h3>Array</h3>
           </a>
         </div>
-        <!-- Queue Circle -->
-        <div class="circle fall-animation" style="background-color: #b0e0e6;"> <!-- Slightly darker shade -->
+        <div class="circle fall-animation">
           <a href="data-structures/queue.html">
             <div class="icon" style="background-image: url('assets/icons/queue.svg');"></div>
             <h3>Queue</h3>
           </a>
         </div>
-        <!-- Hash Table Circle -->
-        <div class="circle fall-animation" style="background-color: #87ceeb;"> <!-- Different shade -->
+      </div>
+
+      <!-- Level 3 -->
+      <div class="row">
+        <div class="circle fall-animation">
           <a href="data-structures/hash-table.html">
             <div class="icon" style="background-image: url('assets/icons/hash-table.svg');"></div>
             <h3>Hash Table</h3>
           </a>
         </div>
-        <!-- Tree Circle -->
-        <div class="circle fall-animation" style="background-color: #4682b4;"> <!-- Darker blue -->
+        <div class="circle fall-animation">
           <a href="data-structures/tree.html">
             <div class="icon" style="background-image: url('assets/icons/tree.svg');"></div>
             <h3>Tree</h3>
           </a>
         </div>
-        <!-- Graph Circle -->
-        <div class="circle fall-animation" style="background-color: #5f9ea0;"> <!-- Darker shade -->
+        <div class="circle fall-animation">
           <a href="data-structures/graph.html">
             <div class="icon" style="background-image: url('assets/icons/graph.svg');"></div>
             <h3>Graph</h3>
