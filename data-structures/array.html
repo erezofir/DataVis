@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Visualization</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../scripts/visualizations/array.js" defer></script>
+</head>
+<body class="array">
+  <!-- Top Footer -->
+  <header class="top-footer">
+    <div class="site-name">Data Structures Visualization</div>
+    <div class="tabs">
+      <a href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="array-header">
+      <h1 class="title">Array</h1>
+      <img src="../assets/illustrations/array.png" alt="Array Illustration" class="array-image">
+    </div>
+
+    <section class="box">
+      <h2>What is it?</h2>
+      <p>An array is a collection of items stored at contiguous memory locations. It allows random access and manipulation of data elements.</p>
+    </section>
+
+    <section class="box">
+      <h2>Time and Space Complexity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Operation</th>
+            <th>Time Complexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Access</td>
+            <td>O(1)</td>
+          </tr>
+          <tr>
+            <td>Search</td>
+            <td>O(n)</td>
+          </tr>
+          <tr>
+            <td>Insert</td>
+            <td>O(n)</td>
+          </tr>
+          <tr>
+            <td>Delete</td>
+            <td>O(n)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="box">
+      <h2>Properties</h2>
+      <ul class="spaced-list">
+        <li>Contiguous memory allocation.</li>
+        <li>Fixed size (in static arrays).</li>
+        <li>Efficient access via index.</li>
+        <li>Homogeneous data elements.</li>
+        <li>Can be single-dimensional or multi-dimensional.</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Operations</h2>
+      <ul>
+        <li>Access by index.</li>
+        <li>Insert and delete at specific positions.</li>
+        <li>Traversal to process all elements.</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Visualization</h2>
+      <canvas id="arrayCanvas" width="400" height="300"></canvas>
+      <div class="controls">
+        <button>Insert</button>
+        <button>Delete</button>
+        <button>Search</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
