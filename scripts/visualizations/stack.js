@@ -28,7 +28,7 @@ function drawStack() {
     ctx.font = "16px 'Montserrat', sans-serif"; // Font for "empty"
     ctx.fillText(item, x + rectWidth / 2, y + rectHeight / 2 + 5);
 
-    // Add head pointer (on the right, pointing inward)
+    // Add head pointer (on the right, pointing left)
     if (index === head) {
       ctx.fillStyle = "#3498db"; // Blue for head
       ctx.font = "16px 'Montserrat', sans-serif";
@@ -42,17 +42,17 @@ function drawStack() {
       ctx.lineWidth = 2;
       ctx.stroke();
 
-      // Arrow for head pointer (pointing inward)
+      // Arrow for head pointer (pointing left)
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Start further right
-      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2 - 5); // Point toward cell
-      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2 + 5); // Point toward cell
+      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Start at arrow line
+      ctx.lineTo(x + rectWidth + 30, y + rectHeight / 2 - 5); // Point leftward
+      ctx.lineTo(x + rectWidth + 30, y + rectHeight / 2 + 5);
       ctx.closePath();
       ctx.fillStyle = "#3498db";
       ctx.fill();
     }
 
-    // Add tail pointer (on the left, pointing inward)
+    // Add tail pointer (on the left, pointing right)
     if (index === tail) {
       ctx.fillStyle = "#27ae60"; // Green for tail
       ctx.font = "16px 'Montserrat', sans-serif";
@@ -66,18 +66,17 @@ function drawStack() {
       ctx.lineWidth = 2;
       ctx.stroke();
 
-      // Arrow for tail pointer (pointing inward)
+      // Arrow for tail pointer (pointing right)
       ctx.beginPath();
-      ctx.moveTo(x - 20, y + rectHeight / 2); // Start further left
-      ctx.lineTo(x - 10, y + rectHeight / 2 - 5); // Point toward cell
-      ctx.lineTo(x - 10, y + rectHeight / 2 + 5); // Point toward cell
+      ctx.moveTo(x - 20, y + rectHeight / 2); // Start at arrow line
+      ctx.lineTo(x - 30, y + rectHeight / 2 - 5); // Point rightward
+      ctx.lineTo(x - 30, y + rectHeight / 2 + 5);
       ctx.closePath();
       ctx.fillStyle = "#27ae60";
       ctx.fill();
     }
   });
 }
-
 
 
 
