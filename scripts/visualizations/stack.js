@@ -28,15 +28,15 @@ function drawStack() {
     ctx.font = "16px 'Montserrat', sans-serif"; // Font for "empty"
     ctx.fillText(item, x + rectWidth / 2, y + rectHeight / 2 + 5);
 
-    // Add head pointer (on the right, pointing left)
+    // Add head pointer (on the right, pointing inward)
     if (index === head) {
       ctx.fillStyle = "#3498db"; // Blue for head
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Head", x + rectWidth + 40, y + rectHeight / 2 + 5); // Adjusted position further right
+      ctx.fillText("Head", x + rectWidth + 25, y + rectHeight / 2 + 5); // Position name
 
       // Draw pressure line
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth + 30, y + rectHeight / 2); // Line start further right
+      ctx.moveTo(x + rectWidth + 30, y + rectHeight / 2); // From "Head" text
       ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2); // To the arrow base
       ctx.strokeStyle = "#3498db";
       ctx.lineWidth = 2;
@@ -52,15 +52,15 @@ function drawStack() {
       ctx.fill();
     }
 
-    // Add tail pointer (on the left, pointing right)
+    // Add tail pointer (on the left, pointing inward)
     if (index === tail) {
       ctx.fillStyle = "#27ae60"; // Green for tail
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Tail", x - 70, y + rectHeight / 2 + 5); // Adjusted position further left
+      ctx.fillText("Tail", x - 50, y + rectHeight / 2 + 5); // Position name
 
       // Draw pressure line
       ctx.beginPath();
-      ctx.moveTo(x - 30, y + rectHeight / 2); // Line start further left
+      ctx.moveTo(x - 50, y + rectHeight / 2); // From "Tail" text
       ctx.lineTo(x - 20, y + rectHeight / 2); // To the arrow base
       ctx.strokeStyle = "#27ae60";
       ctx.lineWidth = 2;
@@ -77,6 +77,7 @@ function drawStack() {
     }
   });
 }
+
 
 
 // Push operation
