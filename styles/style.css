@@ -9,62 +9,99 @@ body {
   min-height: 100vh;
 }
 
-/* Top and Bottom Footers */
-.top-footer, .bottom-footer {
-  background: #1c1c1c; /* Dark gray */
-  color: #ffffff;
-  padding: 1rem;
+/* Top Footer */
+.top-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #4a4a4a; /* Dark gray */
+  color: #ffffff;
+  padding: 1rem;
 }
 
-.footer-icon {
-  width: 20px;
-  height: 20px;
+.top-footer .tabs a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-/* Title */
+.top-footer .tabs a:hover {
+  text-decoration: underline;
+}
+
+/* Title Typing Effect */
 .title {
   text-align: center;
   font-size: 2.5rem;
   margin: 2rem 0;
 }
 
-/* Boxes */
-.box {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+#typing-effect {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
+}
+
+/* Circles */
+.circle {
+  width: 120px;
+  height: 120px;
+  background: #d0ebff; /* Light blue-gray */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.2s;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Visualization Section */
-.visualization canvas {
-  border: 1px solid #00ffcc;
-  background: #e9ecef;
-  margin: 1rem auto;
-  display: block;
-  width: 800px;
-  height: 500px;
+.circle:hover {
+  transform: scale(1.1);
 }
 
-.controls {
-  text-align: center;
-}
-
-.controls button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
+.circle h3 {
   font-size: 1rem;
-  background: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-top: 0.5rem;
+  text-decoration: none; /* No underline */
 }
 
-.controls button:hover {
-  background: #2c7cb3;
+.stack-icon {
+  width: 40px;
+  height: 40px;
+  background-image: url('../assets/icons/stack.svg'); /* Add stack.svg */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Bottom Footer */
+.bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4a4a4a; /* Dark gray */
+  color: #ffffff;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
 }
