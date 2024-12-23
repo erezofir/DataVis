@@ -15,7 +15,7 @@ body.home {
 
 /* Stack Page Background */
 body.stack {
-  background: #c5c9cde0; /* Light gray */
+  background: #b5b7bae0; /* Light gray */
   color: #080808;
 }
 
@@ -140,7 +140,7 @@ body.stack {
 
 /* General Box Styling for Sections */
 .box {
-  background: #ffffff; /* White background for contrast */
+  background: #f2efefe3; /* White background for contrast */
   border-radius: 8px;
   padding: 1.5rem;
   margin: 1.5rem 0;
