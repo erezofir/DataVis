@@ -35,7 +35,7 @@ body.stack {
 }
 
 .top-footer .tabs a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Home Page Main Title */
@@ -75,7 +75,7 @@ body.stack {
 }
 
 .circle h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 0.5rem;
   text-decoration: none; /* No underline */
 }
