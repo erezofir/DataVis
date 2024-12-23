@@ -28,39 +28,40 @@ function drawStack() {
     ctx.font = "16px 'Montserrat', sans-serif"; // Font for "empty"
     ctx.fillText(item, x + rectWidth / 2, y + rectHeight / 2 + 5);
 
-    // Add head pointer (on the right)
+    // Add head pointer (on the right, pointing inward)
     if (index === head) {
       ctx.fillStyle = "#3498db"; // Blue for head
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Head", x + rectWidth + 30, y + rectHeight / 2 + 5);
+      ctx.fillText("Head", x + rectWidth + 40, y + rectHeight / 2 + 5); // Move further to the right
 
-      // Arrow for head pointer
+      // Arrow for head pointer (pointing inward)
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Start at right edge of the cell
-      ctx.lineTo(x + rectWidth + 30, y + rectHeight / 2 - 5);
-      ctx.lineTo(x + rectWidth + 30, y + rectHeight / 2 + 5);
+      ctx.moveTo(x + rectWidth + 30, y + rectHeight / 2); // Start slightly further to the right
+      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 - 5); // Point back toward the cell
+      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 + 5); // Point back toward the cell
       ctx.closePath();
       ctx.fillStyle = "#3498db";
       ctx.fill();
     }
 
-    // Add tail pointer (on the left)
+    // Add tail pointer (on the left, pointing inward)
     if (index === tail) {
       ctx.fillStyle = "#27ae60"; // Green for tail
       ctx.font = "16px 'Montserrat', sans-serif";
       ctx.fillText("Tail", x - 50, y + rectHeight / 2 + 5); // Adjust to the left side of the cell
 
-      // Arrow for tail pointer
+      // Arrow for tail pointer (pointing inward)
       ctx.beginPath();
-      ctx.moveTo(x - 20, y + rectHeight / 2); // Start at left edge of the cell
-      ctx.lineTo(x - 30, y + rectHeight / 2 - 5);
-      ctx.lineTo(x - 30, y + rectHeight / 2 + 5);
+      ctx.moveTo(x - 20, y + rectHeight / 2); // Start slightly further to the left
+      ctx.lineTo(x - 10, y + rectHeight / 2 - 5); // Point back toward the cell
+      ctx.lineTo(x - 10, y + rectHeight / 2 + 5); // Point back toward the cell
       ctx.closePath();
       ctx.fillStyle = "#27ae60";
       ctx.fill();
     }
   });
 }
+
 
 
 // Push operation
