@@ -34,11 +34,19 @@ function drawStack() {
       ctx.font = "16px 'Montserrat', sans-serif";
       ctx.fillText("Head", x + rectWidth + 50, y + rectHeight / 2 + 5); // Move further to the right
 
-      // Arrow for head pointer
+      // Draw pressure line
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Start at the far right of the arrow
-      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2 - 5); // Pointing inward to the cell
-      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2 + 5);
+      ctx.moveTo(x + rectWidth, y + rectHeight / 2); // End of rectangle (right side)
+      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2); // Line to arrow
+      ctx.strokeStyle = "#3498db";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Arrow for head pointer (pointing inward)
+      ctx.beginPath();
+      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Start further right
+      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2 - 5); // Point toward cell
+      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2 + 5); // Point toward cell
       ctx.closePath();
       ctx.fillStyle = "#3498db";
       ctx.fill();
@@ -50,17 +58,26 @@ function drawStack() {
       ctx.font = "16px 'Montserrat', sans-serif";
       ctx.fillText("Tail", x - 60, y + rectHeight / 2 + 5); // Adjust further to the left
 
-      // Arrow for tail pointer
+      // Draw pressure line
+      ctx.beginPath();
+      ctx.moveTo(x, y + rectHeight / 2); // Start of rectangle (left side)
+      ctx.lineTo(x - 20, y + rectHeight / 2); // Line to arrow
+      ctx.strokeStyle = "#27ae60";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Arrow for tail pointer (pointing inward)
       ctx.beginPath();
       ctx.moveTo(x - 20, y + rectHeight / 2); // Start further left
-      ctx.lineTo(x - 10, y + rectHeight / 2 - 5); // Pointing inward to the cell
-      ctx.lineTo(x - 10, y + rectHeight / 2 + 5);
+      ctx.lineTo(x - 10, y + rectHeight / 2 - 5); // Point toward cell
+      ctx.lineTo(x - 10, y + rectHeight / 2 + 5); // Point toward cell
       ctx.closePath();
       ctx.fillStyle = "#27ae60";
       ctx.fill();
     }
   });
 }
+
 
 
 
