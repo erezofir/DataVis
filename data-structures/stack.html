@@ -8,6 +8,7 @@
   <script src="../scripts/visualizations/stack.js" defer></script>
 </head>
 <body>
+  <!-- Top Footer -->
   <header class="top-footer">
     <div class="site-name">Data Structures Visualization</div>
     <div class="tabs">
@@ -15,46 +16,21 @@
     </div>
   </header>
 
+  <!-- Main Content -->
   <main>
+    <!-- What is it Section -->
     <section class="box">
+      <h2>What is it?</h2>
       <div class="section-header">
-        <h2>What is it?</h2>
         <img src="../assets/images/stack-illustration.png" alt="Stack Illustration">
+        <p>A Stack is a Last-In-First-Out (LIFO) data structure. Operations include Push, Pop, and Peek.</p>
       </div>
-      <p>A Stack is a Last-In-First-Out (LIFO) data structure. Operations include Push, Pop, and Peek.</p>
     </section>
 
-    <section class="box">
-      <h2>Time Complexity</h2>
-      <table>
-        <tr><th>Operation</th><th>Time Complexity</th></tr>
-        <tr><td>Push</td><td>O(1)</td></tr>
-        <tr><td>Pop</td><td>O(1)</td></tr>
-        <tr><td>Peek</td><td>O(1)</td></tr>
-      </table>
-    </section>
-
-    <section class="box">
-      <h2>Properties</h2>
-      <ul>
-        <li>Follows LIFO principle</li>
-        <li>Efficient operations</li>
-        <li>Can be implemented using arrays or linked lists</li>
-      </ul>
-    </section>
-
-    <section class="box">
-      <h2>Operations</h2>
-      <ul>
-        <li>Push: Add an element to the top</li>
-        <li>Pop: Remove the top element</li>
-        <li>Clear All: Reset the stack</li>
-      </ul>
-    </section>
-
+    <!-- Visualization Section -->
     <section class="visualization box">
       <h2>Visualization</h2>
-      <canvas id="stackCanvas" width="600" height="400"></canvas>
+      <canvas id="stackCanvas" width="800" height="500"></canvas> <!-- Larger canvas -->
       <div class="controls">
         <button onclick="pushItem()">Push</button>
         <button onclick="popItem()">Pop</button>
@@ -62,14 +38,7 @@
       </div>
     </section>
 
-    <section class="box">
-      <h2>Advantages and Disadvantages</h2>
-      <div class="pros-cons">
-        <div class="advantages" style="color: darkgreen;">✅ Simple and efficient</div>
-        <div class="disadvantages" style="color: red;">❌ Limited by stack size</div>
-      </div>
-    </section>
-
+    <!-- Possible Implementations -->
     <section class="box">
       <h2>Possible Implementations</h2>
       <div class="implementations">
