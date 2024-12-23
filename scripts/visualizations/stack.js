@@ -19,3 +19,31 @@ function drawStack() {
 }
 
 // Add event handlers for Push, Pop, Clear All
+
+
+function pushItem() {
+  const value = prompt("Enter a value:");
+  if (value) {
+    stack.push(value);
+    head = stack.length - 1;
+    drawStack();
+  }
+}
+
+function popItem() {
+  if (stack.length > 1) {
+    stack.pop();
+    head = stack.length - 1;
+    drawStack();
+  }
+}
+
+function clearAll() {
+  stack.length = 1;
+  stack[0] = "empty";
+  head = 0;
+  drawStack();
+}
+
+drawStack();
+

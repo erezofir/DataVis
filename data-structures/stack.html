@@ -16,25 +16,28 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <h1 class="title">Stack</h1>
-
-    <section class="box">
-      <h2>What is it?</h2>
-      <p>A Stack is a Last-In-First-Out (LIFO) data structure...</p>
-    </section>
-
-    <section class="visualization box">
-      <h2>Visualization</h2>
-      <canvas id="stackCanvas" width="800" height="500"></canvas>
-      <div class="controls">
-        <button onclick="pushItem()">Push</button>
-        <button onclick="popItem()">Pop</button>
-        <button onclick="clearAll()">Clear All</button>
-      </div>
-    </section>
-
+    <!-- Main Content -->
+    <main>
+      <!-- What is it Section -->
+      <section class="box">
+        <h2>What is it?</h2>
+        <div class="section-header">
+          <img src="../assets/images/stack-illustration.png" alt="Stack Illustration">
+          <p>A Stack is a Last-In-First-Out (LIFO) data structure. Operations include Push, Pop, and Peek.</p>
+        </div>
+      </section>
+  
+      <!-- Visualization Section -->
+      <section class="visualization box">
+        <h2>Visualization</h2>
+        <canvas id="stackCanvas" width="800" height="500"></canvas> <!-- Larger canvas -->
+        <div class="controls">
+          <button onclick="pushItem()">Push</button>
+          <button onclick="popItem()">Pop</button>
+          <button onclick="clearAll()">Clear All</button>
+        </div>
+      </section>
+  
     <section class="box">
       <h2>Advantages and Disadvantages</h2>
       <div class="pros-cons">
