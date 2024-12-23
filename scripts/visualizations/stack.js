@@ -1,3 +1,12 @@
+const canvas = document.getElementById("stackCanvas");
+const ctx = canvas.getContext("2d");
+
+// Stack initialization
+let stack = ["empty"];
+let head = 0; // Initial top pointer
+let tail = 0; // Initial bottom pointer
+
+// Draw the stack
 function drawStack() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -52,3 +61,50 @@ function drawStack() {
     }
   });
 }
+
+// Push operation
+function pushItem() {
+  const value = prompt("Enter a value:");
+  if (!value) return;
+
+  if (stack[0] === "empty") {
+    stack[0] = value;
+    head = 0;
+    tail = 0;
+  } else {
+    stack.push(value);
+    head = stack.length - 1;
+  }
+
+  drawStack();
+}
+
+// Pop operation
+function popItem() {
+  if (stack.length === 1 && stack[0] === "empty") {
+    alert("Stack is empty!");
+    return;
+  }
+
+  stack.pop();
+  head = stack.length - 1;
+
+  if (stack.length === 0) {
+    stack = ["empty"];
+    head = 0;
+    tail = 0;
+  }
+
+  drawStack();
+}
+
+// Clear All operation
+function clearAll() {
+  stack = ["empty"];
+  head = 0;
+  tail = 0;
+  drawStack();
+}
+
+// Initialize visualization
+drawStack();
