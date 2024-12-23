@@ -70,11 +70,6 @@ body.stack {
   gap: 2rem; /* Space between circles in each row */
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* Space between circles */
-}
 
 /* Stacked Circles */
 .stacked-circles {
