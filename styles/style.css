@@ -1,9 +1,9 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    background: #f2f4f6;
+    color: #080808;
     margin: 0;
-  }
+  }  
   
   header, footer {
     background-color: #1e1e1e;
@@ -17,38 +17,43 @@ body {
     text-decoration: none;
   }
   
-  .grid {
+  ..grid {
     display: flex;
     justify-content: center;
     padding: 2rem;
   }
   
-  .card {
-    background-color: #222222;
-    padding: 1rem;
+  .circle {
+    width: 150px;
+    height: 150px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin: 1rem;
-    text-align: center;
-    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
   }
   
-  .card img {
-    width: 100px;
-    height: auto;
+  .circle:hover {
+    transform: scale(1.1);
   }
   
-  .card h3 {
-    color: #00ffcc;
+  .circle h3 {
+    font-size: 1.2rem;
+    color: #080808;
   }
   
-  /* New styles for visualization */
-  .visualization {
-    text-align: center;
-    margin-top: 2rem;
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
   }
   
-  canvas {
-    background-color: #1e1e1e;
-    border: 1px solid #00ffcc;
-    margin: 1rem auto;
+  .stack-icon {
+    background: url('../assets/icons/stack.svg') no-repeat center center;
+    background-size: contain;
   }
   
