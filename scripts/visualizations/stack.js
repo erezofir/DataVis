@@ -28,15 +28,15 @@ function drawStack() {
     ctx.font = "16px 'Montserrat', sans-serif"; // Font for "empty"
     ctx.fillText(item, x + rectWidth / 2, y + rectHeight / 2 + 5);
 
-    // Add head pointer
+    // Add head pointer (on the right)
     if (index === head) {
       ctx.fillStyle = "#3498db"; // Blue for head
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Head", x + rectWidth + 20, y + rectHeight / 2 + 5);
+      ctx.fillText("Head", x + rectWidth + 30, y + rectHeight / 2 + 5);
 
       // Arrow for head pointer
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Adjusted starting position
+      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Start at right edge of the cell
       ctx.lineTo(x + rectWidth + 30, y + rectHeight / 2 - 5);
       ctx.lineTo(x + rectWidth + 30, y + rectHeight / 2 + 5);
       ctx.closePath();
@@ -44,24 +44,24 @@ function drawStack() {
       ctx.fill();
     }
 
-    // Add tail pointer
+    // Add tail pointer (on the left)
     if (index === tail) {
       ctx.fillStyle = "#27ae60"; // Green for tail
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Head", x + rectWidth + 30, y + rectHeight / 2 + 5); // Adjusted to move right
-
+      ctx.fillText("Tail", x - 50, y + rectHeight / 2 + 5); // Adjust to the left side of the cell
 
       // Arrow for tail pointer
       ctx.beginPath();
-      ctx.moveTo(x - 10, y + rectHeight / 2);
-      ctx.lineTo(x - 20, y + rectHeight / 2 - 5);
-      ctx.lineTo(x - 20, y + rectHeight / 2 + 5);
+      ctx.moveTo(x - 20, y + rectHeight / 2); // Start at left edge of the cell
+      ctx.lineTo(x - 30, y + rectHeight / 2 - 5);
+      ctx.lineTo(x - 30, y + rectHeight / 2 + 5);
       ctx.closePath();
       ctx.fillStyle = "#27ae60";
       ctx.fill();
     }
   });
 }
+
 
 // Push operation
 function pushItem() {

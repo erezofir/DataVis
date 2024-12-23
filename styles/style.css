@@ -170,8 +170,9 @@ body.stack {
 }
 
 .stack-image {
-  width: 100px;
+  width: 180px;
   height: auto;
+  margin-left: 1rem; /* Add spacing from the title */
 }
 
 /* General Box Styling for Sections */
