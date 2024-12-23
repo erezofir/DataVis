@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Restoring preferred font */
   background: #f2f4f6;
   color: #080808;
   margin: 0;
@@ -9,12 +9,18 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
 /* Top Footer */
 .top-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1c2c3f; /* Gray-blue */
+  background: #1e1e1e;
   color: #ffffff;
   padding: 1rem;
 }
@@ -22,43 +28,30 @@ body {
 .top-footer .tabs a {
   color: #ffffff;
   text-decoration: none;
+  margin-left: 1rem;
 }
 
 .top-footer .tabs a:hover {
   text-decoration: underline;
 }
 
-/* Title Typing Effect */
-.title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 2rem 0;
+/* Grid Layout for Circles */
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  flex: 1;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
-
-#typing-effect {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid black;
-  width: 0;
-  animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
-}
-
-/* Circles */
+/* Circle for Icons */
 .circle {
-  width: 120px;
+  width: 120px; /* Reduced size */
   height: 120px;
   background: #d0ebff; /* Light blue-gray */
+  color: #080808;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -73,16 +66,10 @@ body {
   transform: scale(1.1);
 }
 
-.circle h3 {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  text-decoration: none; /* No underline */
-}
-
 .stack-icon {
-  width: 40px;
+  width: 40px; /* Adjusted icon size */
   height: 40px;
-  background-image: url('../assets/icons/stack-icon.svg');
+  background-image: url('../assets/icons/stack-icon.svg'); /* Ensure the file is available */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -93,7 +80,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1c2c3f; /* Gray-blue */
+  background: #1e1e1e;
   color: #ffffff;
   padding: 1rem;
   position: fixed;
@@ -104,30 +91,17 @@ body {
 .footer-icon {
   width: 20px;
   height: 20px;
-}
-
-/* Subheading Boxes */
-.box {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
 }
 
 /* Visualization Section */
 .visualization canvas {
   border: 1px solid #00ffcc;
-  background: #e9ecef;
+  background: #e9ecef; /* Light gray background */
   margin: 1rem auto;
   display: block;
-  width: 800px;
+  width: 800px; /* Adjusted canvas size */
   height: 500px;
-}
-
-.controls {
-  text-align: center;
-  margin-top: 1rem;
 }
 
 .controls button {
@@ -139,4 +113,46 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.controls button:hover {
+  background: #2c7cb3;
+}
+
+/* Possible Implementations */
+.implementations {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.implementation-icon {
+  width: 100px;
+  height: 100px;
+  background: #d0ebff; /* Light blue-gray */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.array-icon {
+  background-image: url('../assets/icons/array-icon.svg');
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.linked-list-icon {
+  background-image: url('../assets/icons/linked-list-icon.svg');
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
