@@ -42,7 +42,7 @@ body.stack {
 .main-title {
   font-family: 'Oswald', sans-serif;
   font-size: 7rem; /* font size */
-  color: #42828f; /* color text */
+  color: #85b6c0; /* color text */
   margin: 2rem;
   text-align: left; /* Indented to the left */
 }
@@ -105,6 +105,20 @@ body.stack {
   }
 }
 
+/* Decorations (e.g., Arrows, Dots) */
+.decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Not clickable */
+  background-image: url('../assets/decorations.svg'); /* Add SVG decorations */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /* Git Icon */
 .git-icon {
   position: fixed;
@@ -140,7 +154,7 @@ body.stack {
 
 /* General Box Styling for Sections */
 .box {
-  background: #cecece;
+  background: #dedada;
   /*Whitebackgroundforcontrast*/border-radius: 8px;
   padding: 1.5rem;
   margin: 1.5rem 0;
@@ -181,8 +195,8 @@ table th {
   background: #e9ecef;
   margin: 1rem auto;
   display: block;
-  width: 500px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
 }
 
 .controls {
