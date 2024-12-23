@@ -55,8 +55,15 @@ body {
 }
 
 /* Circles for Icons on the Home Page */
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Center vertically */
+}
+
 .circle {
-  width: 150px; /* Larger circle for better design */
+  width: 150px; /* Size of the circle */
   height: 150px;
   background: #d0ebff; /* Light blue-gray */
   border-radius: 50%;
@@ -80,7 +87,7 @@ body {
 }
 
 .stack-icon {
-  width: 50px; /* Icon fits inside the circle */
+  width: 50px; /* Icon size */
   height: 50px;
   background-image: url('../assets/icons/stack.svg');
   background-repeat: no-repeat;
