@@ -126,11 +126,11 @@ body.stack {
 }
 
 .pointer.head {
-  color: #3498db; /* Blue for head */
+  color: #dfa4e8; /* Blue for head */
 }
 
 .pointer.tail {
-  color: #27ae60; /* Green for tail */
+  color: #8ce2df; /* Green for tail */
 }
 
 .pointer-arrow {
@@ -177,7 +177,8 @@ body.stack {
 /* General Box Styling for Sections */
 .box {
   background: #f1efef;
-  /*Whitebackgroundforcontrast*/border-radius: 8px;
+  /*Whitebackgroundforcontrast*/
+  border-radius: 8px;
   padding: 1.5rem;
   margin: 1.5rem 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
