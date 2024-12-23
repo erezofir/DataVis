@@ -4,4 +4,3 @@ document.addEventListener("DOMContentLoaded", () => {
       circle.style.animationDelay = `${index * 0.3}s`; // Staggered bounce
     });
   });
-  
