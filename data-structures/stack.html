@@ -18,63 +18,16 @@
 
   <!-- Main Content -->
   <main>
-    <h1 class="title">Stack</h1>
+    <div class="stack-header">
+      <h1 class="title">Stack</h1>
+      <img src="../assets/images/stack.png" alt="Stack Illustration" class="stack-image">
+    </div>
 
     <!-- What is it Section -->
     <section class="box">
       <h2>What is it?</h2>
-      <p>A Stack is a Last-In-First-Out (LIFO) data structure that supports operations like push, pop, and peek...</p>
+      <p>A Stack is a Last-In-First-Out (LIFO) data structure...</p>
     </section>
-
-    <!-- Time Complexity -->
-    <section class="box">
-      <h2>Time and Space Complexity</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Operation</th>
-            <th>Time Complexity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Push</td>
-            <td>O(1)</td>
-          </tr>
-          <tr>
-            <td>Pop</td>
-            <td>O(1)</td>
-          </tr>
-          <tr>
-            <td>Peek</td>
-            <td>O(1)</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Properties -->
-    <section class="box">
-      <h2>Properties</h2>
-      <ul>
-        <li>Follows Last-In-First-Out (LIFO) principle.</li>
-        <li>Supports efficient O(1) operations for push and pop.</li>
-        <li>Can be implemented using arrays or linked lists.</li>
-        <li>Used for managing nested function calls and recursion.</li>
-        <li>Simple and memory-efficient structure.</li>
-      </ul>
-    </section>
-
-    <!-- Operations Section -->
-    <section class="box">
-      <h2>Operations</h2>
-      <ul>
-        <li>Push: Add an element to the stack.</li>
-        <li>Pop: Remove the top element from the stack.</li>
-        <li>Peek: View the top element of the stack without removing it.</li>
-      </ul>
-    </section>
-    
 
     <!-- Visualization -->
     <section class="visualization box">
@@ -84,38 +37,6 @@
         <button onclick="pushItem()">Push</button>
         <button onclick="popItem()">Pop</button>
         <button onclick="clearAll()">Clear All</button>
-      </div>
-    </section>
-
-    <!-- Advantages and Disadvantages -->
-    <section class="box">
-      <h2>Advantages and Disadvantages</h2>
-      <div class="pros-cons">
-        <div class="advantages">
-          <p>✅ Simple and efficient</p>
-          <p>✅ Minimal memory overhead</p>
-          <p>✅ Easy debugging and testing</p>
-        </div>
-        <div class="disadvantages">
-          <p>❌ Limited size (in bounded stacks)</p>
-          <p>❌ No random access to elements</p>
-          <p>❌ Overflow and underflow issues</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Possible Implementations -->
-    <section class="box">
-      <h2>Possible Implementations</h2>
-      <div class="implementations">
-        <div class="circle implementation-icon">
-          <div class="icon array-icon"></div>
-          <p>Array</p>
-        </div>
-        <div class="circle implementation-icon">
-          <div class="icon linked-list-icon"></div>
-          <p>Linked List</p>
-        </div>
       </div>
     </section>
   </main>

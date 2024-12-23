@@ -1,12 +1,22 @@
 /* General Styling */
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #0d1a2d; /* Very dark blue */
-  color: #080808;
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* Home Page Background */
+body.home {
+  background: #0d1a2d; /* Dark blue */
+  color: #ffffff;
+}
+
+/* Stack Page Background */
+body.stack {
+  background: #f2f4f6; /* Light gray */
+  color: #080808;
 }
 
 /* Top Footer */
@@ -28,22 +38,24 @@ body {
   text-decoration: underline;
 }
 
-/* Static Title */
-.static-title {
-  text-align: center;
-  font-size: 3rem; /* Large and prominent */
+/* Home Page Main Title */
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem; /* Larger font size */
   color: #ffffff; /* White text */
-  margin: 2rem 0;
+  margin: 2rem;
+  text-align: left; /* Indented to the left */
+}
+
+/* Home Content Layout */
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
 }
 
 /* Circles for Icons on the Home Page */
-.grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh; /* Center vertically */
-}
-
 .circle {
   width: 150px; /* Size of the circle */
   height: 150px;
@@ -91,31 +103,36 @@ body {
   }
 }
 
-/* Bottom Footer */
-.bottom-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #4a4a4a; /* Dark gray */
-  color: #ffffff;
-  padding: 1rem;
+/* Git Icon */
+.git-icon {
   position: fixed;
-  bottom: 0;
+  bottom: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+}
+
+.git-icon img {
   width: 100%;
+  height: auto;
+  border-radius: 50%; /* Circle shape */
 }
 
-.footer-icon {
-  width: 20px;
-  height: 20px;
+/* Stack Page Title and Header */
+.stack-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-/* Stack Page Styles */
+.stack-header .title {
+  font-size: 3rem;
+  color: #080808;
+}
 
-/* Stack Image Styling */
 .stack-image {
-  display: block;
-  margin: 1rem auto;
-  width: 150px;
+  width: 100px;
   height: auto;
 }
 
