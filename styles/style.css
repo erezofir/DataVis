@@ -1,4 +1,4 @@
-/* General Box Style for Sections */
+/* General Box Styling */
 .box {
   background: #ffffff;
   border-radius: 8px;
@@ -27,7 +27,7 @@ table th {
 
 /* Visualization Section */
 .visualization canvas {
-  border: 1px solid #00ffcc; /* Frame color */
+  border: 2px solid #00ffcc; /* Frame color */
   background: #e9ecef; /* Light gray background */
   margin: 1rem auto;
   display: block;
