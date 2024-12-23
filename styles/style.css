@@ -1,66 +1,57 @@
+/* Circle for Icons */
 .circle {
-    width: 150px;
-    height: 150px;
-    background: #1e3a8a; /* Dark blue */
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    transition: transform 0.2s;
-  }
-  
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1e1e1e;
-    color: #ffffff;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-  }
-  
-  .box {
-    background: #f9f9f9; /* Light gray */
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .section-header img {
-    width: 50px;
-    height: auto;
-  }
-  
-  .pros-cons {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-  
-  .visualization canvas {
-    border: 1px solid #00ffcc;
-    margin-top: 1rem;
-  }
-  
-  .controls button {
-    margin: 0.5rem;
-  }
-  
+  width: 150px;
+  height: 150px;
+  background: #e0f7fa; /* Light blue-gray */
+  color: #080808;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+}
+
+/* Top Footer */
+.top-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.top-footer .tabs a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.top-footer .tabs a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Footer */
+.bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  color: #ffffff;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}

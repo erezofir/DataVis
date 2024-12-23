@@ -1,18 +1,20 @@
 const canvas = document.getElementById("stackCanvas");
 const ctx = canvas.getContext("2d");
-const stack = ["empty"]; // Initial empty element
+const stack = ["empty"];
 let head = 0;
 
 function drawStack() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  stack.forEach((val, i) => {
+  stack.forEach((value, i) => {
     const y = canvas.height - (i + 1) * 30 - 10;
-    ctx.fillStyle = "#3498db";
+    ctx.fillStyle = "#f2f2f2";
     ctx.fillRect(200, y, 100, 30);
     ctx.strokeRect(200, y, 100, 30);
-    ctx.fillStyle = "#ffffff";
-    ctx.fillText(val, 240, y + 20);
-    if (i === head) ctx.fillText("Head", 310, y + 20);
+    ctx.fillStyle = "#000";
+    ctx.fillText(value, 240, y + 20);
+    if (i === head) {
+      ctx.fillText("Head", 310, y + 20);
+    }
   });
 }
 
