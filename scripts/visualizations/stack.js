@@ -32,13 +32,13 @@ function drawStack() {
     if (index === head) {
       ctx.fillStyle = "#3498db"; // Blue for head
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Head", x + rectWidth + 40, y + rectHeight / 2 + 5); // Move further to the right
+      ctx.fillText("Head", x + rectWidth + 50, y + rectHeight / 2 + 5); // Move further to the right
 
-      // Arrow for head pointer (pointing inward)
+      // Arrow for head pointer
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth + 30, y + rectHeight / 2); // Start slightly further to the right
-      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 - 5); // Point back toward the cell
-      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 + 5); // Point back toward the cell
+      ctx.moveTo(x + rectWidth + 20, y + rectHeight / 2); // Start at the far right of the arrow
+      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2 - 5); // Pointing inward to the cell
+      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2 + 5);
       ctx.closePath();
       ctx.fillStyle = "#3498db";
       ctx.fill();
@@ -48,19 +48,20 @@ function drawStack() {
     if (index === tail) {
       ctx.fillStyle = "#27ae60"; // Green for tail
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Tail", x - 50, y + rectHeight / 2 + 5); // Adjust to the left side of the cell
+      ctx.fillText("Tail", x - 60, y + rectHeight / 2 + 5); // Adjust further to the left
 
-      // Arrow for tail pointer (pointing inward)
+      // Arrow for tail pointer
       ctx.beginPath();
-      ctx.moveTo(x - 20, y + rectHeight / 2); // Start slightly further to the left
-      ctx.lineTo(x - 10, y + rectHeight / 2 - 5); // Point back toward the cell
-      ctx.lineTo(x - 10, y + rectHeight / 2 + 5); // Point back toward the cell
+      ctx.moveTo(x - 20, y + rectHeight / 2); // Start further left
+      ctx.lineTo(x - 10, y + rectHeight / 2 - 5); // Pointing inward to the cell
+      ctx.lineTo(x - 10, y + rectHeight / 2 + 5);
       ctx.closePath();
       ctx.fillStyle = "#27ae60";
       ctx.fill();
     }
   });
 }
+
 
 
 
