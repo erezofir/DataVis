@@ -15,7 +15,7 @@ body.home {
 
 /* Stack Page Background */
 body.stack {
-  background: #fafafae0; /* Light gray */
+  background: #d0d0d0e0; /* Light gray */
   color: #030058;
 }
 
@@ -154,7 +154,7 @@ body.stack {
 
 /* General Box Styling for Sections */
 .box {
-  background: #dedada;
+  background: #f1efef;
   /*Whitebackgroundforcontrast*/border-radius: 8px;
   padding: 1.5rem;
   margin: 1.5rem 0;
@@ -174,13 +174,13 @@ table {
 }
 
 table th, table td {
-  border: 1px solid #ddd;
+  border: 1px solid #0d2224;
   padding: 0.8rem;
   text-align: center;
 }
 
 table th {
-  background: #dbdbdb; /* Light gray header for the table */
+  background: #9abdcd; /* Light gray header for the table */
   font-weight: bold;
 }
 
