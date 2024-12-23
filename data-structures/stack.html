@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack - DataVis Pro</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../scripts/visualizations/stack.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Stack</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="description">
+      <h2>What is a Stack?</h2>
+      <p>A Stack is a data structure that follows the Last-In-First-Out (LIFO) principle. Common operations include Push, Pop, and Peek.</p>
+      <h3>Time Complexity</h3>
+      <table>
+        <tr>
+          <th>Operation</th>
+          <th>Time Complexity</th>
+        </tr>
+        <tr>
+          <td>Push</td>
+          <td>O(1)</td>
+        </tr>
+        <tr>
+          <td>Pop</td>
+          <td>O(1)</td>
+        </tr>
+        <tr>
+          <td>Peek</td>
+          <td>O(1)</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="visualization">
+      <h2>Visualization</h2>
+      <canvas id="stackCanvas" width="600" height="400"></canvas>
+      <div class="controls">
+        <button onclick="pushItem()">Push</button>
+        <button onclick="popItem()">Pop</button>
+        <button onclick="peekItem()">Peek</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 DataVis Pro</p>
+  </footer>
+</body>
+</html>
