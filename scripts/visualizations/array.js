@@ -11,6 +11,16 @@ function removeItem(index) {
   drawArray();
 }
 
+function searchItem(value) {
+    const index = array.indexOf(value);
+    if (index !== -1) {
+      alert(`Item found at index: ${index}`);
+    } else {
+      alert('Item not found.');
+    }
+  }
+  
+
 function drawArray() {
     const canvas = document.getElementById('arrayCanvas');
     const ctx = canvas.getContext('2d');

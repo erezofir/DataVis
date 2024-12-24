@@ -12,6 +12,12 @@ function dequeue() {
   alert(`Dequeued: ${dequeued}`);
 }
 
+function clearQueue() {
+    queue.length = 0;
+    drawQueue();
+  }
+  
+
 function drawQueue() {
     const canvas = document.getElementById('queueCanvas');
     const ctx = canvas.getContext('2d');

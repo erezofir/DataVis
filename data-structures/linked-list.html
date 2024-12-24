@@ -1,31 +1,135 @@
-<div class="stack-header">
-    <h1 class="title">Linked List</h1>
-    <img src="../assets/illustrations/linked-list.png" alt="Linked List Illustration" class="stack-image">
-  </div>
-  
-  <!-- What is it Section -->
-  <section class="box">
-    <h2>What is it?</h2>
-    <p>A Linked List is a linear data structure where each element is a node...</p>
-  </section>
-  
-  <!-- Operations Section -->
-  <section class="box">
-    <h2>Operations</h2>
-    <ul>
-      <li>Insert at Head</li>
-      <li>Delete by Value</li>
-      <li>Traverse</li>
-    </ul>
-  </section>
-  
-  <!-- Visualization Section -->
-  <section class="visualization box">
-    <h2>Visualization</h2>
-    <canvas id="linkedListCanvas" width="400" height="250"></canvas>
-    <div class="controls">
-      <button onclick="addNode()">Add Node</button>
-      <button onclick="deleteNode()">Delete Node</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linked List Visualization</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../scripts/visualizations/linked-list.js" defer></script>
+</head>
+<body>
+  <!-- Top Footer -->
+  <header class="top-footer">
+    <div class="site-name">Data Structures Visualization</div>
+    <div class="tabs">
+      <a href="../index.html">Home</a>
     </div>
-  </section>
-  
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="stack-header">
+      <h1 class="title">Linked List</h1>
+      <img src="../assets/illustrations/linked-list.png" alt="Linked List Illustration" class="stack-image">
+    </div>
+
+    <!-- What is it Section -->
+    <section class="box">
+      <h2>What is it?</h2>
+      <p>A Linked List is a linear data structure where each element is a node. Each node contains a value and a reference to the next node in the sequence. Linked Lists allow for dynamic memory allocation and efficient insertion or deletion operations.</p>
+    </section>
+
+    <!-- Time Complexity -->
+    <section class="box">
+      <h2>Time and Space Complexity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Operation</th>
+            <th>Time Complexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Insertion</td>
+            <td>O(1)</td>
+          </tr>
+          <tr>
+            <td>Deletion</td>
+            <td>O(1)</td>
+          </tr>
+          <tr>
+            <td>Traversal</td>
+            <td>O(n)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Properties -->
+    <section class="box">
+      <h2>Properties</h2>
+      <ul class="spaced-list">
+        <li>Dynamic size: Can grow or shrink as needed.</li>
+        <li>Efficient insertions and deletions.</li>
+        <li>Memory overhead due to storing references/pointers.</li>
+        <li>Linear traversal time for search operations.</li>
+      </ul>
+    </section>
+
+    <!-- Operations Section -->
+    <section class="box">
+      <h2>Operations</h2>
+      <ul>
+        <li><b>Insert at Head:</b> Adds a new node to the beginning of the list.</li>
+        <li><b>Delete by Value:</b> Removes a node containing a specified value.</li>
+        <li><b>Traverse:</b> Iterates through the linked list to access each element.</li>
+      </ul>
+    </section>
+
+    <!-- Visualization Section -->
+    <section class="visualization box">
+      <h2>Visualization</h2>
+      <canvas id="linkedListCanvas" width="400" height="250"></canvas>
+      <div class="controls">
+        <button onclick="addNode(prompt('Enter value to add:'))">Add Node</button>
+        <button onclick="deleteNode(prompt('Enter value to delete:'))">Delete Node</button>
+        <button onclick="traverseList()">Traverse</button>
+      </div>
+    </section>
+
+    <!-- Pros and Cons -->
+    <section class="box">
+      <h2>Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="advantages">
+          <p>✅ Dynamic size, flexible memory usage.</p>
+          <p>✅ Easy to implement efficient insertion and deletion.</p>
+          <p>✅ Supports various types (singly, doubly, circular).</p>
+        </div>
+        <div class="disadvantages">
+          <p>❌ Linear search time for finding elements.</p>
+          <p>❌ Extra memory overhead for pointers.</p>
+          <p>❌ Complex implementation for certain operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Possible Implementations -->
+    <section class="box">
+      <h2>Possible Implementations</h2>
+      <div class="implementations">
+        <div class="circle implementation-icon">
+          <div class="icon linked-list-icon"></div>
+          <p>Singly Linked List</p>
+        </div>
+        <div class="circle implementation-icon">
+          <div class="icon linked-list-icon"></div>
+          <p>Doubly Linked List</p>
+        </div>
+        <div class="circle implementation-icon">
+          <div class="icon linked-list-icon"></div>
+          <p>Circular Linked List</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Git Icon -->
+    <div class="git-icon">
+      <a href="https://github.com/erezofir" target="_blank">
+        <img src="../assets/icons/git-circle.svg" alt="GitHub">
+      </a>
+    </div>
+  </main>
+</body>
+</html>

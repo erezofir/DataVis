@@ -76,12 +76,13 @@
       <h2>Visualization</h2>
       <canvas id="hashTableCanvas" width="400" height="300"></canvas>
       <div class="controls">
-        <button>Insert</button>
-        <button>Search</button>
-        <button>Delete</button>
-        <button>Clear All</button>
+        <button onclick="insertKeyValue(prompt('Enter key:'), prompt('Enter value:'))">Insert</button>
+        <button onclick="searchKey(prompt('Enter key to search:'))">Search</button>
+        <button onclick="deleteKey(prompt('Enter key to delete:'))">Delete</button>
+        <button onclick="clearHashTable()">Clear All</button>
       </div>
     </section>
+    
   </main>
 </body>
 </html>

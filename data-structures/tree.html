@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Visualization</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../scripts/visualizations/tree.js" defer></script>
+</head>
+<body>
+  <!-- Top Footer -->
+  <header class="top-footer">
+    <div class="site-name">Data Structures Visualization</div>
+    <div class="tabs">
+      <a href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="stack-header">
+      <h1 class="title">Tree</h1>
+      <img src="../assets/illustrations/tree.png" alt="Tree Illustration" class="stack-image">
+    </div>
+
+    <!-- What is it Section -->
+    <section class="box">
+      <h2>What is it?</h2>
+      <p>A Tree is a hierarchical data structure consisting of nodes, where each node has a parent (except the root) and zero or more children...</p>
+    </section>
+
+    <!-- Time Complexity -->
+    <section class="box">
+      <h2>Time and Space Complexity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Operation</th>
+            <th>Binary Tree</th>
+            <th>Binary Search Tree</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Search</td>
+            <td>O(n)</td>
+            <td>O(log n)</td>
+          </tr>
+          <tr>
+            <td>Insert</td>
+            <td>O(n)</td>
+            <td>O(log n)</td>
+          </tr>
+          <tr>
+            <td>Delete</td>
+            <td>O(n)</td>
+            <td>O(log n)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Properties -->
+    <section class="box">
+      <h2>Properties</h2>
+      <ul class="spaced-list">
+        <li>Root node is the topmost node.</li>
+        <li>Each node has zero or more children.</li>
+        <li>Can be used to implement various structures (e.g., heaps, BSTs).</li>
+      </ul>
+    </section>
+
+    <!-- Visualization Section -->
+    <section class="visualization box">
+      <h2>Visualization</h2>
+      <canvas id="treeCanvas" width="400" height="300"></canvas>
+      <div class="controls">
+        <button onclick="insertNode(prompt('Enter value to insert:'))">Insert</button>
+      </div>
+    </section>
+
+    <!-- Pros and Cons -->
+    <section class="box">
+      <h2>Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="advantages">
+          <p>✅ Great for hierarchical relationships.</p>
+          <p>✅ Supports efficient searching in BSTs.</p>
+          <p>✅ Dynamic resizing.</p>
+        </div>
+        <div class="disadvantages">
+          <p>❌ Can become unbalanced.</p>
+          <p>❌ Traversal can be time-consuming.</p>
+          <p>❌ Complex to implement certain operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Git Icon -->
+    <div class="git-icon">
+      <a href="https://github.com/erezofir" target="_blank">
+        <img src="../assets/icons/git-circle.svg" alt="GitHub">
+      </a>
+    </div>
+  </main>
+</body>
+</html>

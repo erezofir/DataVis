@@ -1,17 +1,18 @@
 const graph = {};
 
-function addEdge(node1, node2) {
-  if (!graph[node1]) graph[node1] = [];
-  graph[node1].push(node2);
-  drawGraph();
-}
-
-function removeEdge(node1, node2) {
-  if (graph[node1]) {
-    graph[node1] = graph[node1].filter((node) => node !== node2);
+function addNode(node) {
+    if (!graph[node]) graph[node] = [];
+    drawGraph();
   }
-  drawGraph();
+  
+function removeNode(node) {
+    delete graph[node];
+        for (const key in graph) {
+            graph[key] = graph[key].filter((neighbor) => neighbor !== node);
+        }
+    drawGraph();
 }
+  
 
 function drawGraph() {
     const canvas = document.getElementById('graphCanvas');

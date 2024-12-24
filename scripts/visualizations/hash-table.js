@@ -10,6 +10,22 @@ function deleteKey(key) {
   drawHashTable();
 }
 
+function searchKey(key) {
+    if (key in hashTable) {
+      alert(`Value: ${hashTable[key]}`);
+    } else {
+      alert('Key not found.');
+    }
+  }
+  
+function clearHashTable() {
+    for (const key in hashTable) {
+        delete hashTable[key];
+    }
+    drawHashTable();
+}
+  
+
 function drawHashTable() {
     const canvas = document.getElementById('hashTableCanvas');
     const ctx = canvas.getContext('2d');

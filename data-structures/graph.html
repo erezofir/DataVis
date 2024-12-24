@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph Visualization</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../scripts/visualizations/graph.js" defer></script>
+</head>
+<body>
+  <!-- Top Footer -->
+  <header class="top-footer">
+    <div class="site-name">Data Structures Visualization</div>
+    <div class="tabs">
+      <a href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="stack-header">
+      <h1 class="title">Graph</h1>
+      <img src="../assets/illustrations/graph.png" alt="Graph Illustration" class="stack-image">
+    </div>
+
+    <!-- What is it Section -->
+    <section class="box">
+      <h2>What is it?</h2>
+      <p>A Graph is a collection of nodes (or vertices) connected by edges. It can be directed or undirected, weighted or unweighted...</p>
+    </section>
+
+    <!-- Time Complexity -->
+    <section class="box">
+      <h2>Time and Space Complexity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Operation</th>
+            <th>Adjacency List</th>
+            <th>Adjacency Matrix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Add Vertex</td>
+            <td>O(1)</td>
+            <td>O(V²)</td>
+          </tr>
+          <tr>
+            <td>Add Edge</td>
+            <td>O(1)</td>
+            <td>O(1)</td>
+          </tr>
+          <tr>
+            <td>Search</td>
+            <td>O(V + E)</td>
+            <td>O(V²)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Properties -->
+    <section class="box">
+      <h2>Properties</h2>
+      <ul class="spaced-list">
+        <li>Vertices (nodes) and edges (connections).</li>
+        <li>Can be directed or undirected.</li>
+        <li>Useful in modeling real-world relationships (e.g., social networks).</li>
+      </ul>
+    </section>
+
+    <!-- Visualization Section -->
+    <section class="visualization box">
+      <h2>Visualization</h2>
+      <canvas id="graphCanvas" width="400" height="300"></canvas>
+      <div class="controls">
+        <button onclick="addNode(prompt('Enter node value:'))">Add Node</button>
+        <button onclick="addEdge(prompt('Enter source node:'), prompt('Enter destination node:'))">Add Edge</button>
+        <button onclick="removeEdge(prompt('Enter source node:'), prompt('Enter destination node:'))">Remove Edge</button>
+        <button onclick="removeNode(prompt('Enter node value to delete:'))">Remove Node</button>
+      </div>
+    </section>
+
+    <!-- Pros and Cons -->
+    <section class="box">
+      <h2>Pros and Cons</h2>
+      <div class="pros-cons">
+        <div class="advantages">
+          <p>✅ Flexible and versatile representation.</p>
+          <p>✅ Models real-world systems effectively.</p>
+          <p>✅ Efficient for sparse data structures with adjacency lists.</p>
+        </div>
+        <div class="disadvantages">
+          <p>❌ Memory overhead for adjacency matrix.</p>
+          <p>❌ Traversal can be computationally expensive.</p>
+          <p>❌ Implementation complexity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Git Icon -->
+    <div class="git-icon">
+      <a href="https://github.com/erezofir" target="_blank">
+        <img src="../assets/icons/git-circle.svg" alt="GitHub">
+      </a>
+    </div>
+  </main>
+</body>
+</html>

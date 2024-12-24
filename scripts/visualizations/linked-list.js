@@ -20,6 +20,17 @@ class ListNode {
     }
     drawLinkedList();
   }
+
+  function traverseList() {
+    let current = head;
+    const values = [];
+    while (current) {
+      values.push(current.value);
+      current = current.next;
+    }
+    alert(`Linked List: ${values.join(' -> ')}`);
+  }
+  
   
   function deleteNode(value) {
     if (!head) return;

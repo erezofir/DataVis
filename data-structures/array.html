@@ -80,13 +80,12 @@
 
     <section class="box">
       <h2>Visualization</h2>
-      <canvas id="arrayCanvas" width="400" height="300"></canvas>
+      <canvas id="arrayCanvas" width="400" height="250"></canvas>
       <div class="controls">
-        <button>Insert</button>
-        <button>Delete</button>
-        <button>Search</button>
+        <button onclick="addItem(prompt('Enter value to insert:'))">Insert</button>
+        <button onclick="removeItem(prompt('Enter index to delete:'))">Delete</button>
+        <button onclick="searchItem(prompt('Enter value to search:'))">Search</button>
       </div>
     </section>
+    
   </main>
-</body>
-</html>
