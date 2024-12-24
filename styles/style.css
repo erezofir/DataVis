@@ -45,7 +45,15 @@ body.stack {
   color: #85b6c0; /* color text */
   margin: 2rem;
   text-align: left; /* Indented to the left */
+  animation: colorChange 3s infinite;
 }
+
+@keyframes colorChange {
+  0% { color: #ff6f61; }
+  50% { color: #6f9dff; }
+  100% { color: #ff6f61; }
+}
+
 
 /* Home Content Layout */
 .home-content {
@@ -95,10 +103,12 @@ body.stack {
   flex-direction: column;
   text-align: center;
   transition: transform 0.3s ease-out;
-}
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+  }
 
 .circle:hover {
   transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .circle h3 {

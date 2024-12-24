@@ -87,5 +87,45 @@
         <button onclick="searchItem(prompt('Enter value to search:'))">Search</button>
       </div>
     </section>
+    <section class="visualization box">
+  <h2>Visualization</h2>
+  <canvas id="arrayCanvas" width="500" height="200"></canvas>
+  <div class="controls">
+    <button onclick="addItem(prompt('Enter value to insert:'))">Insert</button>
+    <button onclick="removeItem(prompt('Enter index to delete:'))">Delete</button>
+    <button onclick="searchItem(prompt('Enter value to search:'))">Search</button>
+  </div>
+</section>
+<section class="box">
+  <h2>Advantages and Disadvantages</h2>
+  <div class="pros-cons">
+    <div class="advantages">
+      <p>✅ Efficient random access with index.</p>
+      <p>✅ Memory-efficient for static arrays.</p>
+      <p>✅ Simple implementation and traversal.</p>
+    </div>
+    <div class="disadvantages">
+      <p>❌ Fixed size for static arrays.</p>
+      <p>❌ Expensive insertions/deletions in dynamic arrays.</p>
+      <p>❌ Wasted memory in sparse usage.</p>
+    </div>
+  </div>
+</section>
+<section class="box">
+  <h2>Possible Implementations</h2>
+  <div class="implementations">
+    <div class="circle implementation-icon">
+      <div class="icon array-icon"></div>
+      <p>Static Array</p>
+    </div>
+    <div class="circle implementation-icon">
+      <div class="icon array-icon"></div>
+      <p>Dynamic Array</p>
+    </div>
+  </div>
+</section>
+
+
+
     
   </main>
