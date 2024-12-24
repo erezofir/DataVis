@@ -126,3 +126,4 @@ function clearAll() {
 
 // Initialize visualization
 drawStack();
+
