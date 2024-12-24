@@ -8,6 +8,7 @@
   <script src="../scripts/visualizations/array.js" defer></script>
 </head>
 <body class="array">
+
   <!-- Top Footer -->
   <header class="top-footer">
     <div class="site-name">Data Structures Visualization</div>
@@ -16,7 +17,7 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+    
   <main>
     <div class="array-header">
       <h1 class="title">Array</h1>
@@ -78,25 +79,17 @@
       </ul>
     </section>
 
-    <section class="box">
+    <section class="visualization box">
       <h2>Visualization</h2>
-      <canvas id="arrayCanvas" width="400" height="250"></canvas>
+      <canvas id="arrayCanvas" width="500" height="200"></canvas>
       <div class="controls">
         <button onclick="addItem(prompt('Enter value to insert:'))">Insert</button>
         <button onclick="removeItem(prompt('Enter index to delete:'))">Delete</button>
         <button onclick="searchItem(prompt('Enter value to search:'))">Search</button>
       </div>
     </section>
-    <section class="visualization box">
-  <h2>Visualization</h2>
-  <canvas id="arrayCanvas" width="500" height="200"></canvas>
-  <div class="controls">
-    <button onclick="addItem(prompt('Enter value to insert:'))">Insert</button>
-    <button onclick="removeItem(prompt('Enter index to delete:'))">Delete</button>
-    <button onclick="searchItem(prompt('Enter value to search:'))">Search</button>
-  </div>
-</section>
-<section class="box">
+    
+    <section class="box">
   <h2>Advantages and Disadvantages</h2>
   <div class="pros-cons">
     <div class="advantages">
@@ -110,22 +103,18 @@
       <p>❌ Wasted memory in sparse usage.</p>
     </div>
   </div>
-</section>
-<section class="box">
-  <h2>Possible Implementations</h2>
-  <div class="implementations">
-    <div class="circle implementation-icon">
-      <div class="icon array-icon"></div>
-      <p>Static Array</p>
-    </div>
-    <div class="circle implementation-icon">
-      <div class="icon array-icon"></div>
-      <p>Dynamic Array</p>
-    </div>
-  </div>
-</section>
-
-
-
-    
+    </section>
+    <section class="box">
+      <h2>Possible Implementations</h2>
+      <div class="implementations">
+        <div class="circle implementation-icon">
+          <div class="icon array-icon"></div>
+          <p>Static Array</p>
+        </div>
+        <div class="circle implementation-icon">
+          <div class="icon array-icon"></div>
+          <p>Dynamic Array</p>
+        </div>
+      </div>
+    </section>   
   </main>
