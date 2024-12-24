@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heap Visualization</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <!-- Top Footer -->
+  <header class="top-footer">
+    <div class="site-name">Data Structures Visualization</div>
+    <div class="tabs">
+      <a href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="stack-header">
+      <h1 class="title">Heap</h1>
+      <img src="../assets/illustrations/heap.png" alt="Heap Illustration" class="stack-image">
+    </div>
+
+    <!-- What is it Section -->
+    <section class="box">
+      <h2>What is it?</h2>
+      <p>A Heap is a specialized tree-based data structure that satisfies the heap property...</p>
+    </section>
+
+    <!-- Time Complexity -->
+    <section class="box">
+      <h2>Time and Space Complexity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Operation</th>
+            <th>Time Complexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Insert</td>
+            <td>O(log n)</td>
+          </tr>
+          <tr>
+            <td>Extract Min/Max</td>
+            <td>O(log n)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Properties -->
+    <section class="box">
+      <h2>Properties</h2>
+      <ul class="spaced-list">
+        <li>Complete binary tree.</li>
+        <li>Heap property: Parent is smaller (min-heap) or larger (max-heap) than its children.</li>
+        <li>Efficient priority queue implementation.</li>
+      </ul>
+    </section>
+
+    <!-- Visualization Section -->
+    <section class="visualization box">
+      <h2>Visualization</h2>
+      <canvas id="heapCanvas" width="400" height="250"></canvas>
+      <div class="controls">
+        <button onclick="insertItem()">Insert</button>
+        <button onclick="extractItem()">Extract</button>
+      </div>
+    </section>
+
+    <!-- Git Icon -->
+    <div class="git-icon">
+      <a href="https://github.com/erezofir" target="_blank">
+        <img src="../assets/icons/git-circle.svg" alt="GitHub">
+      </a>
+    </div>
+  </main>
+</body>
+</html>
