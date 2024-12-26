@@ -20,14 +20,26 @@ body.home {
   100% { background-position: 0% 50%; }
 }
 
+/* Home Page Main Title */
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 8rem;
+  /*fontsize*/color: #09f9f1;
+  /*colortext*/margin: 2rem;
+  text-align: left;
+  /*Indentedtotheleft*/animation: colorChange 3s infinite;
+  -webkit-animation: colorChange 3s infinite;
+}
+
 body.stack {
   background: #f8f8fa ;
   color: #d2d2d6;
 }
 
 .ds-header .title {
+  font-family: 'Oswald', sans-serif;
   font-size: 4rem;
-  align-items: center;
+  text-align: center;
   color: #031572;
 }
 
@@ -64,15 +76,7 @@ body.stack::before {
   text-decoration: none;
 }
 
-/* Home Page Main Title */
-.main-title {
-  font-family: 'Oswald', sans-serif;
-  font-size: 8rem; /* font size */
-  color: #09f9f1; /* color text */
-  margin: 2rem;
-  text-align: left; /* Indented to the left */
-  animation: colorChange 3s infinite;
-}
+
 
 @keyframes colorChange {
   0% { color: #ff1500; }
