@@ -30,32 +30,24 @@ function drawStack() {
 
     // Add head pointer (on the right, pointing left)
     if (index === head) {
-      const rectCenterX = x + rectWidth / 2;
-
-
       ctx.fillStyle = "#3498db"; // Blue for head
       ctx.font = "16px 'Montserrat', sans-serif";
-      // ctx.fillText("Head", x + rectWidth + 40, y + rectHeight / 2 + 5); // Adjusted position further right
-      ctx.fillText("Head", rectCenterX + 40, y + rectHeight / 2 + 5);
+      ctx.fillText("Head", x + rectWidth + 40, y + rectHeight / 2 + 5); // Adjusted position further right
+      
 
       // Draw pressure line
       ctx.beginPath();
-      //ctx.moveTo(x + rectWidth + 30, y + rectHeight / 2); // Line start further right
-      //ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2); // To the arrow base
-      ctx.moveTo(rectCenterX + 30, y + rectHeight / 2);
-      ctx.lineTo(rectCenterX + 10, y + rectHeight / 2);
+      ctx.moveTo(x + rectWidth + 30, y + rectHeight / 2); // Line start further right
+      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2); // To the arrow base 
       ctx.strokeStyle = "#3498db";
       ctx.lineWidth = 2;
       ctx.stroke();
 
       // Arrow for head pointer (pointing left)
       ctx.beginPath();
-      //ctx.moveTo(x + rectWidth + 10, y + rectHeight / 2); // Arrow tip
-      //ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 - 5); // Top of arrow
-      //ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 + 5); // Bottom of arrow
-      ctx.moveTo(rectCenterX + 10, y + rectHeight / 2);
-      ctx.lineTo(rectCenterX + 20, y + rectHeight / 2 - 5);
-      ctx.lineTo(rectCenterX + 20, y + rectHeight / 2 + 5);
+      ctx.moveTo(x + rectWidth + 10, y + rectHeight / 2); // Arrow tip
+      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 - 5); // Top of arrow
+      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 + 5); // Bottom of arrow
       ctx.closePath();
       ctx.fillStyle = "#3498db";
       ctx.fill();
@@ -63,19 +55,15 @@ function drawStack() {
 
     // Add tail pointer (on the left, pointing right)
     if (index === tail) {
-      const rectCenterX = x + rectWidth / 2;
-
       ctx.fillStyle = "#27ae60"; // Green for tail
       ctx.font = "16px 'Montserrat', sans-serif";
-      //ctx.fillText("Tail", x - 70, y + rectHeight / 2 + 5); // Adjusted position further left
-      ctx.fillText("Tail", rectCenterX - 70, y + rectHeight / 2 + 5);
+      ctx.fillText("Tail", x - 70, y + rectHeight / 2 + 5); // Adjusted position further left;
 
       // Draw pressure line
       ctx.beginPath();
-      //ctx.moveTo(x - 30, y + rectHeight / 2); // Line start further left
-      //ctx.lineTo(x - 20, y + rectHeight / 2); // To the arrow base
-      tx.moveTo(rectCenterX - 30, y + rectHeight / 2);
-      ctx.lineTo(rectCenterX - 20, y + rectHeight / 2);
+      ctx.moveTo(x - 30, y + rectHeight / 2); // Line start further left
+      ctx.lineTo(x - 20, y + rectHeight / 2); // To the arrow base
+
     
       ctx.strokeStyle = "#27ae60";
       ctx.lineWidth = 2;
@@ -83,14 +71,9 @@ function drawStack() {
 
       // Arrow for tail pointer (pointing right)
       ctx.beginPath();
-      //ctx.moveTo(x - 20, y + rectHeight / 2); // Arrow tip
-      //ctx.lineTo(x - 30, y + rectHeight / 2 - 5); // Top of arrow
-      //ctx.lineTo(x - 30, y + rectHeight / 2 + 5); // Bottom of arrow
-
-      ctx.moveTo(rectCenterX - 20, y + rectHeight / 2);
-      ctx.lineTo(rectCenterX - 30, y + rectHeight / 2 - 5);
-      ctx.lineTo(rectCenterX - 30, y + rectHeight / 2 + 5);
-
+      ctx.moveTo(x - 20, y + rectHeight / 2); // Arrow tip
+      ctx.lineTo(x - 30, y + rectHeight / 2 - 5); // Top of arrow
+      ctx.lineTo(x - 30, y + rectHeight / 2 + 5); // Bottom of arro
       ctx.closePath();
       ctx.fillStyle = "#27ae60";
       ctx.fill();
