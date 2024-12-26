@@ -112,8 +112,8 @@ body.stack::before {
 
 /* Circle Styling */
 .circle {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   background: #d0ebff; /* Light blue-gray */
   border-radius: 50%;
   display: flex;
@@ -250,11 +250,11 @@ body.stack::before {
 
 /* General Box Styling for Sections  */
 .box {
-  background: #5f98f5;
+  background: #d5dfef;
   border-radius: 8px;
   padding: 1.5rem;
   margin: 1.5rem 0;
-  box-shadow: 0px 4px 6px rgba(88, 214, 237, 0.689);
+  box-shadow: 0px 4px 6px rgba(88, 140, 237, 0.776);
    /* Subtle shadow for depth  */
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
