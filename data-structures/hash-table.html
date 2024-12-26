@@ -1,88 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hash Table Visualization</title>
-  <link rel="stylesheet" href="../styles/style.css">
-  <script src="../scripts/visualizations/hash-table.js" defer></script>
-</head>
-<body class="hash-table">
-  <!-- Top Footer -->
-  <header class="top-footer">
-    <div class="site-name">Data Structures Visualization</div>
-    <div class="tabs">
-      <a href="../index.html">Home</a>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <div class="hash-table-header">
-      <h1 class="title">Hash Table</h1>
-      <img src="../assets/illustrations/hash-table.png" alt="Hash Table Illustration" class="hash-table-image">
-    </div>
-
-    <section class="box">
-      <h2>What is it?</h2>
-      <p>A Hash Table is a data structure that stores data in key-value pairs. It uses a hash function to compute the index of the data in an array.</p>
-    </section>
-
-    <section class="box">
-      <h2>Time and Space Complexity</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Operation</th>
-            <th>Time Complexity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Insert</td>
-            <td>O(1)</td>
-          </tr>
-          <tr>
-            <td>Search</td>
-            <td>O(1)</td>
-          </tr>
-          <tr>
-            <td>Delete</td>
-            <td>O(1)</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="box">
-      <h2>Properties</h2>
-      <ul class="spaced-list">
-        <li>Key-value pair storage.</li>
-        <li>Fast lookup via hash function.</li>
-        <li>Collision handling via chaining or open addressing.</li>
-      </ul>
-    </section>
-
-    <section class="box">
-      <h2>Operations</h2>
-      <ul>
-        <li>Insert: Add a key-value pair.</li>
-        <li>Search: Find a value by its key.</li>
-        <li>Delete: Remove a key-value pair.</li>
-      </ul>
-    </section>
-
-    <section class="box">
-      <h2>Visualization</h2>
-      <canvas id="hashTableCanvas" width="400" height="300"></canvas>
-      <div class="controls">
-        <button onclick="insertKeyValue(prompt('Enter key:'), prompt('Enter value:'))">Insert</button>
-        <button onclick="searchKey(prompt('Enter key to search:'))">Search</button>
-        <button onclick="deleteKey(prompt('Enter key to delete:'))">Delete</button>
-        <button onclick="clearHashTable()">Clear All</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hash Table Visualization</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../scripts/visualizations/hash-table.js" defer></script>
+  </head>
+  <body class="hash-table">
+    <!-- Top Footer -->
+    <header class="top-footer">
+      <div class="site-name">Data Structures Visualization</div>
+      <div class="tabs">
+        <a href="../index.html">Home</a>
       </div>
-    </section>
-    
-  </main>
-</body>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="hash-table-header">
+        <h1 class="title">Hash Table</h1>
+        <img
+          src="../assets/illustrations/hash-table.png"
+          alt="Hash Table Illustration"
+          class="hash-table-image"
+        />
+      </div>
+
+      <section class="box">
+        <h2>What is it?</h2>
+        <p>
+          A Hash Table is a data structure that stores data in key-value pairs.
+          It uses a hash function to compute the index of the data in an array.
+        </p>
+      </section>
+
+      <section class="box">
+        <h2>Time and Space Complexity</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Operation</th>
+              <th>Time Complexity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Insert</td>
+              <td>O(1)</td>
+            </tr>
+            <tr>
+              <td>Search</td>
+              <td>O(1)</td>
+            </tr>
+            <tr>
+              <td>Delete</td>
+              <td>O(1)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="box">
+        <h2>Properties</h2>
+        <ul class="spaced-list">
+          <li>Key-value pair storage.</li>
+          <li>Fast lookup via hash function.</li>
+          <li>Collision handling via chaining or open addressing.</li>
+        </ul>
+      </section>
+
+      <section class="box">
+        <h2>Operations</h2>
+        <ul>
+          <li>Insert: Add a key-value pair.</li>
+          <li>Search: Find a value by its key.</li>
+          <li>Delete: Remove a key-value pair.</li>
+        </ul>
+      </section>
+
+      <section class="box">
+        <h2>Visualization</h2>
+        <canvas id="hashTableCanvas" width="400" height="300"></canvas>
+        <div class="controls">
+          <button
+            onclick="insertKeyValue(prompt('Enter key:'), prompt('Enter value:'))"
+          >
+            Insert
+          </button>
+          <button onclick="searchKey(prompt('Enter key to search:'))">
+            Search by Key
+          </button>
+          <button onclick="deleteKey(prompt('Enter key to delete:'))">
+            Delete
+          </button>
+          <button onclick="clearHashTable()">Clear All</button>
+          <button onclick="searchValue(prompt('Enter value to search:'))">
+            Search by Value
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
