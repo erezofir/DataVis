@@ -335,7 +335,10 @@ table th {
 }*/
 
 .controls button {
+  margin: 0.5rem;
   font-family: 'Montserrat', sans-serif;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   background: #3498db; /* Button color */
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.3);
