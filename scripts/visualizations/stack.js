@@ -12,7 +12,6 @@ function drawStack() {
 
   const rectWidth = 100;
   const rectHeight = 40;
-  const pointerOffset = 20; // Distance between the pointer text and the rectangle
 
   stack.forEach((item, index) => {
     const x = canvas.width / 2 - rectWidth / 2; // Center horizontally
@@ -33,25 +32,21 @@ function drawStack() {
     if (index === head) {
       ctx.fillStyle = "#3498db"; // Blue for head
       ctx.font = "16px 'Montserrat', sans-serif";
-      //ctx.fillText("Head", x + rectWidth + 40, y + rectHeight / 2 + 5); // Adjusted position further right
-      ctx.fillText("Head", x + rectWidth / 2, y - pointerOffset); // Adjusted to center above
-
+      ctx.fillText("Head", x + rectWidth + 40, y + rectHeight / 2 + 5); // Adjusted position further right
 
       // Draw pressure line
       ctx.beginPath();
-      //ctx.moveTo(x + rectWidth + 30, y + rectHeight / 2); // Line start further right
-      //ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2); // To the arrow base
-      ctx.moveTo(x + rectWidth / 2, y - pointerOffset + 5); // Start of arrow
-      ctx.lineTo(x + rectWidth / 2, y); // Line to the rectangle
+      ctx.moveTo(x + rectWidth + 30, y + rectHeight / 2); // Line start further right
+      ctx.lineTo(x + rectWidth + 10, y + rectHeight / 2); // To the arrow base
       ctx.strokeStyle = "#3498db";
       ctx.lineWidth = 2;
       ctx.stroke();
 
       // Arrow for head pointer (pointing left)
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth / 2 - 5, y); // Left of arrow tip
-      ctx.lineTo(x + rectWidth / 2 + 5, y); // Right of arrow tip
-      ctx.lineTo(x + rectWidth / 2, y - 5); // Top of arrow tip
+      ctx.moveTo(x + rectWidth + 10, y + rectHeight / 2); // Arrow tip
+      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 - 5); // Top of arrow
+      ctx.lineTo(x + rectWidth + 20, y + rectHeight / 2 + 5); // Bottom of arrow
       ctx.closePath();
       ctx.fillStyle = "#3498db";
       ctx.fill();
@@ -61,22 +56,21 @@ function drawStack() {
     if (index === tail) {
       ctx.fillStyle = "#27ae60"; // Green for tail
       ctx.font = "16px 'Montserrat', sans-serif";
-      ctx.fillText("Tail", x + rectWidth / 2, y + rectHeight + pointerOffset); // Adjusted to center below
-
+      ctx.fillText("Tail", x - 70, y + rectHeight / 2 + 5); // Adjusted position further left
 
       // Draw pressure line
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth / 2, y + rectHeight + pointerOffset - 5); // Start of arrow
-      ctx.lineTo(x + rectWidth / 2, y + rectHeight); // Line to the rectangle
+      ctx.moveTo(x - 30, y + rectHeight / 2); // Line start further left
+      ctx.lineTo(x - 20, y + rectHeight / 2); // To the arrow base
       ctx.strokeStyle = "#27ae60";
       ctx.lineWidth = 2;
       ctx.stroke();
 
       // Arrow for tail pointer (pointing right)
       ctx.beginPath();
-      ctx.moveTo(x + rectWidth / 2 - 5, y + rectHeight); // Left of arrow tip
-      ctx.lineTo(x + rectWidth / 2 + 5, y + rectHeight); // Right of arrow tip
-      ctx.lineTo(x + rectWidth / 2, y + rectHeight + 5); // Bottom of arrow tipw
+      ctx.moveTo(x - 20, y + rectHeight / 2); // Arrow tip
+      ctx.lineTo(x - 30, y + rectHeight / 2 - 5); // Top of arrow
+      ctx.lineTo(x - 30, y + rectHeight / 2 + 5); // Bottom of arrow
       ctx.closePath();
       ctx.fillStyle = "#27ae60";
       ctx.fill();
