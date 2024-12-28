@@ -40,14 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect(); // Start typing effect
   });
   
-//  Dark Mode Toggle
+// Dark Mode Toggle
 document.getElementById("toggle-dark-mode").addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark-mode"); // Toggle dark mode class
+  
+    // Save dark mode preference in localStorage
     const isDarkMode = document.body.classList.contains("dark-mode");
     localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
   });
   
-  // Check for saved Dark Mode preference
+  // Load saved dark mode preference on page load
   window.addEventListener("DOMContentLoaded", () => {
     const darkModePreference = localStorage.getItem("darkMode");
     if (darkModePreference === "enabled") {
@@ -58,14 +60,22 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
   // Music Toggle
   const musicToggle = document.getElementById("toggle-music");
   let isPlaying = false;
-  let audio = new Audio("assets/music/background.mp3");
   
+  // Load audio file (place the file in 'assets/music/background.mp3')
+  const audio = new Audio("assets/music/stuck-in-the-middle.mp3");
+  
+  // Music play/pause functionality
   musicToggle.addEventListener("click", () => {
     if (isPlaying) {
-      audio.pause();
+      audio.pause(); // Pause the music
     } else {
-      audio.play();
+      audio.play(); // Play the music
     }
-    isPlaying = !isPlaying;
+    isPlaying = !isPlaying; // Toggle play state
   });
   
+
+const volumeSlider = document.getElementById("volume-slider");
+volumeSlider.addEventListener("input", () => {
+  audio.volume = volumeSlider.value;
+});

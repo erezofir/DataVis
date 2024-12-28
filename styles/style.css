@@ -409,3 +409,21 @@ body.home {
   width: 25px;
   height: 25px;
 }
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .floating-container .floating-button {
+  background: #333333;
+}
+
+body.dark-mode .float-element {
+  background: #333333;
+  box-shadow: 0 10px 25px -5px rgba(50, 50, 50, 0.6);
+}
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
