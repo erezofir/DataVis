@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect(); // Start typing effect
   });
   
-// Dark Mode Toggle
+//  Dark Mode Toggle
 document.getElementById("toggle-dark-mode").addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     const isDarkMode = document.body.classList.contains("dark-mode");
