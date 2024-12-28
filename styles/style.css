@@ -32,16 +32,16 @@ body.home {
 }
 
 .sub-title {
-  font-size: 2rem;
-  color: #76cfe6ff;
+  font-size: 5rem;
+  color: rgb(239, 92, 48);
   text-align: left;
   margin-top: 1.5rem; /* Space between the main title and this subtitle */
-  margin-left: 20px; /* Move a bit to the left */
+  margin-left: 60px; /* Move a bit to the left */
 }
 
 #dynamic-text {
   font-weight: bold;
-  color: #f1c40f;
+  color: #f89d0a;
   border-right: 2px solid #f1c40f; /* Blinking cursor */
   animation: blink 0.7s step-end infinite;
 }
