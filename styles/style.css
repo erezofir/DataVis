@@ -318,13 +318,15 @@ body.home {
 .floating-container:hover .element-container .float-element:nth-child(1) {
   opacity: 1;
   transform: translateY(-70px);
+  z-index: 2;
   animation: come-in 0.4s forwards 0.2s;
 }
 
 .floating-container:hover .element-container .float-element:nth-child(2) {
   opacity: 1;
-  animation: come-in 0.4s forwards 0.4s;
   transform: translateY(-140px);
+  z-index: 3;
+  animation: come-in 0.4s forwards 0.4s;
   -webkit-animation: come-in 0.4s forwards 0.4s;
 }
 
@@ -333,7 +335,6 @@ body.home {
   position: absolute;
   width: 65px;
   height: 65px;
-  z-index: 10;
   background: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -364,7 +365,6 @@ body.home {
 .float-element {
   width: 50px;
   height: 50px;
-  z-index: 5;
   pointer-events: auto;
   border-radius: 50%;
   background: #ffffff;
