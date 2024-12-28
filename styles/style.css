@@ -154,8 +154,8 @@ body.home {
   }
   100% {
     transform: translateY(0);
-    opacity: 1; */
-  } 
+    opacity: 1;
+  }
 } 
 
 .fall-animation {
@@ -171,6 +171,7 @@ body.home {
   background-position: center;
   background-size: contain;
 } 
+
 /* 
 .icon.array {
   background-image: url('../assets/icons/array.svg');
