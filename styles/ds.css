@@ -22,15 +22,15 @@ body.ds {
     opacity: 0.1;
   }
   
-  /* Stack Page Title and Header */
-  .stack-header {
+  /* Page Title and Header */
+  .ds-header {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
   }
   
-  .stack-image {
+  .ds-image {
     width: 250px;
     height: auto;
     margin-left: 1rem;
