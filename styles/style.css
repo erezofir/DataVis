@@ -380,8 +380,6 @@ body.dark-mode {
   overflow: hidden;
 } 
 
-
-
 /* הגדרות לתפריט הצף */
 .floating-container {
   position: fixed;
@@ -394,23 +392,6 @@ body.dark-mode {
   margin: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.floating-container:hover {
-  border-radius: 10px;
-  width: 150px;
-  height: auto;
-  padding: 10px;
-  background-color: transparent;
-}
-
-.floating-container:hover .element-container {
-  opacity: 1; /* הצגת האייקונים */
-  pointer-events: auto; /* מאפשר לחיצה */
 }
 
 .floating-button {
@@ -431,16 +412,21 @@ body.dark-mode {
 }
 
 .element-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  position: absolute;
   bottom: 75px;
   left: 12px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
+  pointer-events: none; /* מונע לחיצה כאשר לא גלוי */
+  opacity: 0; /* מוסתר כברירת מחדל */
+  transition: opacity 0.3s ease;
+}
+
+.floating-container:hover .element-container {
+  opacity: 1; /* מציג את האייקונים */
+  pointer-events: auto; /* מאפשר לחיצה */
 }
 
 .float-element {
@@ -451,12 +437,7 @@ body.dark-mode {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
