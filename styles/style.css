@@ -155,7 +155,7 @@ body.home {
   100% {
     transform: translateY(0);
     opacity: 1; */
-  }
+  } 
 } 
 
 .fall-animation {
@@ -171,7 +171,7 @@ body.home {
   background-position: center;
   background-size: contain;
 } 
-
+/* 
 .icon.array {
   background-image: url('../assets/icons/array.svg');
 }
@@ -186,7 +186,7 @@ body.home {
 
 .icon.graph {
   background-image: url('../assets/icons/graph.svg');
-}
+} */
 
 /* Animated Icon */
 .animated-icon {
@@ -257,6 +257,7 @@ body.home {
   50% { border-image: linear-gradient(90deg, #ff008e, #3498db, #6a0dad); }
   100% { border-image: linear-gradient(90deg, #6a0dad, #ff008e, #3498db); }
 }
+
 #background-animation {
   position: fixed;
   top: 0;
