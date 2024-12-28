@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // מצב לילה
 document.getElementById("toggle-dark-mode").addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode"); // הוספת מחלקה למעבר למצב כהה
+    document.body.classList.toggle("dark-mode");
   
-    // שמירת המצב ב-localStorage
+    // שמירת המצב
     const isDarkMode = document.body.classList.contains("dark-mode");
     localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
   });
@@ -63,10 +63,9 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
   const musicToggle = document.getElementById("toggle-music");
   let isPlaying = false;
   
-  // נתיב קובץ המוזיקה
-  const audio = new Audio("assets/music/stuck-in-the-middle.mp3");
+  // טעינת קובץ המוזיקה
+  const audio = new Audio("../assets/music/stuck-in-the-middle.mp3");
   
-  // הפעלת ועצירת מוזיקה
   musicToggle.addEventListener("click", () => {
     if (isPlaying) {
       audio.pause();

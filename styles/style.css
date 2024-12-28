@@ -299,7 +299,7 @@ body.home {
 /* floating container - move to bottom left */
 .floating-container {
   position: fixed;
-  z-index: 9999;
+  z-index: 10;
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -320,6 +320,10 @@ body.home {
   transform: translateY(-70px);
   z-index: 2;
   animation: come-in 0.4s forwards 0.2s;
+  -webkit-transform: translateY(-70px);
+  -moz-transform: translateY(-70px);
+  -ms-transform: translateY(-70px);
+  -o-transform: translateY(-70px);
 }
 
 .floating-container:hover .element-container .float-element:nth-child(2) {
@@ -365,6 +369,7 @@ body.home {
 .float-element {
   width: 50px;
   height: 50px;
+  z-index: 20;
   pointer-events: auto;
   border-radius: 50%;
   background: #ffffff;
