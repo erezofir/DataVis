@@ -6,9 +6,11 @@
   <title>Heap Visualization</title>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/ds.css">
+  <script src="../scripts/visualizations/heap.js" defer></script>
 </head>
-<body>
-  <!-- Top Footer -->
+<body class="heap">
+
+  <!-- Top Navigation -->
   <header class="top-footer">
     <div class="site-name">Data Structures Visualization</div>
     <div class="tabs">
@@ -18,18 +20,18 @@
 
   <!-- Main Content -->
   <main>
+    <!-- Page Title -->
     <div class="ds-header">
       <h1 class="title">Heap</h1>
-      <!-- <img src="../assets/illustrations/heap.png" alt="Heap Illustration" class="stack-image"> -->
     </div>
 
     <!-- What is it Section -->
     <section class="box">
       <h2>What is it?</h2>
-      <p>A Heap is a specialized tree-based data structure that satisfies the heap property...</p>
+      <p>A Heap is a specialized tree-based data structure that satisfies the heap property: the parent is either greater than (max-heap) or less than (min-heap) its children.</p>
     </section>
 
-    <!-- Time Complexity -->
+    <!-- Time and Space Complexity Section -->
     <section class="box">
       <h2>Time and Space Complexity</h2>
       <table>
@@ -52,7 +54,7 @@
       </table>
     </section>
 
-    <!-- Properties -->
+    <!-- Properties Section -->
     <section class="box">
       <h2>Properties</h2>
       <ul class="spaced-list">
@@ -67,17 +69,35 @@
       <h2>Visualization</h2>
       <canvas id="heapCanvas" width="400" height="250"></canvas>
       <div class="controls">
-        <button onclick="insertItem()">Insert</button>
-        <button onclick="extractItem()">Extract</button>
+        <button onclick="insertItem(prompt('Enter value to insert:'))">Insert</button>
+        <button onclick="extractItem()">Extract Min/Max</button>
+        <button onclick="clearHeap()">Clear All</button>
       </div>
     </section>
 
-    <!-- Git Icon -->
-    <div class="git-icon">
-      <a href="https://github.com/erezofir" target="_blank">
-        <img src="../assets/icons/git-circle.svg" alt="GitHub">
-      </a>
-    </div>
+    <!-- Advantages and Disadvantages Section -->
+    <section class="box">
+      <h2>Advantages and Disadvantages</h2>
+      <div class="pros-cons">
+        <div class="advantages">
+          <p>✅ Great for implementing priority queues.</p>
+          <p>✅ Efficient for quick insertion and deletion.</p>
+          <p>✅ Provides dynamic resizing.</p>
+        </div>
+        <div class="disadvantages">
+          <p>❌ Can become unbalanced.</p>
+          <p>❌ Traversal can be complex.</p>
+          <p>❌ Limited to binary relationships.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- GitHub Icon -->
+  <div class="git-icon">
+    <a href="https://github.com/erezofir" target="_blank">
+      <img src="../assets/icons/git-circle.svg" alt="GitHub">
+    </a>
+  </div>
 </body>
 </html>
