@@ -39,24 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
   
     typeEffect(); // Start typing effect
   });
-
-// Toggle Dark Mode
-const toggleDarkMode = document.getElementById("toggle-dark-mode");
-toggleDarkMode.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-
-  // Save preference to localStorage
-  const isDarkMode = document.body.classList.contains("dark-mode");
-  localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
-});
-
-document.getElementById("toggle-dark-mode").addEventListener("click", () => {
+  
+  // Toggle Dark Mode
+  const toggleDarkMode = document.getElementById("toggle-dark-mode");
+  toggleDarkMode.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+  
+    // Save preference to localStorage
     const isDarkMode = document.body.classList.contains("dark-mode");
     localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
   });
   
-  // בדיקה האם מצב לילה שמור במועדפים
+  // Check if dark mode is saved in preferences
   window.addEventListener("DOMContentLoaded", () => {
     const darkModePreference = localStorage.getItem("darkMode");
     if (darkModePreference === "enabled") {
@@ -64,16 +58,46 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
     }
   });
   
-
+  // Music toggle
   const musicToggle = document.getElementById("toggle-music");
-let isPlaying = false;
-let audio = new Audio("assets/music/background.mp3");
-
-musicToggle.addEventListener("click", () => {
-  if (isPlaying) {
-    audio.pause();
-  } else {
-    audio.play();
-  }
-  isPlaying = !isPlaying;
-});
+  let isPlaying = false;
+  let audio = new Audio("assets/music/background.mp3");
+  
+  musicToggle.addEventListener("click", () => {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    isPlaying = !isPlaying;
+  });
+  
+  // Manage settings menu options
+  let settingsMenuTimeout;
+  const settingsMenu = document.querySelector(".settings-menu");
+  const settingsOptions = document.querySelector(".settings-options");
+  
+  // Show options when hovering over the settings menu
+  settingsMenu.addEventListener("mouseenter", () => {
+    clearTimeout(settingsMenuTimeout); // Cancel any previous timer
+    settingsOptions.classList.add("open");
+  });
+  
+  // Hide options after a delay when leaving the settings menu
+  settingsMenu.addEventListener("mouseleave", () => {
+    settingsMenuTimeout = setTimeout(() => {
+      settingsOptions.classList.remove("open");
+    }, 2000); // Keep options open for 2 seconds
+  });
+  
+  // Keep options open when hovering over them
+  settingsOptions.addEventListener("mouseenter", () => {
+    clearTimeout(settingsMenuTimeout); // Cancel the hide timer
+  });
+  
+  settingsOptions.addEventListener("mouseleave", () => {
+    settingsMenuTimeout = setTimeout(() => {
+      settingsOptions.classList.remove("open");
+    }, 2000); // Close options after 2 seconds if mouse leaves
+  });
+  
