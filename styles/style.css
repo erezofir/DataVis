@@ -171,6 +171,22 @@ body.home {
   background-size: contain;
 } 
 
+.icon.array {
+  background-image: url('../assets/icons/array.svg');
+}
+
+.icon.linked-list {
+  background-image: url('../assets/icons/linked-list.svg');
+}
+
+.icon.heap {
+  background-image: url('../assets/icons/heap.svg');
+}
+
+.icon.graph {
+  background-image: url('../assets/icons/graph.svg');
+}
+
 /* Animated Icon */
 .animated-icon {
   animation: rotateIcon 2s linear infinite;
@@ -250,6 +266,5 @@ body.home {
   background: radial-gradient(circle, rgba(39, 194, 250, 0.1), transparent);
   overflow: hidden;
 } 
-
 
 
