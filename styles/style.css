@@ -91,13 +91,12 @@ body.home {
 }
 
 
-/* 
 @keyframes colorChange {
   0% { color: #ff1500; }
   50% { color: #0048ff; }
   100% { color: #ff15d8; }
 }
- */
+ 
 
 /* Each Row in the Pyramid */
 .pyramid-row {
