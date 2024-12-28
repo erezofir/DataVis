@@ -58,8 +58,9 @@ body.home {
   justify-content: space-between;
   align-items: center;
   background: #4a4a4a; /* Dark gray */
+  font-weight: bold;
   color: #ffffff;
-  padding: 1rem;
+  padding: 1.7rem;
 }
 
 .top-footer .site-name {
