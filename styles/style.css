@@ -171,7 +171,7 @@ body.home {
   background-size: contain;
 } 
 
-/* Animated Icon for Stack */
+/* Animated Icon */
 .animated-icon {
   animation: rotateIcon 2s linear infinite;
    /* Smooth rotation */
@@ -235,7 +235,7 @@ body.home {
 }
 
 
-/* @keyframes borderAnimation {
+@keyframes borderAnimation {
   0% { border-image: linear-gradient(90deg, #3498db, #6a0dad, #ff008e); }
   50% { border-image: linear-gradient(90deg, #ff008e, #3498db, #6a0dad); }
   100% { border-image: linear-gradient(90deg, #6a0dad, #ff008e, #3498db); }
@@ -249,8 +249,7 @@ body.home {
   z-index: -1;
   background: radial-gradient(circle, rgba(39, 194, 250, 0.1), transparent);
   overflow: hidden;
-} */
-
+} 
 
 /* .heap-icon {
   background-image: url('../assets/icons/heap.svg');
