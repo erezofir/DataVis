@@ -41,16 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   
 
+
 // מצב לילה
 document.getElementById("toggle-dark-mode").addEventListener("click", () => {
-    console.log("Dark mode toggled"); // בדיקה
-    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark-mode"); // הוספת מחלקה למעבר למצב כהה
   
+    // שמירת המצב ב-localStorage
     const isDarkMode = document.body.classList.contains("dark-mode");
     localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
   });
   
-  // שמירת מצב לילה
+  // טעינת המצב השמור בעת טעינת הדף
   window.addEventListener("DOMContentLoaded", () => {
     const darkModePreference = localStorage.getItem("darkMode");
     if (darkModePreference === "enabled") {
@@ -65,14 +66,12 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
   // נתיב קובץ המוזיקה
   const audio = new Audio("../assets/music/stuck-in-the-middle.mp3");
   
+  // הפעלת ועצירת מוזיקה
   musicToggle.addEventListener("click", () => {
-    console.log("Music button clicked"); // בדיקה
     if (isPlaying) {
       audio.pause();
-      console.log("Music paused"); // בדיקה
     } else {
       audio.play();
-      console.log("Music playing"); // בדיקה
     }
     isPlaying = !isPlaying;
   });
