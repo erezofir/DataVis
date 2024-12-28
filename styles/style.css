@@ -109,6 +109,10 @@ body.dark-mode {
   display: flex;
 }
 
+.settings-menu .settings-options.open {
+  display: flex;
+}
+
 
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
