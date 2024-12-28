@@ -382,3 +382,72 @@ body.dark-mode {
 
 
 
+/* הגדרות לתפריט הצף */
+.floating-container {
+  position: fixed;
+  z-index: 9999;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.floating-container:hover {
+  border-radius: 10px;
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  background-color: #4a4a4a;
+}
+
+.floating-container:hover .element-container .float-element {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.floating-button {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.floating-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.element-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.float-element {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.4s ease;
+}
+
+.float-element img {
+  width: 25px;
+  height: 25px;
+}
