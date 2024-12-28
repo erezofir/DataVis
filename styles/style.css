@@ -84,6 +84,12 @@ body.home {
   color: #ffe6bc; /* Yellow for differentiation */
 }
 
+.top-footer .tabs a.data-links {
+  font-style: italic;
+  color: #ffcc00; /* Yellow for differentiation */
+}
+
+
 .top-footer .tabs a:hover {
   text-decoration: none;
 }
@@ -96,6 +102,9 @@ body.home {
   align-items: center;
   padding: 2rem;
 }
+
+
+
 
 /* Arrange Circles in Pyramid Structure */
 .pyramid-structure {
