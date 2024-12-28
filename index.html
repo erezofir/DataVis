@@ -8,22 +8,18 @@
   <script src="scripts/visualizations/falling-animation.js" defer></script>
 </head>
 
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    // Load the footer from footer.html
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
 
-  <!-- Top Footer -->
-<body class="home">
-  <header class="top-footer">
-    <div class="tabs">
-      <a href="index.html">Home</a>
-      <a href="data-structures/stack.html" class="data-structure-link">Stack</a>
-      <a href="data-structures/queue.html" class="data-structure-link">Queue</a>
-      <a href="data-structures/linked-list.html" class="data-structure-link">Linked List</a>
-      <a href="data-structures/array.html" class="data-structure-link">Array</a>
-      <a href="data-structures/hash-table.html" class="data-structure-link">Hash-Table</a>
-      <a href="data-structures/heap.html" class="data-structure-link">Heap</a>
-      <a href="data-structures/tree.html" class="data-structure-link">Tree</a>
-    </div>
-    <div class="site-name">@Data Structures Visualization</div>
-  </header>
 
   <!-- Main Content -->
   <main>
@@ -93,13 +89,6 @@
       </div>
     </div> 
   </main>
-
-  <!-- Git Icon -->
-  <div class="git-icon">
-    <a href="https://github.com/erezofir" target="_blank">
-      <img src="assets/icons/git-circle.svg" alt="GitHub">
-    </a>
-  </div>
 
   <!-- Scripts -->
   <script src="scripts/main.js"></script>

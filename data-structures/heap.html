@@ -10,13 +10,18 @@
 </head>
 <body class="heap">
 
-  <!-- Top Navigation -->
-  <header class="top-footer">
-    <div class="site-name">Data Structures Visualization</div>
-    <div class="tabs">
-      <a href="../index.html">Home</a>
-    </div>
-  </header>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    // Load the footer from footer.html
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading footer:", error));
+  </script>
+
 
   <!-- Main Content -->
   <main>
@@ -92,12 +97,5 @@
       </div>
     </section>
   </main>
-
-  <!-- GitHub Icon -->
-  <div class="git-icon">
-    <a href="https://github.com/erezofir" target="_blank">
-      <img src="../assets/icons/git-circle.svg" alt="GitHub">
-    </a>
-  </div>
 </body>
 </html>
