@@ -49,3 +49,31 @@ toggleDarkMode.addEventListener("click", () => {
   const isDarkMode = document.body.classList.contains("dark-mode");
   localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
 });
+
+document.getElementById("toggle-dark-mode").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDarkMode = document.body.classList.contains("dark-mode");
+    localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
+  });
+  
+  // בדיקה האם מצב לילה שמור במועדפים
+  window.addEventListener("DOMContentLoaded", () => {
+    const darkModePreference = localStorage.getItem("darkMode");
+    if (darkModePreference === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+  });
+  
+
+  const musicToggle = document.getElementById("toggle-music");
+let isPlaying = false;
+let audio = new Audio("assets/music/background.mp3");
+
+musicToggle.addEventListener("click", () => {
+  if (isPlaying) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
+  isPlaying = !isPlaying;
+});

@@ -41,6 +41,75 @@ body.dark-mode {
   background-color: #6a6a6a;
 }
 
+/* הגדרות הכפתור הראשי */
+.settings-menu {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.settings-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4a4a4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.settings-button:hover {
+  background-color: #6a6a6a;
+}
+
+.settings-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* עיצוב האפשרויות */
+.settings-options {
+  display: none; /* מוסתרת כברירת מחדל */
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  bottom: 70px;
+  left: 10px;
+}
+
+.settings-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4a4a4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.settings-option:hover {
+  background-color: #6a6a6a;
+  transform: scale(1.1);
+}
+
+.settings-option img {
+  width: 20px;
+  height: 20px;
+}
+
+/* הצגת האפשרויות בעת ריחוף על כפתור ההגדרות */
+.settings-menu:hover .settings-options {
+  display: flex;
+}
+
+
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
