@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "tech enthusiasts",
       "problem solvers at heart"
     ];
+  
     const dynamicText = document.getElementById("dynamic-text");
     let currentOption = 0;
     let charIndex = 0;
@@ -35,6 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(typeEffect, isDeleting ? 50 : 100);
     }
   
-    typeEffect();
+    typeEffect(); // Start typing effect
   });
   
