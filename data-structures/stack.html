@@ -7,12 +7,10 @@
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/ds.css">
   <script src="../scripts/visualizations/stack.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="scripts/background-animation.js" defer></script>
-
 </head>
-<body>
-  <!-- Top Footer -->
+<body class="stack">
+
+  <!-- Top Navigation -->
   <header class="top-footer">
     <div class="site-name">Data Structures Visualization</div>
     <div class="tabs">
@@ -22,18 +20,18 @@
 
   <!-- Main Content -->
   <main>
+    <!-- Page Title -->
     <div class="ds-header">
       <h1 class="title">Stack</h1>
-      <!-- <img src="../assets/illustrations/stack.png" alt="stack Illustration" class="stack-image"> -->
     </div>
 
     <!-- What is it Section -->
     <section class="box">
       <h2>What is it?</h2>
-      <p>A Stack is a Last-In-First-Out (LIFO) data structure...</p>
+      <p>A Stack is a Last-In-First-Out (LIFO) data structure where the last element added is the first to be removed.</p>
     </section>
-    
-    <!-- Time Complexity -->
+
+    <!-- Time and Space Complexity Section -->
     <section class="box">
       <h2>Time and Space Complexity</h2>
       <table>
@@ -59,9 +57,8 @@
         </tbody>
       </table>
     </section>
-    
 
-    <!-- Properties -->
+    <!-- Properties Section -->
     <section class="box">
       <h2>Properties</h2>
       <ul class="spaced-list">
@@ -88,51 +85,50 @@
       <h2>Visualization</h2>
       <canvas id="stackCanvas" width="400" height="250"></canvas>
       <div class="controls">
-        <button onclick="pushItem()">Push</button>
+        <button onclick="pushItem(prompt('Enter value to push:'))">Push</button>
         <button onclick="popItem()">Pop</button>
         <button onclick="clearAll()">Clear All</button>
       </div>
-    </section
+    </section>
 
-    <!-- pros-cons -->
+    <!-- Advantages and Disadvantages Section -->
     <section class="box">
-      <h2>Pros and Cons</h2>
+      <h2>Advantages and Disadvantages</h2>
       <div class="pros-cons">
         <div class="advantages">
-          <p>✅ Simple and efficient</p>
-          <p>✅ Minimal memory overhead</p>
-          <p>✅ Easy debugging and testing</p>
+          <p>✅ Simple and efficient.</p>
+          <p>✅ Minimal memory overhead.</p>
+          <p>✅ Easy debugging and testing.</p>
         </div>
         <div class="disadvantages">
-          <p>❌ Limited size (in bounded stacks)</p>
-          <p>❌ No random access to elements</p>
-          <p>❌ Overflow and underflow issues</p>
+          <p>❌ Limited size (in bounded stacks).</p>
+          <p>❌ No random access to elements.</p>
+          <p>❌ Overflow and underflow issues.</p>
         </div>
       </div>
     </section>
-    
-    <!-- Possible Implementations -->
+
+    <!-- Possible Implementations Section -->
     <section class="box">
       <h2>Possible Implementations</h2>
       <div class="implementations">
-        <div class="implementation-icon">
+        <div class="circle implementation-icon">
           <div class="icon" style="background-image: url('../assets/icons/array.svg');"></div>
           <p>Array</p>
         </div>
-        <div class="implementation-icon">
+        <div class="circle implementation-icon">
           <div class="icon" style="background-image: url('../assets/icons/linked-list.svg');"></div>
           <p>Linked List</p>
         </div>
       </div>
     </section>
-
-    <!-- Git Icon -->
-    <div class="git-icon">
-      <a href="https://github.com/erezofir" target="_blank">
-        <img src="../assets/icons/git-circle.svg" alt="GitHub">
-      </a>
-    </div>
-    <div id="background-animation"></div>
   </main>
+
+  <!-- GitHub Icon -->
+  <div class="git-icon">
+    <a href="https://github.com/erezofir" target="_blank">
+      <img src="../assets/icons/git-circle.svg" alt="GitHub">
+    </a>
+  </div>
 </body>
 </html>

@@ -62,9 +62,26 @@ body.home {
   padding: 1rem;
 }
 
+.top-footer .site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.top-footer .tabs {
+  display: flex;
+  gap: 1rem;
+}
+
 .top-footer .tabs a {
   color: #ffffff;
   text-decoration: none;
+  font-size: 1rem;
+}
+
+.top-footer .tabs a.data-structure-link {
+  font-style: italic;
+  color: #ffe6bc; /* Yellow for differentiation */
 }
 
 .top-footer .tabs a:hover {

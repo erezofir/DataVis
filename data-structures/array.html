@@ -10,7 +10,7 @@
 </head>
 <body class="array">
 
-  <!-- Top Footer -->
+  <!-- Top Navigation -->
   <header class="top-footer">
     <div class="site-name">Data Structures Visualization</div>
     <div class="tabs">
@@ -18,18 +18,20 @@
     </div>
   </header>
 
-    
+  <!-- Main Content -->
   <main>
+    <!-- Page Title -->
     <div class="ds-header">
       <h1 class="title">Array</h1>
-      <!-- <img src="../assets/illustrations/array.png" alt="Array Illustration" class="array-image"> -->
     </div>
 
+    <!-- What is it Section -->
     <section class="box">
       <h2>What is it?</h2>
       <p>An array is a collection of items stored at contiguous memory locations. It allows random access and manipulation of data elements.</p>
     </section>
 
+    <!-- Time and Space Complexity Section -->
     <section class="box">
       <h2>Time and Space Complexity</h2>
       <table>
@@ -60,6 +62,7 @@
       </table>
     </section>
 
+    <!-- Properties Section -->
     <section class="box">
       <h2>Properties</h2>
       <ul class="spaced-list">
@@ -71,6 +74,7 @@
       </ul>
     </section>
 
+    <!-- Operations Section -->
     <section class="box">
       <h2>Operations</h2>
       <ul>
@@ -80,6 +84,7 @@
       </ul>
     </section>
 
+    <!-- Visualization Section -->
     <section class="visualization box">
       <h2>Visualization</h2>
       <canvas id="arrayCanvas" width="500" height="200"></canvas>
@@ -89,33 +94,45 @@
         <button onclick="searchItem(prompt('Enter value to search:'))">Search</button>
       </div>
     </section>
-    
+
+    <!-- Advantages and Disadvantages Section -->
     <section class="box">
-  <h2>Advantages and Disadvantages</h2>
-  <div class="pros-cons">
-    <div class="advantages">
-      <p>✅ Efficient random access with index.</p>
-      <p>✅ Memory-efficient for static arrays.</p>
-      <p>✅ Simple implementation and traversal.</p>
-    </div>
-    <div class="disadvantages">
-      <p>❌ Fixed size for static arrays.</p>
-      <p>❌ Expensive insertions/deletions in dynamic arrays.</p>
-      <p>❌ Wasted memory in sparse usage.</p>
-    </div>
-  </div>
+      <h2>Advantages and Disadvantages</h2>
+      <div class="pros-cons">
+        <div class="advantages">
+          <p>✅ Efficient random access with index.</p>
+          <p>✅ Memory-efficient for static arrays.</p>
+          <p>✅ Simple implementation and traversal.</p>
+        </div>
+        <div class="disadvantages">
+          <p>❌ Fixed size for static arrays.</p>
+          <p>❌ Expensive insertions/deletions in dynamic arrays.</p>
+          <p>❌ Wasted memory in sparse usage.</p>
+        </div>
+      </div>
     </section>
+
+    <!-- Possible Implementations Section -->
     <section class="box">
       <h2>Possible Implementations</h2>
       <div class="implementations">
-        <div class="implementation-icon">
+        <div class="circle implementation-icon">
           <div class="icon" style="background-image: url('../assets/icons/array.svg');"></div>
           <p>Static Array</p>
         </div>
-        <div class="implementation-icon">
+        <div class="circle implementation-icon">
           <div class="icon" style="background-image: url('../assets/icons/array.svg');"></div>
           <p>Dynamic Array</p>
         </div>
       </div>
-    </section>   
+    </section>
   </main>
+
+  <!-- GitHub Icon -->
+  <div class="git-icon">
+    <a href="https://github.com/erezofir" target="_blank">
+      <img src="../assets/icons/git-circle.svg" alt="GitHub">
+    </a>
+  </div>
+</body>
+</html>
