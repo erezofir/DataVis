@@ -394,15 +394,21 @@ body.home {
 .float-element {
   width: 50px;
   height: 50px;
+  pointer-events: auto;
   border-radius: 50%;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 10px 25px -5px rgba(232, 234, 234, 0.6);
-  opacity: 0;
+  opacity: 1;
   transform: translateY(100px);
   transition: all 0.4s ease;
+  cursor: pointer; 
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
 }
 
 .float-element img {

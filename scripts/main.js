@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     typeEffect(); // Start typing effect
-  });
+});
   
-// Dark Mode Toggle
+  // Dark Mode Toggle
 document.getElementById("toggle-dark-mode").addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode"); // Toggle dark mode class
+    document.body.classList.toggle("dark-mode");
   
     // Save dark mode preference in localStorage
     const isDarkMode = document.body.classList.contains("dark-mode");
@@ -61,8 +61,8 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
   const musicToggle = document.getElementById("toggle-music");
   let isPlaying = false;
   
-  // Load audio file (place the file in 'assets/music/background.mp3')
-  const audio = new Audio("assets/music/stuck-in-the-middle.mp3");
+  // Load audio file (ensure the file exists in the specified location)
+  const audio = new Audio("../assets/music/stuck-in-the-middle.mp3");
   
   // Music play/pause functionality
   musicToggle.addEventListener("click", () => {
@@ -74,8 +74,3 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
     isPlaying = !isPlaying; // Toggle play state
   });
   
-
-const volumeSlider = document.getElementById("volume-slider");
-volumeSlider.addEventListener("input", () => {
-  audio.volume = volumeSlider.value;
-});
