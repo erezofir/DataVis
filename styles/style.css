@@ -215,8 +215,8 @@ Animated Icon for Stack
 .pointer-arrow {
   display: inline-block;
   margin-left: 5px;
-  transform: rotate(90deg); /* Arrow pointing to the right */
-} */*/
+  transform: rotate(90deg); /* Arrow pointing to the right 
+} */
 
 /* Git Icon */
 .git-icon {
