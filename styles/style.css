@@ -32,7 +32,7 @@ body.home {
 }
 
 .sub-title {
-  font-size: 5rem;
+  font-size: 3rem;
   color: rgb(239, 92, 48);
   text-align: left;
   margin-top: 1.5rem; /* Space between the main title and this subtitle */
@@ -51,34 +51,6 @@ body.home {
     border-color: transparent;
   }
 }
-
-
-
-body.stack {
-  background: #f8f8fa ;
-  color: #d2d2d6;
-}
-
-.ds-header .title {
-  font-family: 'Oswald', sans-serif;
-  font-size: 4rem;
-  text-align: center;
-  color: #031572;
-}
-
-body.stack::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background-image: url('../assets/patterns/futuristic-lines.svg');
-  opacity: 0.1;
-}
-
-
 
 /* Top Footer */
 .top-footer {
@@ -100,14 +72,6 @@ body.stack::before {
 }
 
 
-
-@keyframes colorChange {
-  0% { color: #ff1500; }
-  50% { color: #0048ff; }
-  100% { color: #ff15d8; }
-}
-
-
 /* Home Content Layout */
 .home-content {
   display: flex;
@@ -115,7 +79,6 @@ body.stack::before {
   align-items: center;
   padding: 2rem;
 }
-
 
 /* Arrange Circles in Pyramid Structure */
 .pyramid-structure {
@@ -126,6 +89,15 @@ body.stack::before {
   margin-top: 3rem;
   margin-right: 5%; /* Adjust right margin */
 }
+
+
+/* 
+@keyframes colorChange {
+  0% { color: #ff1500; }
+  50% { color: #0048ff; }
+  100% { color: #ff15d8; }
+}
+ */
 
 /* Each Row in the Pyramid */
 .pyramid-row {
@@ -171,7 +143,7 @@ body.stack::before {
 }
 
 /* Fall Animation */
-@keyframes fall {
+/* @keyframes fall {
   0% {
     transform: translateY(-300px);
     opacity: 0;
@@ -182,25 +154,25 @@ body.stack::before {
 }
   100% {
     transform: translateY(0);
-    opacity: 1;
-  }
-}
+    opacity: 1; */
+  /* }
+} */
 
-.fall-animation {
+/* .fall-animation {
   animation: fall 1.5s ease-out;
   -webkit-animation: fall 1.5s ease-out;
-}
+} */
 
 
-.icon {
+/* .icon {
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
+} */
 
-/* Animated Icon for Stack */
+Animated Icon for Stack
 .animated-icon {
   animation: rotateIcon 2s linear infinite;
    /* Smooth rotation */
@@ -226,25 +198,25 @@ body.stack::before {
   animation: fallBounce 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* Pointer Styling */
+/* Pointer Styling
 .pointer {
   font-family: 'Montserrat', sans-serif; /* Match the site's font */
-  font-size: 16px; /* Font size for pointers */
-}
+  /* font-size: 16px; /* Font size for pointers */
+/* }  
 
 .pointer.head {
-  color: #dfa4e8; /* Blue for head */
+  color: #dfa4e8; /* Blue for head 
 }
 
 .pointer.tail {
-  color: #8ce2df; /* Green for tail */
+  color: #8ce2df; /* Green for tail 
 }
 
 .pointer-arrow {
   display: inline-block;
   margin-left: 5px;
   transform: rotate(90deg); /* Arrow pointing to the right */
-}
+} */*/
 
 /* Git Icon */
 .git-icon {
@@ -263,37 +235,8 @@ body.stack::before {
   padding: 5px;
 }
 
-/* Stack Page Title and Header */
-.stack-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
 
-
-
-.stack-image {
-  width: 250px;
-  height: auto;
-  margin-left: 1rem; /* Add spacing from the title */
-}
-
-/* General Box Styling for Sections  */
-.box {
-  background: #e7e9ed;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  box-shadow: 0px 4px 6px rgba(88, 140, 237, 0.776);
-   /* Subtle shadow for depth  */
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-
-@keyframes borderAnimation {
+/* @keyframes borderAnimation {
   0% { border-image: linear-gradient(90deg, #3498db, #6a0dad, #ff008e); }
   50% { border-image: linear-gradient(90deg, #ff008e, #3498db, #6a0dad); }
   100% { border-image: linear-gradient(90deg, #6a0dad, #ff008e, #3498db); }
@@ -307,147 +250,16 @@ body.stack::before {
   z-index: -1;
   background: radial-gradient(circle, rgba(39, 194, 250, 0.1), transparent);
   overflow: hidden;
-}
+} */
 
 
-
-/* Table Styling */
-table {
-  width: 40%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-}
-
-table th, table td {
-  border: 1px solid #0d2224;
-  padding: 0.8rem;
-  text-align: center;
-}
-
-table th {
-  background: #98d5f2; /* Light gray header for the table */
-  font-weight: bold;
-}
-
-/* Spaced List for Features */
-.spaced-list li {
-  margin-bottom: 0.5rem; /* Add spacing between lines */
-}
-
-/* Visualization Section */
-.visualization canvas {
-  border: 4px solid #00ffcc;
-  background: #e9ecef74;
-  margin: 1rem auto;
-  display: block;
-  width: 500px;
-  height: 300px;
-}
-
-.controls {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-/*.controls button {
-  margin: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background: #3498db; /* Button color 
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.controls button:hover {
-  background: #2c7cb3; /* Darker hover effect 
-}*/
-
-.controls button {
-  margin: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background: #3498db; /* Button color */
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 8px rgba(39, 194, 250, 0.787), 0 0 15px rgba(39, 194, 250, 0.5);
-  border-radius: 5px;
-}
-
-.controls button:hover {
-  box-shadow: 0 0 15px rgba(39, 194, 250, 0.787), 0 0 30px rgba(39, 194, 250, 0.5);
-}
-
-
-
-/* Advantages and Disadvantages */
-.pros-cons {
-  display: flex; /* Side-by-side layout */
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-.advantages, .disadvantages {
-  flex: 1;
-  margin: 0 1rem;
-}
-
-.advantages {
-  color: green; /* Green for advantages */
-}
-
-.disadvantages {
-  color: red; /* Red for disadvantages */
-}
-
-/* Possible Implementations */
-.implementations {
-  display: flex;
-  gap: 1.5rem; /* Spacing between circles */
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.implementation-icon {
-  width: 100px; /* Smaller circles */
-  height: 100px;
-  background: #d0ebff; /* Light blue-gray */
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.array-icon {
-  background-image: url('../assets/icons/array.svg');
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.linked-list-icon {
-  background-image: url('../assets/icons/linked-list.svg');
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.heap-icon {
+/* .heap-icon {
   background-image: url('../assets/icons/heap.svg');
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
+} */
 
 
