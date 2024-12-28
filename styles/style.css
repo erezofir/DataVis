@@ -143,7 +143,7 @@ body.home {
 }
 
 /* Fall Animation */
-/* @keyframes fall {
+@keyframes fall {
   0% {
     transform: translateY(-300px);
     opacity: 0;
@@ -151,28 +151,28 @@ body.home {
     -moz-transform: translateY(-300px);
     -ms-transform: translateY(-300px);
     -o-transform: translateY(-300px);
-}
+  }
   100% {
     transform: translateY(0);
     opacity: 1; */
-  /* }
-} */
+  }
+} 
 
-/* .fall-animation {
+.fall-animation {
   animation: fall 1.5s ease-out;
   -webkit-animation: fall 1.5s ease-out;
-} */
+} 
 
 
-/* .icon {
+.icon {
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-} */
+} 
 
-Animated Icon for Stack
+/* Animated Icon for Stack */
 .animated-icon {
   animation: rotateIcon 2s linear infinite;
    /* Smooth rotation */
