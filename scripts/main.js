@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect(); // Start typing effect
   });
   
-  // מצב לילה
+// Dark Mode Toggle
 document.getElementById("toggle-dark-mode").addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     const isDarkMode = document.body.classList.contains("dark-mode");
     localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
   });
   
-  // בדיקת מצב לילה שמור
+  // Check for saved Dark Mode preference
   window.addEventListener("DOMContentLoaded", () => {
     const darkModePreference = localStorage.getItem("darkMode");
     if (darkModePreference === "enabled") {
@@ -55,7 +55,7 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
     }
   });
   
-  // נגן מוזיקה
+  // Music Toggle
   const musicToggle = document.getElementById("toggle-music");
   let isPlaying = false;
   let audio = new Audio("assets/music/background.mp3");

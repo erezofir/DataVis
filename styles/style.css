@@ -14,104 +14,6 @@ body.home {
   color: #e0e0eb;
 }
 
-body.dark-mode {
-  background-color: #0d1a2d;
-  color: #e0e0eb;
-}
-.dark-mode .top-footer {
-  background-color: #1f1f1f;
-}
-.dark-mode .tabs a {
-  color: #bbbbbb;
-}
-
-.dark-mode-button {
-  background-color: #fcfcfc;
-  color: rgb(124, 116, 116);
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-left: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.dark-mode-button:hover {
-  background-color: #fcfcfc;
-}
-
-/* הגדרות הכפתור הראשי */
-.settings-menu {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 100;
-}
-
-.settings-button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fcfcfc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-}
-
-.settings-button:hover {
-  background-color: #6a6a6a;
-}
-
-.settings-button img {
-  width: 24px;
-  height: 24px;
-}
-
-/* עיצוב האפשרויות */
-.settings-options {
-  display: none; /* מוסתרת כברירת מחדל */
-  flex-direction: column;
-  gap: 10px;
-  position: absolute;
-  bottom: 70px;
-  left: 10px;
-}
-
-.settings-option {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fcfcfc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.settings-option:hover {
-  background-color: #fcfcfc;
-  transform: scale(1.1);
-}
-
-.settings-option img {
-  width: 20px;
-  height: 20px;
-}
-
-/* הצגת האפשרויות בעת ריחוף על כפתור ההגדרות */
-.settings-menu:hover .settings-options {
-  display: flex;
-}
-
-.settings-menu .settings-options.open {
-  display: flex;
-}
 
 
 @keyframes gradientAnimation {
@@ -380,7 +282,7 @@ body.dark-mode {
   overflow: hidden;
 } 
 
-/* הגדרות לתפריט הצף */
+/* floating button container */
 .floating-container {
   position: fixed;
   z-index: 9999;
@@ -390,20 +292,20 @@ body.dark-mode {
   bottom: 20px;
   left: 20px;
   margin: 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .floating-button {
+  position: absolute;
   width: 65px;
   height: 65px;
-  border-radius: 50%;
   background: #ffffff;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px -5px rgba(232, 234, 234, 0.6);
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .floating-button img {
@@ -411,37 +313,51 @@ body.dark-mode {
   height: 30px;
 }
 
+/* element container */
 .element-container {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  bottom: 75px;
-  left: 12px;
-  pointer-events: none; /* מונע לחיצה כאשר לא גלוי */
-  opacity: 0; /* מוסתר כברירת מחדל */
+  bottom: 80px;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
 .floating-container:hover .element-container {
-  opacity: 1; /* מציג את האייקונים */
-  pointer-events: auto; /* מאפשר לחיצה */
+  opacity: 1;
+  pointer-events: auto;
 }
 
+/* individual elements */
 .float-element {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px -5px rgba(232, 234, 234, 0.6);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.4s ease;
+}
+
+.floating-container:hover .float-element:nth-child(1) {
+  opacity: 1;
+  transform: translateY(-60px);
+}
+
+.floating-container:hover .float-element:nth-child(2) {
+  opacity: 1;
+  transform: translateY(-120px);
 }
 
 .float-element img {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
