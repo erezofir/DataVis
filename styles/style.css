@@ -14,6 +14,33 @@ body.home {
   color: #e0e0eb;
 }
 
+body.dark-mode {
+  background-color: #0d1a2d;
+  color: #e0e0eb;
+}
+.dark-mode .top-footer {
+  background-color: #1f1f1f;
+}
+.dark-mode .tabs a {
+  color: #bbbbbb;
+}
+
+.dark-mode-button {
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-button:hover {
+  background-color: #6a6a6a;
+}
+
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -199,23 +226,6 @@ body.home {
   background-size: contain;
 } 
 
-/* 
-.icon.array {
-  background-image: url('../assets/icons/array.svg');
-}
-
-.icon.linked-list {
-  background-image: url('../assets/icons/linked-list.svg');
-}
-
-.icon.heap {
-  background-image: url('../assets/icons/heap.svg');
-}
-
-.icon.graph {
-  background-image: url('../assets/icons/graph.svg');
-} */
-
 /* Animated Icon */
 .animated-icon {
   animation: rotateIcon 2s linear infinite;
@@ -296,5 +306,6 @@ body.home {
   background: radial-gradient(circle, rgba(39, 194, 250, 0.1), transparent);
   overflow: hidden;
 } 
+
 
 

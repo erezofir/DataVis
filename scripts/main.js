@@ -1,3 +1,4 @@
+// Check saved preference
 document.addEventListener("DOMContentLoaded", () => {
     const options = [
       "Students",
@@ -38,4 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
     typeEffect(); // Start typing effect
   });
-  
+
+// Toggle Dark Mode
+const toggleDarkMode = document.getElementById("toggle-dark-mode");
+toggleDarkMode.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Save preference to localStorage
+  const isDarkMode = document.body.classList.contains("dark-mode");
+  localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
+});
