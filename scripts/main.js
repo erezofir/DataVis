@@ -40,16 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect(); // Start typing effect
 });
   
-  // Dark Mode Toggle
+
+// מצב לילה
 document.getElementById("toggle-dark-mode").addEventListener("click", () => {
+    console.log("Dark mode toggled"); // בדיקה
     document.body.classList.toggle("dark-mode");
   
-    // Save dark mode preference in localStorage
     const isDarkMode = document.body.classList.contains("dark-mode");
     localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
   });
   
-  // Load saved dark mode preference on page load
+  // שמירת מצב לילה
   window.addEventListener("DOMContentLoaded", () => {
     const darkModePreference = localStorage.getItem("darkMode");
     if (darkModePreference === "enabled") {
@@ -57,20 +58,22 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
     }
   });
   
-  // Music Toggle
+  // מוזיקה
   const musicToggle = document.getElementById("toggle-music");
   let isPlaying = false;
   
-  // Load audio file (ensure the file exists in the specified location)
+  // נתיב קובץ המוזיקה
   const audio = new Audio("../assets/music/stuck-in-the-middle.mp3");
   
-  // Music play/pause functionality
   musicToggle.addEventListener("click", () => {
+    console.log("Music button clicked"); // בדיקה
     if (isPlaying) {
-      audio.pause(); // Pause the music
+      audio.pause();
+      console.log("Music paused"); // בדיקה
     } else {
-      audio.play(); // Play the music
+      audio.play();
+      console.log("Music playing"); // בדיקה
     }
-    isPlaying = !isPlaying; // Toggle play state
+    isPlaying = !isPlaying;
   });
   
