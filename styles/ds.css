@@ -1,4 +1,4 @@
-body.stack {
+body.ds {
     background: #f8f8fa;
     color: #d2d2d6;
   }
@@ -10,7 +10,7 @@ body.stack {
     color: #031572;
   }
   
-  body.stack::before {
+  body.ds::before {
     content: '';
     position: absolute;
     top: 0;
