@@ -282,82 +282,132 @@ body.home {
   overflow: hidden;
 } 
 
-/* floating button container */
+
+
+/* floating button */
+@-webkit-keyframes come-in {
+  0% {
+    -webkit-transform: translatey(100px);
+    transform: translatey(100px);
+    opacity: 0;
+  }
+
+  30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+    transform: translateX(-50px) scale(0.4);
+  }
+
+  70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+    transform: translateX(0px) scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: translatey(0px) scale(1);
+    transform: translatey(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes come-in {
+  0% {
+    -webkit-transform: translatey(100px);
+    transform: translatey(100px);
+    opacity: 0;
+  }
+
+  30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+    transform: translateX(-50px) scale(0.4);
+  }
+
+  70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+    transform: translateX(0px) scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: translatey(0px) scale(1);
+    transform: translatey(0px) scale(1);
+    opacity: 1;
+  }
+}
+
 .floating-container {
   position: fixed;
   z-index: 9999;
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
 }
 
-.floating-button {
-  position: absolute;
-  width: 65px;
-  height: 65px;
-  background: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 25px -5px rgba(232, 234, 234, 0.6);
-  cursor: pointer;
+.floating-container:hover {
+  border-radius: 0%;
+  width: 150px;
+  height: 300px;
+}
+
+.floating-container:hover .floating-button {
+  box-shadow: 0 10px 25px rgba(29, 26, 26, 0.6);
+  -webkit-transform: translatey(5px);
+  transform: translatey(5px);
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.floating-button img {
-  width: 30px;
-  height: 30px;
+
+.floating-container:hover .element-container .float-element:nth-child(1) {
+  -webkit-animation: come-in 0.4s forwards 0.2s;
+  animation: come-in 0.4s forwards 0.2s;
 }
 
-/* element container */
-.element-container {
+.floating-container:hover .element-container .float-element:nth-child(2) {
+  -webkit-animation: come-in 0.4s forwards 0.4s;
+  animation: come-in 0.4s forwards 0.4s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(3) {
+  -webkit-animation: come-in 0.4s forwards 0.6s;
+  animation: come-in 0.4s forwards 0.6s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(4) {
+  -webkit-animation: come-in 0.4s forwards 0.8s;
+  animation: come-in 0.4s forwards 0.8s;
+}
+
+.floating-container .floating-button {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  bottom: 80px;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.floating-container:hover .element-container {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* individual elements */
-.float-element {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
+  background: var(--dsa-white-alternate);
+  bottom: 0;
   border-radius: 50%;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-right: 0px;
+  color: var(--dsa-white);
+  line-height: 65px;
+  text-align: center;
+  font-size: 23px;
+  z-index: 9999;
   box-shadow: 0 10px 25px -5px rgba(232, 234, 234, 0.6);
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.floating-container .float-element {
+  position: relative;
+  display: block;
+  z-index: 0;
   opacity: 0;
+  float: right;
+  margin: 10px auto;
+  -webkit-transform: translateY(100px);
   transform: translateY(100px);
-  transition: all 0.4s ease;
-}
-
-.floating-container:hover .float-element:nth-child(1) {
-  opacity: 1;
-  transform: translateY(-60px);
-}
-
-.floating-container:hover .float-element:nth-child(2) {
-  opacity: 1;
-  transform: translateY(-120px);
-}
-
-.float-element img {
-  width: 30px;
-  height: 30px;
 }
