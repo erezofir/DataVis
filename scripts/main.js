@@ -64,7 +64,7 @@ document.getElementById("toggle-dark-mode").addEventListener("click", () => {
   let isPlaying = false;
   
   // נתיב קובץ המוזיקה
-  const audio = new Audio("../assets/music/stuck-in-the-middle.mp3");
+  const audio = new Audio("assets/music/stuck-in-the-middle.mp3");
   
   // הפעלת ועצירת מוזיקה
   musicToggle.addEventListener("click", () => {
