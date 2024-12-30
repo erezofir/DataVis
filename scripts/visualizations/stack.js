@@ -8,10 +8,21 @@ document.getElementById("stackCanvas").appendChild(renderer.domElement);
 // נתונים לערימה
 let stack = ["empty"];
 let stackObjects = [];
+let headPointer, tailPointer;
+
+// יצירת מצביעים
+function createPointer(name, yPosition) {
+  const geometry = new THREE.BoxGeometry(0.5, 0.2, 0.5);
+  const material = new THREE.MeshBasicMaterial({ color: 0xffcc00 });
+  const pointer = new THREE.Mesh(geometry, material);
+  pointer.position.set(-1.5, yPosition, 0);
+  pointer.name = name;
+  scene.add(pointer);
+  return pointer;
+}
 
 // פונקציה ליצירת בלוק בערימה
 function createBlock(value, yPosition) {
-  console.log(`Creating block with value: ${value} at position: ${yPosition}`);
   const geometry = new THREE.BoxGeometry(1, 0.5, 1);
   const material = new THREE.MeshBasicMaterial({ color: 0x3498db });
   const cube = new THREE.Mesh(geometry, material);
@@ -23,8 +34,6 @@ function createBlock(value, yPosition) {
 
 // ציור הערימה
 function drawStack() {
-  console.log("Drawing stack:", stack);
-
   // ניקוי הסצנה
   stackObjects.forEach(obj => scene.remove(obj));
   stackObjects = [];
@@ -36,49 +45,50 @@ function drawStack() {
     stackObjects.push(block);
   });
 
-  console.log("Stack objects:", stackObjects);
+  updatePointers();
 }
 
-// פונקציה לדחיפת אלמנט לערימה
-function pushItem(value) {
-  console.log("Pushing value:", value);
+// עדכון מצביעים
+function updatePointers() {
+  if (!headPointer) headPointer = createPointer("Head", 0);
+  if (!tailPointer) tailPointer = createPointer("Tail", 0);
 
+  if (stack.length > 0 && stack[0] !== "empty") {
+    headPointer.position.y = (stack.length - 1) * 0.6;
+    tailPointer.position.y = 0;
+  } else {
+    headPointer.position.y = 0;
+    tailPointer.position.y = 0;
+  }
+}
+
+// פונקציות לערימה
+function pushItem(value) {
   if (stack[0] === "empty") {
     stack[0] = value;
   } else {
     stack.push(value);
   }
-
-  console.log("Stack after push:", stack);
-
-  drawStack(); // עדכון הוויזואליזציה
+  drawStack();
 }
 
-// פונקציה להסרת אלמנט מהערימה
 function popItem() {
   if (stack.length === 1 && stack[0] === "empty") {
     alert("Stack is empty!");
     return;
   }
-
   stack.pop();
   if (stack.length === 0) stack = ["empty"];
-
-  console.log("Stack after pop:", stack);
-
   drawStack();
 }
 
-// פונקציה לריקון הערימה
 function clearAll() {
   stack = ["empty"];
-  console.log("Stack cleared.");
   drawStack();
 }
 
 // חיבור כפתורים לאירועים
-const pushButton = document.getElementById("pushButton");
-pushButton.addEventListener("click", () => {
+document.getElementById("pushButton").addEventListener("click", () => {
   const value = prompt("Enter a value to push:");
   if (value) pushItem(value);
 });
