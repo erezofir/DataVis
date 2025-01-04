@@ -48,7 +48,7 @@ function drawPointer(x, y, label) {
 }
 
 // Stack operations
-function pushButton() {
+window.pushButton = function () {
   if (stack.length < maxStackSize) {
     const value = prompt("Enter value to push:");
     if (value) {
@@ -60,9 +60,9 @@ function pushButton() {
   } else {
     alert("Stack overflow!");
   }
-}
+};
 
-function popButton() {
+window.popButton = function () {
   if (stack.length > 0) {
     stack.pop();
     tailIndex = stack.length - 1;
@@ -74,14 +74,11 @@ function popButton() {
   } else {
     alert("Stack underflow!");
   }
-}
+};
 
-function clearButton() {
+window.clearButton = function () {
   stack.length = 0;
   headIndex = -1;
   tailIndex = -1;
   drawStack();
-}
-
-// Initial draw
-drawStack();
+};
