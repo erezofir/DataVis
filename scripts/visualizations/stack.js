@@ -82,3 +82,6 @@ window.clearButton = function () {
   tailIndex = -1;
   drawStack();
 };
+
+// Initial draw
+drawStack();
