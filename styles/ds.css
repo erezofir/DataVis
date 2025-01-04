@@ -188,3 +188,30 @@ body.ds {
     color: #333;
     font-family: Arial, sans-serif;
   }
+
+  .pointer-table {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .pointer-table table {
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pointer-table th,
+  .pointer-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .pointer-table th {
+    background: #f4f4f4;
+    font-weight: bold;
+  }
+  

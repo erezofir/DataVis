@@ -11,16 +11,16 @@ let tailIndex = -1;
 function drawStack() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  const cellHeight = canvas.height / 12;
-  const cellWidth = canvas.width / 3;
+  const cellHeight = canvas.height / 16;
+  const cellWidth = canvas.width / 4;
   const baseX = canvas.width / 2 - cellWidth / 2;
   let y = canvas.height - cellHeight - 10;
 
   for (let i = 0; i < stack.length; i++) {
     ctx.strokeStyle = "#000";
     ctx.strokeRect(baseX, y, cellWidth, cellHeight);
-    ctx.font = "16px Arial";
-    ctx.fillText(stack[i], baseX + cellWidth / 2 - 10, y + cellHeight / 2 + 5);
+    ctx.font = "12px Arial";
+    ctx.fillText(stack[i], baseX + cellWidth / 2 , y + cellHeight / 2 + 4);
 
     if (i === headIndex) {
       drawPointer(baseX - 30, y + cellHeight / 2, "HEAD");
@@ -33,20 +33,11 @@ function drawStack() {
   }
 }
 
-// Draw a pointer with a label
-function drawPointer(x, y, label) {
-  const pointerSize = 10;
-  ctx.beginPath();
-  ctx.moveTo(x, y);
-  ctx.lineTo(x - pointerSize, y);
-  ctx.lineTo(x - pointerSize  + 5, y - 5);
-  ctx.moveTo(x - pointerSize, y);
-  ctx.lineTo(x - pointerSize + 5, y + 5);
-  ctx.stroke();
-
-  ctx.font = "12px Arial";
-  ctx.fillText(label, x - 50, y + 5);
+function updatePointers() {
+  document.getElementById("head-value").textContent = headIndex !== -1 ? headIndex : "EMPTY";
+  document.getElementById("tail-value").textContent = tailIndex !== -1 ? tailIndex : "EMPTY";
 }
+
 
 // Stack operations
 window.pushButton = function () {
@@ -57,6 +48,7 @@ window.pushButton = function () {
       tailIndex = stack.length - 1;
       if (headIndex === -1) headIndex = 0;
       drawStack();
+      updatePointers();
     }
   } else {
     alert("Stack overflow!");
@@ -72,6 +64,7 @@ window.popButton = function () {
       tailIndex = -1;
     }
     drawStack();
+    updatePointers();
   } else {
     alert("Stack underflow!");
   }
@@ -82,6 +75,7 @@ window.clearButton = function () {
   headIndex = -1;
   tailIndex = -1;
   drawStack();
+  pdatePointers();
 };
 
 // Initial draw
