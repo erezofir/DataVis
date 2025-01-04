@@ -75,7 +75,7 @@ window.clearButton = function () {
   headIndex = -1;
   tailIndex = -1;
   drawStack();
-  pdatePointers();
+  updatePointers();
 };
 
 // Initial draw
