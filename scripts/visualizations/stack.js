@@ -11,10 +11,10 @@ let tailIndex = -1;
 function drawStack() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  const cellHeight = 30;
-  const cellWidth = 100;
+  const cellHeight = canvas.height / 12;
+  const cellWidth = canvas.width / 3;
   const baseX = canvas.width / 2 - cellWidth / 2;
-  let y = canvas.height - cellHeight;
+  let y = canvas.height - cellHeight - 10;
 
   for (let i = 0; i < stack.length; i++) {
     ctx.strokeStyle = "#000";
@@ -35,12 +35,13 @@ function drawStack() {
 
 // Draw a pointer with a label
 function drawPointer(x, y, label) {
+  const pointerSize = 10;
   ctx.beginPath();
   ctx.moveTo(x, y);
-  ctx.lineTo(x - 20, y);
-  ctx.lineTo(x - 15, y - 5);
-  ctx.moveTo(x - 20, y);
-  ctx.lineTo(x - 15, y + 5);
+  ctx.lineTo(x - pointerSize, y);
+  ctx.lineTo(x - pointerSize  + 5, y - 5);
+  ctx.moveTo(x - pointerSize, y);
+  ctx.lineTo(x - pointerSize + 5, y + 5);
   ctx.stroke();
 
   ctx.font = "12px Arial";
