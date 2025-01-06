@@ -88,32 +88,34 @@
     <!-- Visualization Section -->
     <section class="visualization box">
       <h2>Visualization</h2>
-      <canvas id="stackCanvas" width="300" height="250"></canvas>
+      <div class="stack-container">
+        <canvas id="stackCanvas" width="500" height="150"></canvas>
+        <div class="pointer-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Pointer</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HEAD</td>
+                <td id="head-value">-1</td>
+              </tr>
+              <tr>
+                <td>TAIL</td>
+                <td id="tail-value">-1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <div class="controls">
         <button onclick="pushButton()">Push</button>
         <button onclick="popButton()">Pop</button>
         <button onclick="clearButton()">Clear All</button>
       </div>
-      <div class="pointer-table">
-        <table>
-          <thead>
-            <tr>
-              <th>Pointer</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>HEAD</td>
-              <td id="head-value">-1</td>
-            </tr>
-            <tr>
-              <td>TAIL</td>
-              <td id="tail-value">-1</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>      
     </section>
 
     <!-- Advantages and Disadvantages Section -->
