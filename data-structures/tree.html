@@ -31,11 +31,14 @@
     <section class="box">
       <h2>What is it?</h2>
       <p>A Binary Tree is a hierarchical data structure where each node has at most two children: a left child and a right child.</p>
+      <p>A Binary Search Tree (BST) is a special type of Binary Tree where the left child contains values less than the parent node, and the right child contains values greater than the parent node. BSTs are commonly used for efficient searching and sorting.</p>
     </section>
 
     <!-- Time and Space Complexity Section -->
     <section class="box">
       <h2>Time and Space Complexity</h2>
+      <p>- In a Binary Tree, the structure is not constrained, and the complexity depends on the depth of the tree.</p>
+      <p>- In a Binary Search Tree (BST), the structure ensures faster searching, inserting, and deleting, assuming the tree is balanced.</p>
       <table>
         <thead>
           <tr>
@@ -71,13 +74,15 @@
         <li>The topmost node is called the root.</li>
         <li>Each node can have at most two children.</li>
         <li>Binary Trees can be balanced or unbalanced.</li>
-        <li>They are used in searching, sorting, and hierarchical relationships.</li>
+        <li>A Binary Search Tree (BST) enforces ordering: left child < parent < right child.</li>
+        <li>Used in searching, sorting, and hierarchical relationships.</li>
       </ul>
     </section>
 
     <!-- Input Section -->
     <section class="visualization box">
       <h2>Visualization</h2>
+      <p>Use the input box to enter node values (e.g., 1, 2, 3, null) and select the tree type to visualize either a Binary Tree or a Binary Search Tree (BST).</p>
       <label for="tree-input">Enter Nodes:</label>
       <input
           type="text"
@@ -101,14 +106,14 @@
       <h2>Advantages and Disadvantages</h2>
       <div class="pros-cons">
         <div class="advantages">
-          <p>✅ Represents hierarchical data effectively.</p>
-          <p>✅ Efficient searching in balanced BSTs.</p>
+          <p>✅ Represents hierarchical data effectively (Binary Tree).</p>
+          <p>✅ Efficient searching in balanced Binary Search Trees (BST).</p>
           <p>✅ Supports dynamic resizing.</p>
         </div>
         <div class="disadvantages">
-          <p>❌ Can become unbalanced (reducing efficiency).</p>
-          <p>❌ Traversal can be time-consuming.</p>
-          <p>❌ Complex implementation for balancing.</p>
+          <p>❌ Can become unbalanced, reducing efficiency (BST).</p>
+          <p>❌ Traversal can be time-consuming in unbalanced trees.</p>
+          <p>❌ Complex implementation for balancing in Binary Search Trees.</p>
         </div>
       </div>
     </section>
