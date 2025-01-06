@@ -88,34 +88,20 @@
     <!-- Visualization Section -->
     <section class="visualization box">
       <h2>Visualization</h2>
-      <div class="stack-container">
-        <canvas id="stackCanvas" width="500" height="300"></canvas>
-        <div class="pointer-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Pointer</th>
-                <th>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>HEAD</td>
-                <td id="head-value">-1</td>
-              </tr>
-              <tr>
-                <td>TAIL</td>
-                <td id="tail-value">-1</td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="root">
+        <h1 class="title">Call Stack Visualizer</h1>
+        <div class="controls">
+          <label for="stackInput" class="label">Enter next command below:</label>
+          <input id="stackInput" class="input" type="text" placeholder="Enter value">
+          <div class="buttons">
+            <button class="button" onclick="handlePush()">Push</button>
+            <button class="button" onclick="handlePop()">Pop</button>
+            <button class="button" onclick="handleClear()">Clear All</button>
+          </div>
         </div>
-      </div>
-      <div class="controls">
-        <input type="text" id="stackInput" placeholder="Enter value" />
-        <button onclick="pushButton()">Push</button>
-        <button onclick="popButton()">Pop</button>
-        <button onclick="clearButton()">Clear All</button>
+        <div class="stack-container" id="stackContainer">
+          <label class="empty-label" id="emptyLabel">EMPTY!</label>
+        </div>
       </div>
     </section>
 
