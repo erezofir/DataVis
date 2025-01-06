@@ -22,9 +22,10 @@ body {
 
 /* Table Styling */
 table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
   margin: 1rem 0;
+  background: #d0dcf3;
 }
 
 table th, table td {
