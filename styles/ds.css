@@ -135,8 +135,15 @@ canvas {
   fill: #90ee90; /* Leaf nodes */
 }
 
-.highlight {
+.highlight_strong {
   background-color: #8ff0fb; 
+  padding: 0 4px; 
+  border-radius: 3px; 
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.highlight_low {
+  background-color: #d4eded; 
   padding: 0 4px; 
   border-radius: 3px; 
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1); 
