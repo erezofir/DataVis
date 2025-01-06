@@ -83,7 +83,7 @@ function drawArray() {
 
     // Draw value
     ctx.fillStyle = "#fff";
-    ctx.font = "16px Montserrat";
+    ctx.font = "13px Montserrat";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(array[i], x + boxWidth / 2, y + boxHeight / 2);
