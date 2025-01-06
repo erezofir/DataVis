@@ -101,22 +101,24 @@
     <section class="box">
       <h2>Interactive Code Example</h2>
       <p>Edit the code below and click "Run" to see the result:</p>
-      <textarea id="java-code" class="code-editor"
+      <textarea id="java-code" class="code-editor">
+    // Initialize an array
     int[] numbers = {1, 2, 3, 4, 5};
-
+    
     // Access elements
     System.out.println("First Element: " + numbers[0]);
-
+    
     // Modify an element
     numbers[2] = 10;
     System.out.println("Modified Array:");
     for (int number : numbers) {
-      System.out.print(number + " ");
+        System.out.print(number + " ");
     }
       </textarea>
       <button onclick="runCode()">Run</button>
-      pre id="output"></pre>
+      <pre id="output"></pre>
     </section>
+    
 
     <!-- Advantages and Disadvantages Section -->
     <section class="box">
