@@ -115,23 +115,27 @@ function copyCode() {
 
 // Run the Java code entered in the code editor
 function runCode() {
-  const code = document.getElementById("java-code").value;
-  const outputElement = document.getElementById("output");
+  const code = document.getElementById("java-code").value; // Get the user's code
+  const outputElement = document.getElementById("output"); // Output element
 
   try {
-    // Simulate execution of user code
+    // Clear previous output
+    outputElement.textContent = "";
+
+    // Validate and execute user code using Function
     const userCodeFunction = new Function(`
       const console = {
         log: (...args) => outputElement.textContent += args.join(' ') + '\\n',
         print: (...args) => outputElement.textContent += args.join(' ') + '\\n',
       };
-      outputElement.textContent = ''; // Clear previous output
+      // User code starts here
       ${code}
     `);
 
-    userCodeFunction(); // Execute user code
+    // Execute the user's code
+    userCodeFunction();
   } catch (error) {
-    // Display error message if user code fails
+    // Catch syntax errors or runtime issues in user code
     outputElement.textContent = `Error: ${error.message}`;
   }
 }
