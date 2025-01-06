@@ -148,7 +148,7 @@ body.ds {
   #stackCanvas {
     display: block;
     margin: 0 auto;
-    width: 90%;
+    width: 500%;
     height: 400px;
     background-color: #f5f5f5;
     border: 1px solid #ddd;
