@@ -1,106 +1,75 @@
-.container {
-    max-width: 800px;
-    margin: 40px auto;
+/* General container for stack visualization */
+.react-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.controls {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .react-container h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
     margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-button {
-    padding: 8px 16px;
-    background-color: #4CAF50;
+  }
+  
+  /* Input field */
+  .react-container input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Buttons */
+  .react-container button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-#stackInput {
-    padding: 8px;
+  }
+  
+  .react-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Stack display area */
+  .react-container .stack-display {
     border: 1px solid #ddd;
-    border-radius: 4px;
-    flex-grow: 1;
-    max-width: 200px;
-}
-
-.visualization {
-    display: flex;
-    justify-content: center;
-}
-
-.stack-container {
-    width: 300px;
-    position: relative;
-}
-
-.stack-label {
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #333;
-}
-
-.stack {
-    border: 2px solid #666;
-    border-bottom: none;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column-reverse;
-    overflow-y: auto;
-}
-
-.stack-bottom {
-    height: 20px;
-    background-color: #666;
-    border-radius: 0 0 4px 4px;
-}
-
-.stack-frame {
     padding: 10px;
-    margin: 5px;
-    background-color: #e9ecef;
-    border: 1px solid #dee2e6;
+    min-height: 200px;
+    background-color: #fff;
     border-radius: 4px;
-    animation: slideIn 0.3s ease-out;
-}
-
-.stack-frame.popping {
-    animation: slideOut 0.3s ease-in;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideOut {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-}
+    overflow-y: auto;
+    margin-top: 10px;
+  }
+  
+  .react-container .stack-display p {
+    padding: 8px;
+    margin: 4px 0;
+    background-color: hotpink;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .react-container .stack-display .empty {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/ds.css">
   <script src="../scripts/visualizations/tree.js" defer></script>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 </head>
 <body class="tree">
 
@@ -81,8 +83,8 @@
     <section class="visualization box">
       <h2>Visualization</h2>
       <canvas id="treeCanvas" width="400" height="300"></canvas>
-      <div class="controls">
-        <button onclick="insertNode(prompt('Enter value to insert:'))">Insert</button>
+        <!-- React Root -->
+        <div id="react-root"></div>
       </div>
     </section>
 
@@ -103,5 +105,8 @@
       </div>
     </section>
   </main>
+
+  <!-- React Component -->
+  <script src="js/stack.js"></script>
 </body>
 </html>

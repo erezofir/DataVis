@@ -1,58 +1,55 @@
-let stack = []; // Array to store stack elements
+const { useState } = React;
 
-function updateStackDisplay() {
-  const stackContainer = document.getElementById('stackContainer');
-  const emptyLabel = document.getElementById('emptyLabel');
-  
-  // Clear the stack container
-  stackContainer.innerHTML = '';
+const StackVisualizer = () => {
+  const [stack, setStack] = useState([]);
+  const [input, setInput] = useState('');
 
-  if (stack.length === 0) {
-    // Show "EMPTY!" label if the stack is empty
-    emptyLabel.style.display = 'block';
-  } else {
-    // Hide "EMPTY!" label and display stack elements
-    emptyLabel.style.display = 'none';
-    stack.forEach((item) => {
-      const stackItem = document.createElement('div');
-      stackItem.className = 'stack-item';
-      stackItem.textContent = item;
-      stackContainer.appendChild(stackItem);
-    });
-  }
-}
+  const handlePush = () => {
+    if (!input.trim()) {
+      alert('Please enter a value!');
+      return;
+    }
+    setStack([...stack, input.trim()]);
+    setInput('');
+  };
 
-function handlePush() {
-  const stackInput = document.getElementById('stackInput');
-  const value = stackInput.value.trim();
+  const handlePop = () => {
+    if (stack.length === 0) {
+      alert('Stack is empty!');
+      return;
+    }
+    const newStack = [...stack];
+    newStack.pop();
+    setStack(newStack);
+  };
 
-  if (!value) {
-    alert('Please enter a value!');
-    return;
-  }
+  const handleClear = () => {
+    setStack([]);
+  };
 
-  // Push the value to the stack and clear the input field
-  stack.push(value);
-  stackInput.value = '';
-  updateStackDisplay();
-}
+  return (
+    <div className="react-container">
+      <h1>Stack Visualizer</h1>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Enter value"
+      />
+      <div>
+        <button onClick={handlePush}>Push</button>
+        <button onClick={handlePop}>Pop</button>
+        <button onClick={handleClear}>Clear All</button>
+      </div>
+      <div className="stack-display">
+        {stack.length === 0 ? (
+          <p className="empty">Stack is empty</p>
+        ) : (
+          stack.map((item, index) => <p key={index}>{item}</p>)
+        )}
+      </div>
+    </div>
+  );
+};
 
-function handlePop() {
-  if (stack.length === 0) {
-    alert('Stack is empty!');
-    return;
-  }
-
-  // Remove the last value from the stack
-  stack.pop();
-  updateStackDisplay();
-}
-
-function handleClear() {
-  // Clear the entire stack
-  stack = [];
-  updateStackDisplay();
-}
-
-// Initialize the stack display when the page loads
-updateStackDisplay();
+ReactDOM.render(<StackVisualizer />, document.getElementById('react-root'));
