@@ -6,7 +6,7 @@
   <title>Stack Visualization</title>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/ds.css">
-  <script src="../scripts/visualizations/stack.js" defer></script>
+  <link rel="stylesheet" href="../styles/stack.css">
 </head>
 <body class="stack">
 
@@ -88,20 +88,23 @@
     <!-- Visualization Section -->
     <section class="visualization box">
       <h1>Visualization</h1>
-      <div class="root">
+      <div class="container">
         <div class="controls">
-          <label for="stackInput" class="label">Enter next value below:</label>
-          <input id="stackInput" class="input" type="text" placeholder="Enter value">
-          <div class="buttons">
-            <button class="button" onclick="handlePush()">Push</button>
-            <button class="button" onclick="handlePop()">Pop</button>
-            <button class="button" onclick="handleClear()">Clear All</button>
-          </div>
+            <button id="pushBtn">Push</button>
+            <button id="popBtn">Pop</button>
+            <input type="text" id="stackInput" placeholder="Enter value">
         </div>
-        <div class="stack-container" id="stackContainer">
-          <label class="empty-label" id="emptyLabel">EMPTY!</label>
+        
+        <div class="visualization">
+            <div class="stack-container">
+                <div class="stack-label">Call Stack</div>
+                <div id="stackVisualizer" class="stack">
+                    <!-- Stack frames will be added here dynamically -->
+                </div>
+                <div class="stack-bottom"></div>
+            </div>
         </div>
-      </div>
+    </div>
     </section>
 
 
