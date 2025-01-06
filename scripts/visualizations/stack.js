@@ -7,8 +7,8 @@ const canvas = document.getElementById("visCanvas");
 const ctx = canvas.getContext("2d");
 
 // Stack Visualization Settings
-const boxWidth = 100;
-const boxHeight = 40;
+const boxWidth = 300;
+const boxHeight = 150;
 const startX = canvas.width / 2 - boxWidth / 2;
 const startY = canvas.height - 50;
 
@@ -23,7 +23,7 @@ function drawStack() {
     ctx.strokeStyle = "#000"; // Border color
     ctx.strokeRect(x, y, boxWidth, boxHeight);
     ctx.fillStyle = "#fff"; // Text color
-    ctx.font = "16px Arial";
+    ctx.font = "16px Montserrat";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(value, x + boxWidth / 2, y + boxHeight / 2);

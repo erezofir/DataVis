@@ -35,8 +35,8 @@ function drawQueue() {
 
   const width = canvas.width;
   const height = canvas.height;
-  const boxWidth = 60;
-  const boxHeight = 30;
+  const boxWidth = 300;
+  const boxHeight = 150;
   const spacing = 10;
   const totalWidth = queue.length * boxWidth + (queue.length - 1) * spacing;
   const startX = (width + totalWidth) / 2 - boxWidth; // Start drawing from the right
@@ -53,7 +53,7 @@ function drawQueue() {
 
     // Draw value
     ctx.fillStyle = "#fff";
-    ctx.font = "16px Arial";
+    ctx.font = "16px Montserrat";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(queue[i], x + boxWidth / 2, y + boxHeight / 2);
