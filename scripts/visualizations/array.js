@@ -108,3 +108,24 @@ function copyCode(button) {
     setTimeout(() => (button.innerText = "Copy Code"), 2000);
   });
 }
+
+function runCode() {
+  const code = document.getElementById("java-code").value;
+  const output = document.getElementById("output");
+
+  // Simulating the execution of the Java code
+  try {
+    const numbers = [1, 2, 3, 4, 5];
+    const firstElement = numbers[0];
+
+    // Simulating modification
+    numbers[2] = 10;
+
+    let result = "First Element: " + firstElement + "\nModified Array:\n";
+    result += numbers.join(" ");
+
+    output.innerText = result;
+  } catch (error) {
+    output.innerText = "Error: " + error.message;
+  }
+}
