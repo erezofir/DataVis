@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stack Visualization</title>
+  <title>Stack</title>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/stack.css">
   <link rel="stylesheet" href="../styles/ds.css">
-  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 </head>
 <body class="stack">
   <!-- Footer -->
@@ -87,12 +85,15 @@
     </section>
 
     <!-- Visualization Section -->
-  <section class="visualization box">
-    <div id="main-content">
-      <h1>Stack Visualizer</h1>
-      <div id="react-root"></div>
-    </div>
-  </section>
+    <section class="visualization box">
+      <h2>Visualization</h2>
+      <canvas id="visCanvas" width="400" height="300"></canvas>
+      <div class="controls">
+        <button onclick="push(prompt('Enter value to push:'))">Push</button>
+        <button onclick="pop()">Pop</button>
+        <button onclick="clearAll()">Clear All</button>
+      </div>
+    </section>
 
 
     <!-- Advantages and Disadvantages Section -->

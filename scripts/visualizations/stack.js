@@ -1,55 +1,60 @@
-const { useState } = React;
+// Stack Data Structure
+const stack = [];
+const maxStackSize = 10; // Maximum elements in stack
 
-const StackVisualizer = () => {
-  const [stack, setStack] = useState([]);
-  const [input, setInput] = useState('');
+// DOM Elements
+const canvas = document.getElementById("visCanvas");
+const ctx = canvas.getContext("2d");
 
-  const handlePush = () => {
-    if (!input.trim()) {
-      alert('Please enter a value!');
-      return;
-    }
-    setStack([...stack, input.trim()]);
-    setInput('');
-  };
+// Stack Visualization Settings
+const boxWidth = 100;
+const boxHeight = 40;
+const startX = canvas.width / 2 - boxWidth / 2;
+const startY = canvas.height - 50;
 
-  const handlePop = () => {
-    if (stack.length === 0) {
-      alert('Stack is empty!');
-      return;
-    }
-    const newStack = [...stack];
-    newStack.pop();
-    setStack(newStack);
-  };
+// Draw Stack
+function drawStack() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+  stack.forEach((value, index) => {
+    const x = startX;
+    const y = startY - index * boxHeight;
+    ctx.fillStyle = "#6c9cf3"; // Box color
+    ctx.fillRect(x, y, boxWidth, boxHeight);
+    ctx.strokeStyle = "#000"; // Border color
+    ctx.strokeRect(x, y, boxWidth, boxHeight);
+    ctx.fillStyle = "#fff"; // Text color
+    ctx.font = "16px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(value, x + boxWidth / 2, y + boxHeight / 2);
+  });
+}
 
-  const handleClear = () => {
-    setStack([]);
-  };
+// Push operation
+function push(key) {
+  if (stack.length < maxStackSize) {
+    stack.push(key);
+    drawStack();
+  } else {
+    alert("Stack Overflow: Cannot add more elements.");
+  }
+}
 
-  return (
-    <div className="react-container">
-      <h1>Stack Visualizer</h1>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Enter value"
-      />
-      <div>
-        <button onClick={handlePush}>Push</button>
-        <button onClick={handlePop}>Pop</button>
-        <button onClick={handleClear}>Clear All</button>
-      </div>
-      <div className="stack-display">
-        {stack.length === 0 ? (
-          <p className="empty">Stack is empty</p>
-        ) : (
-          stack.map((item, index) => <p key={index}>{item}</p>)
-        )}
-      </div>
-    </div>
-  );
-};
+// Pop operation
+function pop() {
+  if (stack.length > 0) {
+    stack.pop();
+    drawStack();
+  } else {
+    alert("Stack Underflow: No elements to remove.");
+  }
+}
 
-ReactDOM.render(<StackVisualizer />, document.getElementById('react-root'));
+// Clear All operation
+function clearAll() {
+  stack.length = 0;
+  drawStack();
+}
+
+// Initial Draw
+drawStack();
