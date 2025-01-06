@@ -7,8 +7,8 @@ const canvas = document.getElementById("visCanvas");
 const ctx = canvas.getContext("2d");
 
 // Stack Visualization Settings
-const boxWidth = 300;
-const boxHeight = 150;
+const boxWidth = 100;
+const boxHeight = 40;
 const startX = canvas.width / 2 - boxWidth / 2;
 const startY = canvas.height - 50;
 

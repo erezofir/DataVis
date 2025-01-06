@@ -35,8 +35,8 @@ function drawQueue() {
 
   const width = canvas.width;
   const height = canvas.height;
-  const boxWidth = 300;
-  const boxHeight = 150;
+  const boxWidth = 60;
+  const boxHeight = 30;
   const spacing = 10;
   const totalWidth = queue.length * boxWidth + (queue.length - 1) * spacing;
   const startX = (width + totalWidth) / 2 - boxWidth; // Start drawing from the right
