@@ -79,13 +79,12 @@
     <!-- Visualization Section -->
     <section class="visualization box">
       <h2>Visualization</h2>
-      <canvas id="graphCanvas" width="400" height="300"></canvas>
-      <div class="controls">
-        <button onclick="addNode(prompt('Enter node value:'))">Add Node</button>
-        <button onclick="addEdge(prompt('Enter source node:'), prompt('Enter destination node:'))">Add Edge</button>
-        <button onclick="removeEdge(prompt('Enter source node:'), prompt('Enter destination node:'))">Remove Edge</button>
-        <button onclick="removeNode(prompt('Enter node value to delete:'))">Remove Node</button>
-      </div>
+      <p>Enter edges in the format: [[1,2],[2,3],[3,1]]</p>
+      <label for="graph-input">Enter Edges:</label>
+      <input type="text" id="graph-input" placeholder="e.g., [[1,2],[2,3],[3,1]]" />
+      <button onclick="generateGraph()">Generate Graph</button>
+      <button onclick="clearGraph()">Clear Graph</button>
+      <canvas id="graphCanvas" width="600" height="400"></canvas>
     </section>
 
     <!-- Advantages and Disadvantages Section -->
@@ -104,6 +103,24 @@
         </div>
       </div>
     </section>
+
+    <section class="box">
+  <h2>Possible Implementations</h2>
+  <div class="implementations">
+    <div class="circle implementation-icon">
+      <p>Chaining</p>
+    </div>
+    <div class="circle implementation-icon">
+      <p>Open Addressing</p>
+    </div>
+    <div class="circle implementation-icon">
+      <p>Double Hashing</p>
+    </div>
+  </div>
+</section>
   </main>
+
+  <!-- Scripts -->
+  <script src="../scripts/visualizations/graph.js" defer></script>
 </body>
 </html>
