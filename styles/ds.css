@@ -77,23 +77,22 @@ body.ds {
   .controls {
     text-align: center;
     margin-top: 1rem;
-    margin: 10px 0;
   }
   
   .controls button {
     margin: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background: #3498db;
+    background: #007BFF;
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 8px rgba(39, 194, 250, 0.787), 0 0 15px rgba(39, 194, 250, 0.5);
+    border: none;
     border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
   }
   
   .controls button:hover {
-    box-shadow: 0 0 15px rgba(39, 194, 250, 0.787), 0 0 30px rgba(39, 194, 250, 0.5);
+    background: #0056b3;
+    cursor: pointer;
   }
   
   /* Advantages and Disadvantages */
@@ -158,26 +157,28 @@ body.ds {
   }
   
   .stack-container {
-    width: 100%;
+    width: 90%;
     height: 150px;
     border: 2px solid #3498db;
     background-color: #e9ecef;
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .stack-element {
     width: 40px;
-    height: 80%;
-    margin: 0 5px;
+    height: 100px;
+    margin-right: 10px;
     background-color: #3498db;
     color: white;
     text-align: center;
-    line-height: 40px;
+    line-height: 100px;
     border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .visualization {
@@ -192,7 +193,7 @@ body.ds {
 
   .pointer-table {
     position: absolute;
-    top: 10px;
+    bottom: -50px;
     right: 10px;
     font-family: 'Montserrat', sans-serif;
   }

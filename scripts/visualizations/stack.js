@@ -6,11 +6,13 @@ const tailValue = document.getElementById("tail-value");
 
 function drawStack() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  stack.forEach((element, index) => {
+
+  stack.forEach((value, index) => {
     ctx.fillStyle = "#3498db";
-    ctx.fillRect(10 + index * 50, 20, 40, 100);
+    ctx.fillRect(10 + index * 50, 30, 40, 100);
     ctx.fillStyle = "#ffffff";
-    ctx.fillText(element, 25 + index * 50, 70);
+    ctx.font = "16px Montserrat";
+    ctx.fillText(value, 20 + index * 50, 80);
   });
 
   // Update head and tail pointers
@@ -19,8 +21,8 @@ function drawStack() {
 }
 
 function pushButton() {
-  const value = Math.floor(Math.random() * 100);
   if (stack.length < 10) {
+    const value = Math.floor(Math.random() * 100);
     stack.push(value);
     drawStack();
   } else {
