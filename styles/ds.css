@@ -134,20 +134,9 @@ canvas {
   fill: #90ee90; /* Leaf nodes */
 }
 
-.highlight-bar {
-  position: relative;
-  display: inline-block;
-}
-
-.highlight-bar::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, #c5c5cd, #9acbff); /* מעבר צבעים */
-  border-radius: 3px;
-  z-index: -1;
+.highlight {
+  background-color: #ffeaa7; /* צבע המרקר */
+  padding: 0 4px; /* ריווח פנימי קטן */
+  border-radius: 3px; /* פינות מעוגלות */
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1); /* אפקט עומק קל */
 }
