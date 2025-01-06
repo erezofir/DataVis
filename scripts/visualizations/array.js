@@ -99,37 +99,23 @@ function drawArray() {
 // Initial draw to set up the canvas
 drawArray();
 
-// Copy the code from the code editor
+// Copy code to clipboard
 function copyCode() {
-  const code = document.getElementById("java-code");
-  code.select(); // Select the text in the textarea
-  code.setSelectionRange(0, 99999); // For mobile devices
-
-  try {
-    document.execCommand("copy");
-    alert("Code copied to clipboard!");
-  } catch (err) {
-    alert("Failed to copy code.");
-  }
+  const codeElement = document.getElementById("java-code").innerText; // Use innerText for non-editable content
+  navigator.clipboard
+    .writeText(codeElement)
+    .then(() => alert("Code copied to clipboard!"))
+    .catch(() => alert("Failed to copy code."));
 }
 
-// Run the Java code entered in the code editor
+// Simulate code execution for the example
 function runCode() {
-  const code = document.getElementById("java-code").value; // Get the user's code
-  const outputElement = document.getElementById("output"); // Output element
+  const outputElement = document.getElementById("output");
 
-  // Clear the previous output
-  outputElement.textContent = "";
+  // Simulate Java code output
+  const simulatedOutput = `First Element: 1
+Modified Array:
+1 2 10 4 5`;
 
-  // Simulate Java code execution
-  try {
-    if (code.includes("int[] numbers = {1, 2, 3, 4, 5};")) {
-      // Simulated output for the provided Java code
-      outputElement.textContent = `First Element: 1\nModified Array:\n1 2 10 4 5`;
-    } else {
-      throw new Error("This code is not supported in the simulation.");
-    }
-  } catch (error) {
-    outputElement.textContent = `Error: ${error.message}`;
-  }
+  outputElement.textContent = simulatedOutput;
 }

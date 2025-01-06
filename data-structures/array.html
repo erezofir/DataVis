@@ -100,8 +100,9 @@
     
     <section class="box">
       <h2>Interactive Code Example</h2>
-      <p>Edit the code below (in Java) and click "Run" to see the result:</p>
-      <textarea id="java-code" class="code-editor">
+      <p>Click "Run" to see the output or "Copy" to copy the code:</p>
+      <pre id="java-code">
+    <code>
     // Initialize an array
     int[] numbers = {1, 2, 3, 4, 5};
     
@@ -112,15 +113,18 @@
     numbers[2] = 10;
     System.out.println("Modified Array:");
     for (int number : numbers) {
-        System.out.print(number + " ");
+      System.out.print(number + " ");
     }
-      </textarea>
+    </code>
+      </pre>
       <div class="code-buttons">
-      <button onclick="runCode()">Run</button>
-      <button onclick="copyCode()">Copy</button>
+        <button onclick="runCode()">Run</button>
+        <button onclick="copyCode()">Copy</button>
       </div>
       <pre id="output"></pre>
     </section>
+    
+    
     
 
     <!-- Advantages and Disadvantages Section 
