@@ -226,12 +226,13 @@ pre code {
   margin-top: 10px; /* Space between buttons and the code editor */
 }
 
+/* Buttons styling */
 .code-buttons button {
   padding: 8px 16px;
-  font-family: 'Montserrat', sans-serif; /* Change font */
+  font-family: 'Montserrat', sans-serif; /* Font family */
   font-size: 14px;
-  background-color: #6c9cf3; /* Button background color */
-  color: white; /* Button text color */
+  background-color: #6c9cf3; /* Button background */
+  color: white; /* Button text */
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -240,11 +241,6 @@ pre code {
 
 .code-buttons button:hover {
   background-color: #9eb7f2; /* Hover effect */
-}
-
-
-.copy-button:hover {
-  background-color: #9eb7f2;
 }
 
 .code-editor {

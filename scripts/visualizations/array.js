@@ -112,24 +112,16 @@ function copyCode() {
   }
 }
 
-
 function runCode() {
   const code = document.getElementById("java-code").value;
-  const output = document.getElementById("output");
 
-  // Simulating the execution of the Java code
-  try {
-    const numbers = [1, 2, 3, 4, 5];
-    const firstElement = numbers[0];
+  // סימולציה של הרצת הקוד - לצערנו אי אפשר להריץ Java ישירות בדפדפן.
+  const outputElement = document.getElementById("output");
 
-    // Simulating modification
-    numbers[2] = 10;
-
-    let result = "First Element: " + firstElement + "\nModified Array:\n";
-    result += numbers.join(" ");
-
-    output.innerText = result;
-  } catch (error) {
-    output.innerText = "Error: " + error.message;
+  // דוגמת פלט – אפשר להוסיף לוגיקה שמדמה הרצה
+  if (code.includes("numbers")) {
+    outputElement.textContent = `First Element: 1\nModified Array:\n1 2 10 4 5`;
+  } else {
+    outputElement.textContent = "Code executed. Output not available for this code.";
   }
 }
