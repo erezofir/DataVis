@@ -74,7 +74,7 @@ function drawLinkedList() {
 
     // Draw the node value
     ctx.fillStyle = "#fff";
-    ctx.font = "16px Arial";
+    ctx.font = "16px Montserrat";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(current.value, x + nodeWidth / 2, y + nodeHeight / 2);

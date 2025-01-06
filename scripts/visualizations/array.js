@@ -83,14 +83,14 @@ function drawArray() {
 
     // Draw value
     ctx.fillStyle = "#fff";
-    ctx.font = "16px Arial";
+    ctx.font = "16px Montserrat";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(array[i], x + boxWidth / 2, y + boxHeight / 2);
 
     // Draw index
     ctx.fillStyle = "#000";
-    ctx.font = "12px Arial";
+    ctx.font = "12px Montserrat";
     ctx.textAlign = "center";
     ctx.fillText(i, x + boxWidth / 2, y + boxHeight + 15);
   }

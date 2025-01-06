@@ -1,29 +1,7 @@
-let nodes = [];
-let edges = [];
-
-function generateGraph() {
-  const input = document.getElementById("graph-input").value;
-  if (!input) return;
-
-  try {
-    const edgeList = JSON.parse(input);
-    nodes = [...new Set(edgeList.flat())]; // Create a unique list of nodes
-    edges = edgeList;
-    drawGraph();
-  } catch (error) {
-    alert("Invalid input format. Please use the format: [[1,2],[2,3],[3,1]]");
-  }
-}
-
-function clearGraph() {
-  nodes = [];
-  edges = [];
-  drawGraph();
-}
-
 function drawGraph() {
   const canvas = document.getElementById("graphCanvas");
   const ctx = canvas.getContext("2d");
+  const graphType = document.getElementById("graph-type").value; // Get graph type
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   const centerX = canvas.width / 2;
@@ -53,6 +31,25 @@ function drawGraph() {
     ctx.strokeStyle = "#636e72";
     ctx.lineWidth = 2;
     ctx.stroke();
+
+    // If directed, add arrowhead
+    if (graphType === "directed") {
+      const angle = Math.atan2(toPos.y - fromPos.y, toPos.x - fromPos.x);
+      const arrowLength = 10;
+
+      // Arrowhead lines
+      ctx.beginPath();
+      ctx.moveTo(
+        toPos.x - arrowLength * Math.cos(angle - Math.PI / 6),
+        toPos.y - arrowLength * Math.sin(angle - Math.PI / 6)
+      );
+      ctx.lineTo(toPos.x, toPos.y);
+      ctx.lineTo(
+        toPos.x - arrowLength * Math.cos(angle + Math.PI / 6),
+        toPos.y - arrowLength * Math.sin(angle + Math.PI / 6)
+      );
+      ctx.stroke();
+    }
   });
 
   // Draw nodes
@@ -68,7 +65,7 @@ function drawGraph() {
 
     // Draw node label
     ctx.fillStyle = "#2d3436";
-    ctx.font = "14px Arial";
+    ctx.font = "16px Montserrat";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(node, pos.x, pos.y);

@@ -149,3 +149,35 @@ canvas {
   border-radius: 3px; 
   box-shadow: inset 0 -2px 0 rgba(201, 232, 235, 0.805); 
 }
+
+.graph canvas {
+  width: 600px;
+  height: 400px;
+  background-color: #eef2f7;
+  border: 2px solid #6c9cf3;
+  border-radius: 8px;
+}
+
+.node {
+  fill: #74b9ff;
+  stroke: #2d3436;
+  stroke-width: 2px;
+}
+
+.edge {
+  stroke: #636e72;
+  stroke-width: 2px;
+}
+
+.text {
+  font-size: 14px;
+  text-anchor: middle;
+  fill: #2d3436;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: center;
+}
