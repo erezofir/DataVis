@@ -118,24 +118,18 @@ function runCode() {
   const code = document.getElementById("java-code").value; // Get the user's code
   const outputElement = document.getElementById("output"); // Output element
 
+  // Clear the previous output
+  outputElement.textContent = "";
+
+  // Simulate Java code execution
   try {
-    // Clear previous output
-    outputElement.textContent = "";
-
-    // Validate and execute user code using Function
-    const userCodeFunction = new Function(`
-      const console = {
-        log: (...args) => outputElement.textContent += args.join(' ') + '\\n',
-        print: (...args) => outputElement.textContent += args.join(' ') + '\\n',
-      };
-      // User code starts here
-      ${code}
-    `);
-
-    // Execute the user's code
-    userCodeFunction();
+    if (code.includes("int[] numbers = {1, 2, 3, 4, 5};")) {
+      // Simulated output for the provided Java code
+      outputElement.textContent = `First Element: 1\nModified Array:\n1 2 10 4 5`;
+    } else {
+      throw new Error("This code is not supported in the simulation.");
+    }
   } catch (error) {
-    // Catch syntax errors or runtime issues in user code
     outputElement.textContent = `Error: ${error.message}`;
   }
 }
