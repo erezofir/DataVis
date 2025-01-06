@@ -8,7 +8,7 @@ class TreeNode {
 
 let root = null;
 
-// Build binary tree from array
+// Build Binary Tree
 function buildBinaryTree(array) {
   if (!array || array.length === 0) return null;
 
@@ -33,11 +33,42 @@ function buildBinaryTree(array) {
   return nodes[0];
 }
 
-// Generate tree from user input
+// Build Binary Search Tree
+function buildBinarySearchTree(array) {
+  if (!array || array.length === 0) return null;
+
+  const root = new TreeNode(array[0]);
+
+  function insertNode(current, value) {
+    if (value < current.value) {
+      if (!current.left) {
+        current.left = new TreeNode(value);
+      } else {
+        insertNode(current.left, value);
+      }
+    } else {
+      if (!current.right) {
+        current.right = new TreeNode(value);
+      } else {
+        insertNode(current.right, value);
+      }
+    }
+  }
+
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] !== null) {
+      insertNode(root, array[i]);
+    }
+  }
+
+  return root;
+}
+
+// Generate Tree
 function generateTree() {
-  const input = prompt(
-    "Enter values separated by commas (use 'null' for empty nodes):"
-  );
+  const input = document.getElementById("tree-input").value;
+  const type = document.getElementById("tree-type").value;
+
   if (!input) return;
 
   const values = input
@@ -45,17 +76,21 @@ function generateTree() {
     .map((v) => (v.trim().toLowerCase() === "null" ? null : parseInt(v.trim())))
     .filter((v) => v === null || !isNaN(v));
 
-  root = buildBinaryTree(values);
+  root =
+    type === "binary-tree"
+      ? buildBinaryTree(values)
+      : buildBinarySearchTree(values);
+
   drawTree();
 }
 
-// Clear the tree
+// Clear Tree
 function clearTree() {
   root = null;
   drawTree();
 }
 
-// Draw the binary tree on canvas
+// Draw Tree
 function drawTree() {
   const canvas = document.getElementById("treeCanvas");
   const ctx = canvas.getContext("2d");
@@ -69,13 +104,23 @@ function drawTree() {
 function drawNode(ctx, node, x, y, offset) {
   if (!node) return;
 
-  // Draw the node
+  // Draw node circle
   ctx.beginPath();
   ctx.arc(x, y, 20, 0, 2 * Math.PI);
   ctx.stroke();
-  ctx.fillStyle = "#6c9cf3";
+
+  // Assign colors
+  if (!node.left && !node.right) {
+    ctx.fillStyle = "#90ee90"; // Leaf node
+  } else if (node === root) {
+    ctx.fillStyle = "#db7093"; // Root node
+  } else {
+    ctx.fillStyle = "skyblue"; // Internal node
+  }
+
   ctx.fill();
 
+  // Draw node value
   ctx.fillStyle = "#fff";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
@@ -99,6 +144,3 @@ function drawNode(ctx, node, x, y, offset) {
     drawNode(ctx, node.right, x + offset, y + 70, offset / 2);
   }
 }
-
-// Initial draw
-drawTree();

@@ -75,15 +75,29 @@
       </ul>
     </section>
 
-    <!-- Visualization Section -->
-    <section class="visualization box">
-      <h2>Visualization</h2>
-      <canvas id="treeCanvas" width="600" height="400"></canvas>
-      <div class="controls">
-        <button onclick="generateTree()">Generate Tree</button>
-        <button onclick="clearTree()">Clear Tree</button>
-      </div>
-    </section>
+        <!-- Input Section -->
+        <section class="box">
+          <h2>Tree Configuration</h2>
+          <label for="tree-input">Enter Nodes:</label>
+          <input
+            type="text"
+            id="tree-input"
+            placeholder="e.g., 1, 4, -3, null, 5"
+          />
+          <label for="tree-type">Input Type:</label>
+          <select id="tree-type">
+            <option value="binary-tree">Binary Tree</option>
+            <option value="binary-search-tree">Binary Search Tree</option>
+          </select>
+          <button onclick="generateTree()">Generate Tree</button>
+          <button onclick="clearTree()">Clear Tree</button>
+        </section>
+    
+        <!-- Visualization Section -->
+        <section class="visualization box">
+          <h2>Visualization</h2>
+          <canvas id="treeCanvas" width="600" height="400"></canvas>
+        </section>
 
     <!-- Advantages and Disadvantages Section -->
     <section class="box">
