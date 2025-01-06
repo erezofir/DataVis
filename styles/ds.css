@@ -25,7 +25,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
-  color: #f8f8fa;
 }
 
 table th, table td {
@@ -37,6 +36,7 @@ table th, table td {
 table th {
   background: #516f7c;
   font-weight: bold;
+  color: #f8f8fa;
 }
 
 /* Visualization Canvas Styling */
