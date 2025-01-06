@@ -28,7 +28,6 @@ function handlePush() {
   }
 
   stack.push(value);
-  stackInput.value = ''; // Clear input
   updateStackDisplay();
 }
 
