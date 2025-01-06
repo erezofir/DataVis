@@ -2,16 +2,18 @@ body.stack {
     font-family: "Montserrat", sans-serif;
     background-color: #f2f4f6;
     color: #080808;
+    font-size: 18px;
   }
   
   .visualization {
+    font-family: "Josefin Sans", sans-serif;
     text-align: center;
     margin-top: 20px;
   }
   
   canvas {
     border: 2px solid #6c9cf3;
-    background-color: #eef2f7;
+    background-color: #eef2f7d8;
     display: block;
     margin: 0 auto;
     border-radius: 8px;
@@ -22,6 +24,8 @@ body.stack {
   }
   
   button {
+    margin-bottom: 16px;
+    font-family: "Josefin Sans", sans-serif;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #6c9cf3;
@@ -34,6 +38,6 @@ body.stack {
   }
   
   button:hover {
-    background-color: #5478c9;
+    background-color: #9eb7f2;
   }
   

@@ -145,7 +145,7 @@ body.ds {
   }
   
 
-  #stackCanvas {
+  #visCanvas {
     display: block;
     margin: 0 auto;
     width: 500%;
@@ -165,64 +165,3 @@ body.ds {
     margin-bottom: 1rem;
   }
   
-  .stack-container {
-    width: 450px;
-    height: 300px;
-    border: 2px solid #3498db;
-    background-color: #e9ecef;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  
-  .stack-element {
-    width: 80%;
-    height: 40px;
-    margin-bottom: 5px;
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .visualization {
-    text-align: center;
-  }
-
-  .pointer {
-    font-size: 14px;
-    color: #333;
-    font-family: Arial, sans-serif;
-  }
-
-  .pointer-table {
-    position: absolute;
-    bottom: -50px;
-    right: 10px;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .pointer-table table {
-    border-collapse: collapse;
-    background: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .pointer-table th,
-  .pointer-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  .pointer-table th {
-    background: #f4f4f4;
-    font-weight: bold;
-  }
