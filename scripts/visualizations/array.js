@@ -1,6 +1,6 @@
 const array = [];
 
-// Add item to array
+// Add item to the array
 function addItem(value) {
   if (value) {
     array.push(value);
@@ -58,7 +58,7 @@ function highlightElement(index) {
   setTimeout(drawArray, 1000); // Re-draw array after 1 second
 }
 
-// Draw the array on canvas
+// Draw the array on the canvas
 function drawArray() {
   const canvas = document.getElementById("arrayCanvas");
   const ctx = canvas.getContext("2d");
@@ -96,9 +96,10 @@ function drawArray() {
   }
 }
 
-// Initial draw
+// Initial draw to set up the canvas
 drawArray();
 
+// Copy the code from the code editor
 function copyCode() {
   const code = document.getElementById("java-code");
   code.select(); // Select the text in the textarea
@@ -112,16 +113,25 @@ function copyCode() {
   }
 }
 
+// Run the Java code entered in the code editor
 function runCode() {
   const code = document.getElementById("java-code").value;
-
-  // סימולציה של הרצת הקוד - לצערנו אי אפשר להריץ Java ישירות בדפדפן.
   const outputElement = document.getElementById("output");
 
-  // דוגמת פלט – אפשר להוסיף לוגיקה שמדמה הרצה
-  if (code.includes("numbers")) {
-    outputElement.textContent = `First Element: 1\nModified Array:\n1 2 10 4 5`;
-  } else {
-    outputElement.textContent = "Code executed. Output not available for this code.";
+  try {
+    // Simulate execution of user code
+    const userCodeFunction = new Function(`
+      const console = {
+        log: (...args) => outputElement.textContent += args.join(' ') + '\\n',
+        print: (...args) => outputElement.textContent += args.join(' ') + '\\n',
+      };
+      outputElement.textContent = ''; // Clear previous output
+      ${code}
+    `);
+
+    userCodeFunction(); // Execute user code
+  } catch (error) {
+    // Display error message if user code fails
+    outputElement.textContent = `Error: ${error.message}`;
   }
 }

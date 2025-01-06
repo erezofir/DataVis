@@ -230,7 +230,7 @@ pre code {
 .code-buttons button {
   padding: 8px 16px;
   font-family: 'Montserrat', sans-serif; /* Font family */
-  font-size: 14px;
+  font-size: 16px;
   background-color: #6c9cf3; /* Button background */
   color: white; /* Button text */
   border: none;
@@ -248,19 +248,27 @@ pre code {
   height: 250px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #bae0ec;
+  border-radius: 10px;
   padding: 1rem;
   margin: 1rem 0;
   background-color: #f5f5f5;
   resize: vertical;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 #output {
   background-color: #eef2f7;
   border: 1px solid #b8e9dc;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1rem;
   white-space: pre-wrap;
   margin-top: 1rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
