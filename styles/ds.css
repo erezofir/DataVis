@@ -96,7 +96,7 @@ canvas {
 .implementations {
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* רווח בין העיגולים */
+  gap: 1.5rem; 
   margin-top: 1rem;
 }
 
@@ -112,4 +112,9 @@ canvas {
   text-align: center;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.binary-tree canvas {
+  width: 600px;
+  height: 400px;
 }

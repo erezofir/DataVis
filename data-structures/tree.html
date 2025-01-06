@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tree Visualization</title>
+  <title>Binary Tree Visualization</title>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/ds.css">
-  <script src="../scripts/visualizations/tree.js" defer></script>
-  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 </head>
-<body class="tree">
-
+<body class="binary-tree">
   <!-- Footer -->
   <div id="footer-placeholder"></div>
   <script>
@@ -24,18 +20,17 @@
       .catch(error => console.error("Error loading footer:", error));
   </script>
 
-
   <!-- Main Content -->
   <main>
     <!-- Page Title -->
     <div class="ds-header">
-      <h1 class="title">Tree</h1>
+      <h1 class="title">Binary Tree</h1>
     </div>
 
     <!-- What is it Section -->
     <section class="box">
       <h2>What is it?</h2>
-      <p>A Tree is a hierarchical data structure consisting of nodes, where each node has a parent (except the root) and zero or more children.</p>
+      <p>A Binary Tree is a hierarchical data structure where each node has at most two children: a left child and a right child.</p>
     </section>
 
     <!-- Time and Space Complexity Section -->
@@ -73,18 +68,21 @@
     <section class="box">
       <h2>Properties</h2>
       <ul class="spaced-list">
-        <li>Root node is the topmost node.</li>
-        <li>Each node has zero or more children.</li>
-        <li>Can be used to implement various structures (e.g., heaps, BSTs).</li>
+        <li>The topmost node is called the root.</li>
+        <li>Each node can have at most two children.</li>
+        <li>Binary Trees can be balanced or unbalanced.</li>
+        <li>They are used in searching, sorting, and hierarchical relationships.</li>
       </ul>
     </section>
 
     <!-- Visualization Section -->
     <section class="visualization box">
       <h2>Visualization</h2>
-      <canvas id="treeCanvas" width="400" height="300"></canvas>
-        <!-- React Root -->
-        <div id="react-root"></div>
+      <canvas id="treeCanvas" width="600" height="400"></canvas>
+      <div class="controls">
+        <button onclick="insertNode(prompt('Enter value to insert:'))">Insert</button>
+        <button onclick="deleteNode(prompt('Enter value to delete:'))">Delete</button>
+        <button onclick="clearTree()">Clear Tree</button>
       </div>
     </section>
 
@@ -93,20 +91,20 @@
       <h2>Advantages and Disadvantages</h2>
       <div class="pros-cons">
         <div class="advantages">
-          <p>✅ Great for hierarchical relationships.</p>
-          <p>✅ Supports efficient searching in BSTs.</p>
-          <p>✅ Dynamic resizing.</p>
+          <p>✅ Represents hierarchical data effectively.</p>
+          <p>✅ Efficient searching in balanced BSTs.</p>
+          <p>✅ Supports dynamic resizing.</p>
         </div>
         <div class="disadvantages">
-          <p>❌ Can become unbalanced.</p>
+          <p>❌ Can become unbalanced (reducing efficiency).</p>
           <p>❌ Traversal can be time-consuming.</p>
-          <p>❌ Complex to implement certain operations.</p>
+          <p>❌ Complex implementation for balancing.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- React Component -->
-  <script src="js/stack.js"></script>
+  <!-- Scripts -->
+  <script src="../scripts/visualizations/tree.js" defer></script>
 </body>
 </html>
