@@ -97,6 +97,33 @@
         <button onclick="searchItem(prompt('Enter value to search:'))">Search</button>
       </div>
     </section>
+    
+    <section class="box">
+      <h2>Code Example</h2>
+      <p>Here's an example of how to use an array in Java:</p>
+      <pre>
+    <code class="language-java">
+    public class ArrayExample {
+        public static void main(String[] args) {
+            // Initialize an array
+            int[] numbers = {1, 2, 3, 4, 5};
+    
+            // Access elements
+            System.out.println("First Element: " + numbers[0]);
+    
+            // Modify an element
+            numbers[2] = 10;
+            System.out.println("Modified Array: ");
+            for (int number : numbers) {
+                System.out.print(number + " ");
+            }
+        }
+    }
+    </code>
+      </pre>
+      <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+    </section>
+    
 
     <!-- Advantages and Disadvantages Section -->
     <section class="box">

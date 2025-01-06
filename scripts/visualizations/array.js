@@ -98,3 +98,13 @@ function drawArray() {
 
 // Initial draw
 drawArray();
+
+function copyCode(button) {
+  const codeBlock = button.previousElementSibling;
+  const text = codeBlock.innerText;
+
+  navigator.clipboard.writeText(text).then(() => {
+    button.innerText = "Copied!";
+    setTimeout(() => (button.innerText = "Copy Code"), 2000);
+  });
+}
