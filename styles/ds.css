@@ -25,6 +25,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
+  color: #f8f8fa;
 }
 
 table th, table td {
@@ -34,7 +35,7 @@ table th, table td {
 }
 
 table th {
-  background: #98d5f2;
+  background: #516f7c;
   font-weight: bold;
 }
 
