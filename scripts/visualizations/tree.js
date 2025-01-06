@@ -115,7 +115,7 @@ function drawNode(ctx, node, x, y, offset) {
   } else if (node === root) {
     ctx.fillStyle = "#db7093"; // Root node
   } else {
-    ctx.fillStyle = "skyblue"; // Internal node
+    ctx.fillStyle = "#98d5f2"; // Internal node
   }
 
   ctx.fill();
