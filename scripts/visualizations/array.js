@@ -99,15 +99,19 @@ function drawArray() {
 // Initial draw
 drawArray();
 
-function copyCode(button) {
-  const codeBlock = button.previousElementSibling;
-  const text = codeBlock.innerText;
+function copyCode() {
+  const code = document.getElementById("java-code");
+  code.select(); // Select the text in the textarea
+  code.setSelectionRange(0, 99999); // For mobile devices
 
-  navigator.clipboard.writeText(text).then(() => {
-    button.innerText = "Copied!";
-    setTimeout(() => (button.innerText = "Copy Code"), 2000);
-  });
+  try {
+    document.execCommand("copy");
+    alert("Code copied to clipboard!");
+  } catch (err) {
+    alert("Failed to copy code.");
+  }
 }
+
 
 function runCode() {
   const code = document.getElementById("java-code").value;
