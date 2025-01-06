@@ -8,40 +8,44 @@ class TreeNode {
 
 let root = null;
 
-// Function to build a balanced binary tree from an array
-function buildTreeFromArray(array) {
+// Build binary tree from array
+function buildBinaryTree(array) {
   if (!array || array.length === 0) return null;
 
-  // Sort the array to ensure balanced tree
-  array.sort((a, b) => a - b);
+  const nodes = array.map((value) =>
+    value === null ? null : new TreeNode(value)
+  );
 
-  // Recursive function to create the tree
-  function buildTree(arr, start, end) {
-    if (start > end) return null;
+  for (let i = 0; i < nodes.length; i++) {
+    if (nodes[i] !== null) {
+      const leftIndex = 2 * i + 1;
+      const rightIndex = 2 * i + 2;
 
-    const mid = Math.floor((start + end) / 2);
-    const node = new TreeNode(arr[mid]);
-
-    node.left = buildTree(arr, start, mid - 1);
-    node.right = buildTree(arr, mid + 1, end);
-
-    return node;
+      if (leftIndex < nodes.length) {
+        nodes[i].left = nodes[leftIndex];
+      }
+      if (rightIndex < nodes.length) {
+        nodes[i].right = nodes[rightIndex];
+      }
+    }
   }
 
-  return buildTree(array, 0, array.length - 1);
+  return nodes[0];
 }
 
 // Generate tree from user input
 function generateTree() {
-  const input = prompt("Enter values separated by commas:");
+  const input = prompt(
+    "Enter values separated by commas (use 'null' for empty nodes):"
+  );
   if (!input) return;
 
   const values = input
     .split(",")
-    .map((v) => parseInt(v.trim()))
-    .filter((v) => !isNaN(v));
+    .map((v) => (v.trim().toLowerCase() === "null" ? null : parseInt(v.trim())))
+    .filter((v) => v === null || !isNaN(v));
 
-  root = buildTreeFromArray(values);
+  root = buildBinaryTree(values);
   drawTree();
 }
 

@@ -118,3 +118,18 @@ canvas {
   width: 600px;
   height: 400px;
 }
+.node__root {
+  fill: #db7093; /* Root node */
+}
+
+.node__onebranch {
+  fill: #ffa07a; /* Nodes with one branch */
+}
+
+.node__branch {
+  fill: skyblue; /* Internal nodes */
+}
+
+.node__leaf {
+  fill: #90ee90; /* Leaf nodes */
+}
