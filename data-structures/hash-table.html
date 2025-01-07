@@ -93,6 +93,35 @@
 </section>
 
 <section class="box">
+  <h2>Interactive Code Example</h2>
+  <p>Click "Run" to see the output or "Copy" to copy the code:</p>
+  <pre id="java-code">
+<code>
+// Initialize a HashMap
+HashMap<String, Integer> hashMap = new HashMap<>();
+
+// Add key-value pairs
+hashMap.put("One", 1);
+hashMap.put("Two", 2);
+hashMap.put("Three", 3);
+
+// Get a value by key
+System.out.println("Value for 'Two': " + hashMap.get("Two"));
+
+// Remove a key
+hashMap.remove("One");
+System.out.println("HashMap after removal: " + hashMap);
+</code>
+  </pre>
+  <div class="code-buttons">
+    <button onclick="runCode()">Run</button>
+    <button onclick="copyCode()">Copy</button>
+  </div>
+  <pre id="output"></pre>
+</section>
+
+
+<section class="box">
   <h2>Advantages and Disadvantages</h2>
   <div class="pros-cons">
     <div class="advantages">

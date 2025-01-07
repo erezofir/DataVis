@@ -91,6 +91,36 @@
       <canvas id="graphCanvas" width="600" height="400"></canvas>
     </section>
 
+    <section class="box">
+      <h2>Interactive Code Example</h2>
+      <p>Click "Run" to see the output or "Copy" to copy the code:</p>
+      <pre id="java-code">
+    <code>
+    // Define a graph using an adjacency list
+    Map<Integer, List<Integer>> graph = new HashMap<>();
+    
+    // Add edges
+    graph.put(1, Arrays.asList(2, 3));
+    graph.put(2, Arrays.asList(4));
+    graph.put(3, Arrays.asList(5));
+    graph.put(4, Arrays.asList());
+    graph.put(5, Arrays.asList());
+    
+    // Traverse the graph
+    System.out.println("Graph:");
+    for (Map.Entry<Integer, List<Integer>> entry : graph.entrySet()) {
+      System.out.println(entry.getKey() + " -> " + entry.getValue());
+    }
+    </code>
+      </pre>
+      <div class="code-buttons">
+        <button onclick="runCode()">Run</button>
+        <button onclick="copyCode()">Copy</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+    
+
     <!-- Advantages and Disadvantages Section -->
     <section class="box">
       <h2>Advantages and Disadvantages</h2>

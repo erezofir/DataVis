@@ -94,6 +94,35 @@
       </div>
     </section>
 
+    <section class="box">
+      <h2>Interactive Code Example</h2>
+      <p>Click "Run" to see the output or "Copy" to copy the code:</p>
+      <pre id="java-code">
+    <code>
+    // Initialize a linked list
+    LinkedList<Integer> linkedList = new LinkedList<>();
+    
+    // Add elements to the list
+    linkedList.add(1);
+    linkedList.add(2);
+    linkedList.add(3);
+    
+    // Access first element
+    System.out.println("First Element: " + linkedList.getFirst());
+    
+    // Remove the last element
+    linkedList.removeLast();
+    System.out.println("Linked List after removal: " + linkedList);
+    </code>
+      </pre>
+      <div class="code-buttons">
+        <button onclick="runCode()">Run</button>
+        <button onclick="copyCode()">Copy</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+    
+
     <!-- Advantages and Disadvantages Section -->
     <section class="box">
       <h2>Advantages and Disadvantages</h2>

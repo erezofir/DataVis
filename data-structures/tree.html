@@ -101,6 +101,48 @@
         <canvas id="treeCanvas" width="600" height="400"></canvas>
       </section>
 
+      <section class="box">
+        <h2>Interactive Code Example</h2>
+        <p>Click "Run" to see the output or "Copy" to copy the code:</p>
+        <pre id="java-code">
+      <code>
+      // Define a Node class
+      class Node {
+        int value;
+        Node left, right;
+      
+        Node(int value) {
+          this.value = value;
+          left = right = null;
+        }
+      }
+      
+      // Create a binary tree
+      Node root = new Node(1);
+      root.left = new Node(2);
+      root.right = new Node(3);
+      
+      // Traverse the tree
+      System.out.println("Inorder Traversal:");
+      inorderTraversal(root);
+      
+      void inorderTraversal(Node node) {
+        if (node != null) {
+          inorderTraversal(node.left);
+          System.out.print(node.value + " ");
+          inorderTraversal(node.right);
+        }
+      }
+      </code>
+        </pre>
+        <div class="code-buttons">
+          <button onclick="runCode()">Run</button>
+          <button onclick="copyCode()">Copy</button>
+        </div>
+        <pre id="output"></pre>
+      </section>
+      
+
     <!-- Advantages and Disadvantages Section -->
     <section class="box">
       <h2>Advantages and Disadvantages</h2>
