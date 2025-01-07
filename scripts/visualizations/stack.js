@@ -68,10 +68,12 @@ function copyCode() {
     .catch(() => alert("Failed to copy code."));
 }
 
-// Simulate running the code (static output for demonstration)
+// Simulate running the code for Stack
 function runCode() {
   const outputElement = document.getElementById("output");
-  const simulatedOutput = `This is a placeholder output for the example code.`;
+  const simulatedOutput = `Top Element: 3
+Popped Element: 3
+Stack: [1, 2]`;
   outputElement.textContent = simulatedOutput;
 }
 
