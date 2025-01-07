@@ -62,3 +62,22 @@ function drawQueue() {
 
 // Initial draw
 drawQueue();
+
+// Copy code to clipboard
+function copyCode() {
+  const codeElement = document.getElementById("java-code").innerText;
+  navigator.clipboard
+    .writeText(codeElement)
+    .then(() => alert("Code copied to clipboard!"))
+    .catch(() => alert("Failed to copy code."));
+}
+
+// Simulate running the code for Queue
+function runCode() {
+  const outputElement = document.getElementById("output");
+  const simulatedOutput = `Front Element: 1
+Removed Element: 1
+Queue: [2, 3]`;
+  outputElement.textContent = simulatedOutput;
+}
+
