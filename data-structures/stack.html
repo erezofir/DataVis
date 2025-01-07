@@ -94,6 +94,37 @@
       </div>
     </section>
 
+    <section class="box">
+      <h2>Interactive Code Example</h2>
+      <p>Click "Run" to see the output or "Copy" to copy the code:</p>
+      <pre id="java-code">
+    <code>
+    // Initialize a stack
+    Stack<Integer> stack = new Stack<>();
+    
+    // Push elements to stack
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    
+    // Peek the top element
+    System.out.println("Top Element: " + stack.peek());
+    
+    // Pop an element
+    System.out.println("Popped Element: " + stack.pop());
+    
+    // Display remaining stack
+    System.out.println("Stack: " + stack);
+    </code>
+      </pre>
+      <div class="code-buttons">
+        <button onclick="runCode()">Run</button>
+        <button onclick="copyCode()">Copy</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+    
+
 
     <!-- Advantages and Disadvantages Section -->
     <section class="box">
